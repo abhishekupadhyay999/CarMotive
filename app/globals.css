@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --primary: #ff5a1f;
+  --primary-hover: #e64a19;
+
+  /* Backgrounds */
+  --background: #f8fafc;
+  --section: #f3f4f6;
+  --card: #ffffff;
+
+  /* Text */
+  --heading: #111827;
+  --text: #6b7280;
+
+  /* Border */
+  --border: #e5e7eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--heading);
+  overflow-x: hidden;
+  font-family: Inter, sans-serif;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+/* ===========================
+   Premium EMI Slider
+=========================== */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: #ff5a1f;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 90, 31, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: -7px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: #ff5a1f;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 90, 31, 0.35);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
 }
