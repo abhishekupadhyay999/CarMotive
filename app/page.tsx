@@ -8,12 +8,14 @@ import TrustStats from "@/components/home/TrustStats";
 import Testimonials from "@/components/Testimonal/Testimonials";
 import Contact from "@/components/contacts/Contacts";
 import Footer from "@/components/layout/Footer";
+import DreamCarFinder from "@/components/DreamCar/DreamCarFinder";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
       <Hero/>
+      <DreamCarFinder/>
       <TrustStats/>
       <EMICalculator/>
       <BrandPartners/>
