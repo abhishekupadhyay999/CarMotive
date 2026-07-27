@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonal/Testimonials";
 import Contact from "@/components/contacts/Contacts";
 import Footer from "@/components/layout/Footer";
 import DreamCarFinder from "@/components/DreamCar/DreamCarFinder";
+import FeatureCards from "@/components/FeaturedCards";
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
       <Hero/>
       <DreamCarFinder/>
       <TrustStats/>
-      <EMICalculator/>
+      <FeatureCards/>
       <BrandPartners/>
+      <EMICalculator/>
       <RecentDeliveries/>
       <WhyChoose/>
       <Testimonials/>

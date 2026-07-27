@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import {
   FaCar,
   FaTags,
-  FaBolt,
   FaExchangeAlt,
   FaUniversity,
   FaShieldAlt,
-  FaTruck,
   FaStar,
+  FaFileAlt,
+  FaHeadset,
 } from "react-icons/fa";
 
 interface FeatureCardProps {
@@ -21,11 +21,11 @@ interface FeatureCardProps {
 const iconMap = {
   car: FaCar,
   tag: FaTags,
-  bolt: FaBolt,
   exchange: FaExchangeAlt,
   bank: FaUniversity,
   shield: FaShieldAlt,
-  truck: FaTruck,
+  file: FaFileAlt,
+  support: FaHeadset,
   star: FaStar,
 };
 
@@ -34,7 +34,7 @@ export default function FeatureCard({
   title,
   description,
 }: FeatureCardProps) {
-  const Icon = iconMap[icon as keyof typeof iconMap];
+  const Icon = iconMap[icon as keyof typeof iconMap] ?? FaCar;
 
   return (
     <motion.div
@@ -59,8 +59,8 @@ export default function FeatureCard({
         hover:shadow-2xl
       "
     >
-      {/* Decorative Glow */}
-      <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-orange-100 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+      {/* Background Glow */}
+      <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-100 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Icon */}
       <div
@@ -82,15 +82,16 @@ export default function FeatureCard({
           className="
             text-2xl
             text-[#FF5A1F]
-            transition-colors
+            transition-all
             duration-300
+            group-hover:scale-110
             group-hover:text-white
           "
         />
       </div>
 
       {/* Title */}
-      <h3 className="mt-8 text-2xl font-bold text-gray-900">
+      <h3 className="mt-8 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#FF5A1F]">
         {title}
       </h3>
 

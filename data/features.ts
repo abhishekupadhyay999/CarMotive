@@ -9,50 +9,50 @@ export interface Feature {
 export const features: Feature[] = [
   {
     icon: "car",
-    title: "All Leading Brands",
+    title: "20+ Leading Car Brands",
     description:
-      "Choose from India's top automobile brands under one roof.",
+      "Explore hatchbacks, sedans, SUVs, luxury cars and electric vehicles from India's most trusted automobile brands.",
   },
   {
     icon: "tag",
-    title: "Best Price Assurance",
+    title: "Best Price Guarantee",
     description:
-      "Competitive pricing with attractive offers and maximum savings.",
+      "Enjoy transparent pricing, exclusive dealership offers and the best value for your investment.",
   },
   {
-    icon: "bolt",
-    title: "Faster Delivery",
+    icon: "bank",
+    title: "Easy Finance Solutions",
     description:
-      "Ready stock available for most popular models.",
+      "Quick loan approvals with attractive EMI plans from leading banks and NBFCs.",
   },
   {
     icon: "exchange",
     title: "Best Exchange Value",
     description:
-      "Upgrade your vehicle with fair market valuation.",
-  },
-  {
-    icon: "bank",
-    title: "Easy Finance",
-    description:
-      "Quick loan approvals with attractive EMI options.",
+      "Upgrade your current vehicle with fair market valuation and hassle-free exchange support.",
   },
   {
     icon: "shield",
-    title: "Insurance & Warranty",
+    title: "Quality Assurance",
     description:
-      "Complete insurance and extended warranty solutions.",
+      "Every vehicle is carefully inspected to meet the highest standards of quality, safety and reliability.",
   },
   {
-    icon: "truck",
-    title: "PAN India Delivery",
+    icon: "file",
+    title: "Hassle-Free Documentation",
     description:
-      "Safe and professional vehicle delivery across India.",
+      "From registration and insurance to paperwork, our experts handle everything for a seamless buying experience.",
+  },
+  {
+    icon: "support",
+    title: "Dedicated Customer Support",
+    description:
+      "Our experienced team guides you through every step—from selecting your car to after-sales assistance.",
   },
   {
     icon: "star",
-    title: "Trusted by Thousands",
+    title: "Trusted by 1000+ Customers",
     description:
-      "Honest advice backed by thousands of satisfied customers.",
+      "Built on trust, transparency and exceptional service, we've helped thousands drive home their dream car.",
   },
 ];

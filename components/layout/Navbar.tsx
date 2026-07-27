@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -10,11 +11,14 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "EMI", href: "#emi" },
+  { name: "Finance", href: "/finance" },
   { name: "Brands", href: "#brands" },
   { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("#home");
@@ -23,10 +27,14 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      const sections = navLinks.map((item) => ({
-        id: item.href,
-        element: document.querySelector(item.href),
-      }));
+      if (pathname !== "/") return;
+
+      const sections = navLinks
+        .filter((item) => item.href.startsWith("#"))
+        .map((item) => ({
+          id: item.href,
+          element: document.querySelector(item.href),
+        }));
 
       const current = sections.find((section) => {
         if (!section.element) return false;
@@ -46,7 +54,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     if (isOpen) {
@@ -72,7 +80,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 lg:px-8">
+        <div className="mx-auto flex h-36 max-w-7xl items-center justify-between px-6 lg:px-10">
 
           {/* Logo */}
 
@@ -81,40 +89,48 @@ export default function Navbar() {
             <Image
               src="/logo/logo1.jpeg"
               alt="Carmotive India"
-              width={240}
-              height={70}
+              width={700}
+              height={220}
               priority
-              className="h-12 w-auto object-contain transition duration-300 hover:scale-105 lg:h-14"
+              className="h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
             />
 
           </Link>
 
           {/* Desktop Navigation */}
 
-          <nav className="hidden items-center gap-10 lg:flex">
+          <nav className="hidden items-center gap-12 lg:flex">
 
-            {navLinks.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={`relative text-[15px] font-semibold transition-all duration-300 ${
-                  active === item.href
-                    ? "text-[#FF5A1F]"
-                    : scrolled
-                    ? "text-gray-700 hover:text-[#FF5A1F]"
-                    : "text-white hover:text-[#FF5A1F]"
-                }`}
-              >
-                {item.name}
+            {navLinks.map((item) => {
+              const isPageLink = item.href.startsWith("/");
 
-                {active === item.href && (
-                  <motion.span
-                    layoutId="activeNav"
-                    className="absolute -bottom-2 left-0 h-1 w-full rounded-full bg-[#FF5A1F]"
-                  />
-                )}
-              </a>
-            ))}
+              const isActive = isPageLink
+                ? pathname === item.href
+                : active === item.href;
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative text-[15px] font-semibold transition-all duration-300 ${
+                    isActive
+                      ? "text-[#FF5A1F]"
+                      : scrolled
+                      ? "text-gray-700 hover:text-[#FF5A1F]"
+                      : "text-white hover:text-[#FF5A1F]"
+                  }`}
+                >
+                  {item.name}
+
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute -bottom-2 left-0 h-1 w-full rounded-full bg-[#FF5A1F]"
+                    />
+                  )}
+                </Link>
+              );
+            })}
 
           </nav>
 
@@ -127,13 +143,12 @@ export default function Navbar() {
               className="flex items-center gap-2 rounded-full border border-[#FF5A1F] px-5 py-3 font-semibold text-[#FF5A1F] transition-all duration-300 hover:bg-[#FF5A1F] hover:text-white"
             >
               <Phone size={18} />
-
               +91 98881 95553
             </a>
 
             <a
               href="#contact"
-              className="group flex items-center gap-2 rounded-full bg-[#FF5A1F] px-6 py-3 font-semibold text-white shadow-lg shadow-orange-300 transition-all duration-300 hover:scale-105 hover:bg-[#E84A12]"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-[#FF5A1F] to-orange-500 px-7 py-3 font-semibold text-white shadow-xl shadow-orange-300 transition-all duration-300 hover:scale-105"
             >
               Get Best Deal
 
@@ -141,12 +156,11 @@ export default function Navbar() {
                 size={18}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-
             </a>
 
           </div>
 
-          {/* Mobile Button */}
+          {/* Mobile Menu Button */}
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -154,13 +168,14 @@ export default function Navbar() {
               scrolled ? "text-gray-900" : "text-white"
             }`}
           >
-            {isOpen ? <X size={30} /> : <Menu size={30} />}
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
 
         </div>
 
       </motion.header>
             {/* Mobile Menu */}
+
       <AnimatePresence>
         {isOpen && (
           <>
@@ -181,46 +196,54 @@ export default function Navbar() {
               transition={{ type: "spring", damping: 22 }}
               className="fixed right-0 top-0 z-50 flex h-screen w-[85%] max-w-sm flex-col bg-white shadow-2xl lg:hidden"
             >
-              {/* Header */}
-              <div className="flex h-24 items-center justify-between border-b border-gray-200 px-6">
+              {/* Drawer Header */}
+              <div className="flex h-32 items-center justify-between border-b border-gray-200 px-6">
 
                 <Image
-                  src="/logo/logo2.png"
+                  src="/logo/logo1.jpeg"
                   alt="Carmotive India"
-                  width={180}
-                  height={60}
-                  className="h-12 w-auto object-contain"
+                  width={320}
+                  height={120}
                   priority
+                  className="h-20 w-auto object-contain"
                 />
 
                 <button
                   onClick={() => setIsOpen(false)}
                   className="rounded-full p-2 transition hover:bg-gray-100"
                 >
-                  <X size={28} />
+                  <X size={30} />
                 </button>
 
               </div>
 
-              {/* Links */}
+              {/* Navigation */}
               <div className="flex flex-1 flex-col px-6 py-8">
 
                 <div className="space-y-2">
 
-                  {navLinks.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`block rounded-xl px-5 py-4 text-lg font-semibold transition-all ${
-                        active === item.href
-                          ? "bg-orange-50 text-[#FF5A1F]"
-                          : "text-gray-700 hover:bg-gray-100"
-                      }`}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                  {navLinks.map((item) => {
+                    const isPageLink = item.href.startsWith("/");
+
+                    const isActive = isPageLink
+                      ? pathname === item.href
+                      : active === item.href;
+
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`block rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-300 ${
+                          isActive
+                            ? "bg-orange-50 text-[#FF5A1F]"
+                            : "text-gray-700 hover:bg-gray-100 hover:text-[#FF5A1F]"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
 
                 </div>
 
@@ -229,20 +252,24 @@ export default function Navbar() {
 
                   <a
                     href="tel:+919888195553"
-                    className="flex items-center justify-center gap-2 rounded-full border-2 border-[#FF5A1F] py-4 font-semibold text-[#FF5A1F] transition hover:bg-[#FF5A1F] hover:text-white"
+                    className="flex items-center justify-center gap-2 rounded-full border-2 border-[#FF5A1F] py-4 font-semibold text-[#FF5A1F] transition-all duration-300 hover:bg-[#FF5A1F] hover:text-white"
                   >
                     <Phone size={18} />
                     +91 98881 95553
                   </a>
 
-                  <a
+                  <Link
                     href="#contact"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center gap-2 rounded-full bg-[#FF5A1F] py-4 font-semibold text-white shadow-lg transition hover:bg-[#E84A12]"
+                    className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FF5A1F] to-orange-500 py-4 font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105"
                   >
                     Get Best Deal
-                    <ChevronRight size={18} />
-                  </a>
+
+                    <ChevronRight
+                      size={18}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </Link>
 
                 </div>
 

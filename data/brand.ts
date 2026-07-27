@@ -3,98 +3,129 @@ export type BrandCategory = "All" | "Luxury" | "Popular" | "EV";
 export interface Brand {
   name: string;
   logo: string;
-  category: Exclude<BrandCategory, "All">;
+  categories: Exclude<BrandCategory, "All">[];
 }
 
 export const brands: Brand[] = [
+  // =======================
   // Luxury Brands
+  // =======================
   {
     name: "BMW",
     logo: "/brands/BMW.svg",
-    category: "Luxury",
+    categories: ["Luxury", "EV"],
   },
   {
     name: "Mercedes-Benz",
     logo: "/brands/mercedes.png",
-    category: "Luxury",
+    categories: ["Luxury", "EV"],
   },
   {
     name: "Audi",
     logo: "/brands/audi.png",
-    category: "Luxury",
+    categories: ["Luxury", "EV"],
   },
   {
     name: "Volvo",
     logo: "/brands/volvo.jpeg",
-    category: "Luxury",
+    categories: ["Luxury", "EV"],
   },
   {
     name: "Land Rover",
     logo: "/brands/land-rover.png",
-    category: "Luxury",
+    categories: ["Luxury", "EV"],
+  },
+  {
+    name: "Lexus",
+    logo: "/brands/lexus.png",
+    categories: ["Luxury", "EV"],
   },
 
+  // =======================
   // Popular Brands
+  // =======================
+  {
+    name: "Maruti Suzuki",
+    logo: "/brands/maruti-suzuki.svg",
+    categories: ["Popular", "EV"],
+  },
   {
     name: "Toyota",
     logo: "/brands/toyota.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Honda",
-    logo: "/brands/honda-11.svg",
-    category: "Popular",
+    logo: "/brands/honda.png",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Hyundai",
     logo: "/brands/hyundai.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Kia",
-    logo: "/brands/kia.png",
-    category: "Popular",
+    logo: "/brands/kia.jpeg",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Tata",
     logo: "/brands/tata.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Mahindra",
     logo: "/brands/mahindra.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Volkswagen",
     logo: "/brands/volkswagen.jpeg",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "MG",
     logo: "/brands/MG.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Skoda",
     logo: "/brands/skoda.png",
-    category: "Popular",
+    categories: ["Popular", "EV"],
   },
   {
     name: "Jeep",
     logo: "/brands/jeep.png",
-    category: "Popular",
+    categories: ["Popular"],
+  },
+  {
+    name: "Nissan",
+    logo: "/brands/nissan.png",
+    categories: ["Popular"],
+  },
+  {
+    name: "Renault",
+    logo: "/brands/Renault_2021.svg",
+    categories: ["Popular"],
+  },
+  {
+    name: "Citroën",
+    logo: "/brands/citroen.png",
+    categories: ["Popular", "EV"],
   },
 
-  // Electric Brands
+  // =======================
+  // EV Only Brands
+  // =======================
   {
     name: "BYD",
     logo: "/brands/BYD.png",
-    category: "EV",
+    categories: ["EV"],
   },
   {
     name: "VinFast",
     logo: "/brands/vinfast.jpeg",
-    category: "EV",
+    categories: ["EV"],
   },
 ];
