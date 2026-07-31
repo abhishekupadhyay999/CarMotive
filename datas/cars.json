@@ -1,0 +1,2939 @@
+[
+  {
+    "id": 1,
+    "brand": "MARUTI SUZUKI",
+    "model": "S-Presso",
+    "engine": "1.0L K10C Petrol (998 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b93.70 Lakh"
+  },
+  {
+    "id": 2,
+    "brand": "MARUTI SUZUKI",
+    "model": "Alto K10",
+    "engine": "1.0L K10C Petrol (998 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b93.70 Lakh"
+  },
+  {
+    "id": 3,
+    "brand": "MARUTI SUZUKI",
+    "model": "Celerio",
+    "engine": "1.0L K10C Petrol (998 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b94.70 Lakh"
+  },
+  {
+    "id": 4,
+    "brand": "MARUTI SUZUKI",
+    "model": "WagonR",
+    "engine": "1.0L K10C, 1.2L K12N",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b94.99 Lakh"
+  },
+  {
+    "id": 5,
+    "brand": "MARUTI SUZUKI",
+    "model": "Swift",
+    "engine": "1.2L Z12E 3-Cyl Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b95.79 Lakh"
+  },
+  {
+    "id": 6,
+    "brand": "MARUTI SUZUKI",
+    "model": "Dzire",
+    "engine": "1.2L Z12E 3-Cyl Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.26 Lakh"
+  },
+  {
+    "id": 7,
+    "brand": "MARUTI SUZUKI",
+    "model": "Baleno",
+    "engine": "1.2L Z12E Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b95.99 Lakh"
+  },
+  {
+    "id": 8,
+    "brand": "MARUTI SUZUKI",
+    "model": "Fronx",
+    "engine": "1.2L Petrol, 1.0L BoosterJet Turbo Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG (1.2L)"
+    ],
+    "transmission": [
+      "5MT",
+      "6MT",
+      "AMT",
+      "6AT"
+    ],
+    "price": "\u20b96.85 Lakh"
+  },
+  {
+    "id": 9,
+    "brand": "MARUTI SUZUKI",
+    "model": "Brezza",
+    "engine": "1.5L K15C Petrol, 1.0L BoosterJet Turbo Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b97.40 Lakh"
+  },
+  {
+    "id": 10,
+    "brand": "MARUTI SUZUKI",
+    "model": "Ertiga",
+    "engine": "1.5L K15C Smart Hybrid",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b98.85 Lakh"
+  },
+  {
+    "id": 11,
+    "brand": "MARUTI SUZUKI",
+    "model": "XL6",
+    "engine": "1.5L K15C Smart Hybrid",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b911.57 Lakh"
+  },
+  {
+    "id": 12,
+    "brand": "MARUTI SUZUKI",
+    "model": "Grand Vitara",
+    "engine": "1.5L Smart Hybrid, 1.5L Strong Hybrid",
+    "fuel": [
+      "Petrol",
+      "Hybrid"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT",
+      "e-CVT",
+      "AWD AT"
+    ],
+    "price": "\u20b910.77 Lakh"
+  },
+  {
+    "id": 13,
+    "brand": "MARUTI SUZUKI",
+    "model": "Jimny",
+    "engine": "1.5L K15B Petrol",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "4AT"
+    ],
+    "price": "\u20b912.39 Lakh"
+  },
+  {
+    "id": 14,
+    "brand": "MARUTI SUZUKI",
+    "model": "Invicto",
+    "engine": "2.0L Strong Hybrid",
+    "fuel": [
+      "Hybrid (Petrol + Electric)"
+    ],
+    "transmission": [
+      "e-CVT"
+    ],
+    "price": "\u20b924.97 Lakh"
+  },
+  {
+    "id": 15,
+    "brand": "MARUTI SUZUKI",
+    "model": "e Vitara",
+    "engine": "49 kWh / 61 kWh Electric Motor",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b913.49 Lakh*"
+  },
+  {
+    "id": 16,
+    "brand": "HYUNDAI",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 17,
+    "brand": "HYUNDAI",
+    "model": "Grand i10 NIOS",
+    "engine": "1.2L Kappa Petrol (1197 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.50 Lakh"
+  },
+  {
+    "id": 18,
+    "brand": "HYUNDAI",
+    "model": "Exter",
+    "engine": "1.2L Kappa Petrol (1197 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.73 Lakh"
+  },
+  {
+    "id": 19,
+    "brand": "HYUNDAI",
+    "model": "Aura",
+    "engine": "1.2L Kappa Petrol (1197 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b97.04 Lakh"
+  },
+  {
+    "id": 20,
+    "brand": "HYUNDAI",
+    "model": "i20",
+    "engine": "1.2L Kappa Petrol (1197 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "CVT (iVT)"
+    ],
+    "price": "\u20b96.94 Lakh"
+  },
+  {
+    "id": 21,
+    "brand": "HYUNDAI",
+    "model": "i20 N Line",
+    "engine": "1.0L Turbo GDi Petrol (998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT"
+    ],
+    "price": "\u20b910.56 Lakh"
+  },
+  {
+    "id": 22,
+    "brand": "HYUNDAI",
+    "model": "Venue",
+    "engine": "1.2L MPi Petrol, 1.0L Turbo GDi Petrol, 1.5L CRDi Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT",
+      "6MT",
+      "6iMT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b99.18 Lakh"
+  },
+  {
+    "id": 23,
+    "brand": "HYUNDAI",
+    "model": "Venue N Line",
+    "engine": "1.0L Turbo GDi Petrol",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT"
+    ],
+    "price": "\u20b912.48 Lakh"
+  },
+  {
+    "id": 24,
+    "brand": "HYUNDAI",
+    "model": "Verna",
+    "engine": "1.5L MPi Petrol, 1.5L Turbo GDi Petrol",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "iVT",
+      "6MT (Turbo)",
+      "7DCT"
+    ],
+    "price": "\u20b912.86 Lakh"
+  },
+  {
+    "id": 25,
+    "brand": "HYUNDAI",
+    "model": "Creta",
+    "engine": "1.5L MPi Petrol, 1.5L Turbo GDi Petrol, 1.5L CRDi Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "iVT",
+      "6MT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b912.76 Lakh"
+  },
+  {
+    "id": 26,
+    "brand": "HYUNDAI",
+    "model": "Creta N Line",
+    "engine": "1.5L Turbo GDi Petrol",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT"
+    ],
+    "price": "\u20b922.09 Lakh"
+  },
+  {
+    "id": 27,
+    "brand": "HYUNDAI",
+    "model": "Alcazar",
+    "engine": "1.5L Turbo GDi Petrol, 1.5L CRDi Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b916.80 Lakh"
+  },
+  {
+    "id": 28,
+    "brand": "HYUNDAI",
+    "model": "Creta Electric",
+    "engine": "42 kWh / 51.4 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Sing"
+    ],
+    "price": null
+  },
+  {
+    "id": 29,
+    "brand": "KIA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 30,
+    "brand": "KIA",
+    "model": "Sonet",
+    "engine": "1.2L SmartStream Petrol (1197 cc), 1.0L Turbo GDi Petrol (998 cc), 1.5L CRDi Diesel (1493 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT",
+      "6iMT",
+      "6MT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b97.41 Lakh"
+  },
+  {
+    "id": 31,
+    "brand": "KIA",
+    "model": "Syros",
+    "engine": "1.0L Turbo GDi Petrol (998 cc), 1.5L CRDi Diesel (1493 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b99.50 Lakh*"
+  },
+  {
+    "id": 32,
+    "brand": "KIA",
+    "model": "Syros EV",
+    "engine": "42 kWh / 51.4 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b913.49 Lakh"
+  },
+  {
+    "id": 33,
+    "brand": "KIA",
+    "model": "Seltos",
+    "engine": "1.5L SmartStream Petrol (1497 cc), 1.5L Turbo GDi Petrol (1482 cc), 1.5L CRDi Diesel (1493 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "iMT",
+      "CVT (IVT)",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b911.00 Lakh"
+  },
+  {
+    "id": 34,
+    "brand": "KIA",
+    "model": "Carens",
+    "engine": "1.5L NA Petrol, 1.5L Turbo Petrol, 1.5L Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6iMT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b911.02 Lakh"
+  },
+  {
+    "id": 35,
+    "brand": "KIA",
+    "model": "Carens Clavis",
+    "engine": "1.5L NA Petrol, 1.5L Turbo Petrol, 1.5L Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6iMT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b911.27 Lakh"
+  },
+  {
+    "id": 36,
+    "brand": "KIA",
+    "model": "Carens Clavis EV",
+    "engine": "42 kWh / 51.4 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b917.99 Lakh*"
+  },
+  {
+    "id": 37,
+    "brand": "KIA",
+    "model": "Carnival",
+    "engine": "2.2L CRDi Diesel (2151 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b963.91 Lakh"
+  },
+  {
+    "id": 38,
+    "brand": "KIA",
+    "model": "EV6",
+    "engine": "84 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (RWD/AWD)"
+    ],
+    "price": "\u20b965.97 Lakh"
+  },
+  {
+    "id": 39,
+    "brand": "KIA",
+    "model": "EV9",
+    "engine": "99.8 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic AWD"
+    ],
+    "price": "\u20b91.30 Crore"
+  },
+  {
+    "id": 40,
+    "brand": "MG",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 41,
+    "brand": "MG",
+    "model": "Comet EV",
+    "engine": "17.3 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b97.00 Lakh"
+  },
+  {
+    "id": 42,
+    "brand": "MG",
+    "model": "Windsor EV",
+    "engine": "38 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b914.10 Lakh"
+  },
+  {
+    "id": 43,
+    "brand": "MG",
+    "model": "Windsor EV Pro",
+    "engine": "52.9 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b918.10 Lakh"
+  },
+  {
+    "id": 44,
+    "brand": "MG",
+    "model": "ZS EV",
+    "engine": "50.3 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b915.50 Lakh"
+  },
+  {
+    "id": 45,
+    "brand": "MG",
+    "model": "Astor",
+    "engine": "1.5L VTi-TECH Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "CVT"
+    ],
+    "price": "\u20b911.00 Lakh"
+  },
+  {
+    "id": 46,
+    "brand": "MG",
+    "model": "Hector",
+    "engine": "1.5L Turbo Petrol (1451 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "CVT"
+    ],
+    "price": "\u20b911.99 Lakh"
+  },
+  {
+    "id": 47,
+    "brand": "MG",
+    "model": "Hector Plus",
+    "engine": "1.5L Turbo Petrol (1451 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "CVT"
+    ],
+    "price": "\u20b917.29 Lakh"
+  },
+  {
+    "id": 48,
+    "brand": "MG",
+    "model": "Gloster",
+    "engine": "2.0L Twin Turbo Diesel (1996 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b938.33 Lakh"
+  },
+  {
+    "id": 49,
+    "brand": "MG",
+    "model": "Majestor",
+    "engine": "2.0L Twin Turbo Diesel (1996 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b940.99 Lakh"
+  },
+  {
+    "id": 50,
+    "brand": "MG",
+    "model": "M9",
+    "engine": "90 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b969.90 Lakh*"
+  },
+  {
+    "id": 51,
+    "brand": "MG",
+    "model": "Cyberster",
+    "engine": "77 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b974.99 Lakh*"
+  },
+  {
+    "id": 52,
+    "brand": "MAHINDRA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 53,
+    "brand": "MAHINDRA",
+    "model": "XUV 3XO",
+    "engine": "1.2L mStallion TGDi Petrol (1197 cc), 1.2L TCMPFi Petrol (1197 cc), 1.5L mHawk Diesel (1497 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "AMT"
+    ],
+    "price": "\u20b97.79 Lakh"
+  },
+  {
+    "id": 54,
+    "brand": "MAHINDRA",
+    "model": "XUV 3XO EV",
+    "engine": "35 kWh / 45 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b913.89 Lakh"
+  },
+  {
+    "id": 55,
+    "brand": "MAHINDRA",
+    "model": "Bolero",
+    "engine": "1.5L mHawk Diesel (1493 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT"
+    ],
+    "price": "\u20b99.79 Lakh"
+  },
+  {
+    "id": 56,
+    "brand": "MAHINDRA",
+    "model": "Bolero Neo",
+    "engine": "1.5L mHawk Diesel (1493 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT"
+    ],
+    "price": "\u20b99.97 Lakh"
+  },
+  {
+    "id": 57,
+    "brand": "MAHINDRA",
+    "model": "Bolero Neo Plus",
+    "engine": "2.2L mHawk Diesel (2184 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT"
+    ],
+    "price": "\u20b911.72 Lakh"
+  },
+  {
+    "id": 58,
+    "brand": "MAHINDRA",
+    "model": "Thar",
+    "engine": "2.0L mStallion Turbo Petrol (1997 cc), 2.2L mHawk Diesel (2184 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b911.50 Lakh"
+  },
+  {
+    "id": 59,
+    "brand": "MAHINDRA",
+    "model": "Thar Roxx",
+    "engine": "2.0L mStallion Turbo Petrol, 2.2L mHawk Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b912.52 Lakh"
+  },
+  {
+    "id": 60,
+    "brand": "MAHINDRA",
+    "model": "Scorpio Classic",
+    "engine": "2.2L mHawk Diesel (2184 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT"
+    ],
+    "price": "\u20b913.77 Lakh"
+  },
+  {
+    "id": 61,
+    "brand": "MAHINDRA",
+    "model": "Scorpio N",
+    "engine": "2.0L mStallion Turbo Petrol, 2.2L mHawk Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "4WD"
+    ],
+    "price": "\u20b913.49 Lakh"
+  },
+  {
+    "id": 62,
+    "brand": "MAHINDRA",
+    "model": "XUV700",
+    "engine": "2.0L mStallion Turbo Petrol, 2.2L mHawk Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "AWD (Diesel AT)"
+    ],
+    "price": "\u20b914.49 Lakh"
+  },
+  {
+    "id": 63,
+    "brand": "MAHINDRA",
+    "model": "XUV 7XO",
+    "engine": "2.0L mStallion Turbo Petrol, 2.2L mHawk Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "AWD"
+    ],
+    "price": "\u20b913.99 Lakh"
+  },
+  {
+    "id": 64,
+    "brand": "MAHINDRA",
+    "model": "Marazzo",
+    "engine": "1.5L mHawk Diesel (1497 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT"
+    ],
+    "price": "\u20b914.06 Lakh"
+  },
+  {
+    "id": 65,
+    "brand": "MAHINDRA",
+    "model": "BE 6",
+    "engine": "59 kWh / 79 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b918.90 Lakh"
+  },
+  {
+    "id": 66,
+    "brand": "MAHINDRA",
+    "model": "XEV 9e",
+    "engine": "59 kWh / 79 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b921.90 Lakh"
+  },
+  {
+    "id": 67,
+    "brand": "TOYOTA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 68,
+    "brand": "TOYOTA",
+    "model": "Glanza",
+    "engine": "1.2L Petrol (1197 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.73 Lakh"
+  },
+  {
+    "id": 69,
+    "brand": "TOYOTA",
+    "model": "Urban Cruiser Taisor",
+    "engine": "1.2L Petrol (1197 cc), 1.0L Turbo Petrol (998 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT",
+      "5MT (Turbo)",
+      "6AT"
+    ],
+    "price": "\u20b97.74 Lakh"
+  },
+  {
+    "id": 70,
+    "brand": "TOYOTA",
+    "model": "Rumion",
+    "engine": "1.5L Petrol (1462 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b910.66 Lakh"
+  },
+  {
+    "id": 71,
+    "brand": "TOYOTA",
+    "model": "Urban Cruiser Hyryder",
+    "engine": "1.5L Smart Hybrid, 1.5L Strong Hybrid",
+    "fuel": [
+      "Petrol",
+      "Hybrid",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT",
+      "e-CVT",
+      "AWD AT"
+    ],
+    "price": "\u20b911.31 Lakh"
+  },
+  {
+    "id": 72,
+    "brand": "TOYOTA",
+    "model": "Hilux (2026)",
+    "engine": "2.8L GD Diesel (2755 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6AT (4x2 / 4x4)"
+    ],
+    "price": "\u20b931.99 Lakh"
+  },
+  {
+    "id": 73,
+    "brand": "TOYOTA",
+    "model": "Innova Crysta",
+    "engine": "2.4L GD Diesel (2393 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT"
+    ],
+    "price": "\u20b919.72 Lakh"
+  },
+  {
+    "id": 74,
+    "brand": "TOYOTA",
+    "model": "Innova Hycross",
+    "engine": "2.0L Petrol, 2.0L Strong Hybrid",
+    "fuel": [
+      "Petrol",
+      "Hybrid"
+    ],
+    "transmission": [
+      "CVT",
+      "e-CVT"
+    ],
+    "price": "\u20b918.70 Lakh"
+  },
+  {
+    "id": 75,
+    "brand": "TOYOTA",
+    "model": "Fortuner",
+    "engine": "2.7L Petrol (2694 cc), 2.8L GD Diesel (2755 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b934.76 Lakh"
+  },
+  {
+    "id": 76,
+    "brand": "TOYOTA",
+    "model": "Fortuner Legender",
+    "engine": "2.8L GD Diesel (2755 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6AT"
+    ],
+    "price": "\u20b944.11 Lakh"
+  },
+  {
+    "id": 77,
+    "brand": "TOYOTA",
+    "model": "Camry",
+    "engine": "2.5L Strong Hybrid (2487 cc)",
+    "fuel": [
+      "Hybrid"
+    ],
+    "transmission": [
+      "e-CVT"
+    ],
+    "price": "\u20b948.50 Lakh"
+  },
+  {
+    "id": 78,
+    "brand": "TOYOTA",
+    "model": "Vellfire",
+    "engine": "2.5L Strong Hybrid (2487 cc)",
+    "fuel": [
+      "Hybrid"
+    ],
+    "transmission": [
+      "e-CVT"
+    ],
+    "price": "\u20b91.22 Crore"
+  },
+  {
+    "id": 79,
+    "brand": "TOYOTA",
+    "model": "Land Cruiser 300",
+    "engine": "3.3L Twin-Turbo V6 Diesel (3346 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "10AT"
+    ],
+    "price": "\u20b92.31 Crore"
+  },
+  {
+    "id": 80,
+    "brand": "TATA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 81,
+    "brand": "TATA",
+    "model": "Tiago",
+    "engine": "1.2L Revotron Petrol (1199 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b95.64 Lakh"
+  },
+  {
+    "id": 82,
+    "brand": "TATA",
+    "model": "Tiago EV",
+    "engine": "19.2 kWh / 24 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b97.99 Lakh"
+  },
+  {
+    "id": 83,
+    "brand": "TATA",
+    "model": "Tigor",
+    "engine": "1.2L Revotron Petrol (1199 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.39 Lakh"
+  },
+  {
+    "id": 84,
+    "brand": "TATA",
+    "model": "Tigor EV",
+    "engine": "26 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b912.49 Lakh"
+  },
+  {
+    "id": 85,
+    "brand": "TATA",
+    "model": "Altroz",
+    "engine": "1.2L Petrol (1199 cc), 1.5L Diesel (1497 cc), 1.2L Turbo Petrol",
+    "fuel": [
+      "Petrol",
+      "Diesel",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "6MT",
+      "AMT",
+      "DCT"
+    ],
+    "price": "\u20b96.89 Lakh"
+  },
+  {
+    "id": 86,
+    "brand": "TATA",
+    "model": "Punch",
+    "engine": "1.2L Revotron Petrol (1199 cc), 1.2L Turbo Petrol",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b96.84 Lakh"
+  },
+  {
+    "id": 87,
+    "brand": "TATA",
+    "model": "Punch EV",
+    "engine": "25 kWh / 35 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b910.30 Lakh"
+  },
+  {
+    "id": 88,
+    "brand": "TATA",
+    "model": "Nexon",
+    "engine": "1.2L Turbo Petrol (1199 cc), 1.5L Diesel (1497 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel",
+      "CNG"
+    ],
+    "transmission": [
+      "6MT",
+      "AMT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b98.75 Lakh"
+  },
+  {
+    "id": 89,
+    "brand": "TATA",
+    "model": "Nexon EV",
+    "engine": "30 kWh / 45 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b912.49 Lakh"
+  },
+  {
+    "id": 90,
+    "brand": "TATA",
+    "model": "Curvv",
+    "engine": "1.2L Hyperion Turbo Petrol (1199 cc), 1.5L Kryojet Diesel (1497 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT"
+    ],
+    "price": "\u20b99.76 Lakh"
+  },
+  {
+    "id": 91,
+    "brand": "TATA",
+    "model": "Curvv EV",
+    "engine": "45 kWh / 55 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b917.49 Lakh"
+  },
+  {
+    "id": 92,
+    "brand": "TATA",
+    "model": "Sierra",
+    "engine": "1.5L Turbo Petrol, 2.0L Kryotec Diesel",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT",
+      "6AT"
+    ],
+    "price": "\u20b913.60 Lakh"
+  },
+  {
+    "id": 93,
+    "brand": "TATA",
+    "model": "Sierra EV",
+    "engine": "63 kWh / 75 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (RWD/AWD)"
+    ],
+    "price": "\u20b918.79 Lakh"
+  },
+  {
+    "id": 94,
+    "brand": "TATA",
+    "model": "Harrier",
+    "engine": "2.0L Kryotec Diesel (1956 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b915.49 Lakh"
+  },
+  {
+    "id": 95,
+    "brand": "TATA",
+    "model": "Harrier EV",
+    "engine": "65 kWh / 75 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (RWD/AWD)"
+    ],
+    "price": "\u20b921.49 Lakh"
+  },
+  {
+    "id": 96,
+    "brand": "TATA",
+    "model": "Safari",
+    "engine": "2.0L Kryotec Diesel (1956 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b916.99 Lakh"
+  },
+  {
+    "id": 97,
+    "brand": "SKODA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 98,
+    "brand": "SKODA",
+    "model": "Kylaq",
+    "engine": "1.0L TSI Turbo Petrol (999 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT"
+    ],
+    "price": "\u20b98.54 Lakh"
+  },
+  {
+    "id": 99,
+    "brand": "SKODA",
+    "model": "Kushaq",
+    "engine": "1.0L TSI Turbo Petrol (999 cc), 1.5L TSI Turbo Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "7DSG"
+    ],
+    "price": "\u20b910.69 Lakh"
+  },
+  {
+    "id": 100,
+    "brand": "SKODA",
+    "model": "Slavia",
+    "engine": "1.0L TSI Turbo Petrol (999 cc), 1.5L TSI Turbo Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "7DSG"
+    ],
+    "price": "\u20b910.00 Lakh"
+  },
+  {
+    "id": 101,
+    "brand": "SKODA",
+    "model": "Kodiaq",
+    "engine": "2.0L TSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7DSG AWD"
+    ],
+    "price": "\u20b936.99 Lakh"
+  },
+  {
+    "id": 102,
+    "brand": "SKODA",
+    "model": "Kodiaq RS",
+    "engine": "2.0L TSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7DSG AWD"
+    ],
+    "price": "\u20b966.99 Lakh"
+  },
+  {
+    "id": 103,
+    "brand": "NISSAN",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 104,
+    "brand": "NISSAN",
+    "model": "Magnite",
+    "engine": "1.0L NA Petrol (999 cc), 1.0L Turbo Petrol (999 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG*"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT",
+      "CVT"
+    ],
+    "price": "\u20b95.65 Lakh"
+  },
+  {
+    "id": 105,
+    "brand": "NISSAN",
+    "model": "Gravite",
+    "engine": "1.0L NA Petrol (999 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b95.73 Lakh"
+  },
+  {
+    "id": 106,
+    "brand": "NISSAN",
+    "model": "Tekton",
+    "engine": "1.0L Turbo Petrol (999 cc), 1.3L Turbo Petrol (1332 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT"
+    ],
+    "price": "\u20b910.49 Lakh"
+  },
+  {
+    "id": 107,
+    "brand": "NISSAN",
+    "model": "X-Trail",
+    "engine": "1.5L VC-Turbo Petrol + Mild Hybrid (1498 cc)",
+    "fuel": [
+      "Petrol (Mild Hybrid)"
+    ],
+    "transmission": [
+      "CVT (X-Tronic)"
+    ],
+    "price": "\u20b948.20 Lakh"
+  },
+  {
+    "id": 108,
+    "brand": "RENAULT",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 109,
+    "brand": "RENAULT",
+    "model": "Kwid",
+    "engine": "1.0L SCe Petrol (999 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b94.53 Lakh"
+  },
+  {
+    "id": 110,
+    "brand": "RENAULT",
+    "model": "Kiger",
+    "engine": "1.0L Energy Petrol (999 cc), 1.0L Turbo Petrol (999 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG*"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT",
+      "CVT"
+    ],
+    "price": "\u20b95.81 Lakh"
+  },
+  {
+    "id": 111,
+    "brand": "RENAULT",
+    "model": "Triber",
+    "engine": "1.0L Energy Petrol (999 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG*"
+    ],
+    "transmission": [
+      "5MT",
+      "AMT"
+    ],
+    "price": "\u20b95.81 Lakh"
+  },
+  {
+    "id": 112,
+    "brand": "RENAULT",
+    "model": "Duster",
+    "engine": "1.3L Turbo Petrol (1332 cc), 1.8L Strong Hybrid Petrol",
+    "fuel": [
+      "Petrol",
+      "Strong Hybrid"
+    ],
+    "transmission": [
+      "6MT",
+      "7DCT",
+      "e-CVT"
+    ],
+    "price": "\u20b910.49 Lakh"
+  },
+  {
+    "id": 113,
+    "brand": "RENAULT",
+    "model": "Boreal (Bigster)",
+    "engine": "1.3L Turbo Petrol (1332 cc), 1.8L Strong Hybrid Petrol**",
+    "fuel": [
+      "Petrol",
+      "Strong Hybrid"
+    ],
+    "transmission": [
+      "7DCT",
+      "e-CVT"
+    ],
+    "price": "\u20b913.00 Lakh (Expected)"
+  },
+  {
+    "id": 114,
+    "brand": "JEEP",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 115,
+    "brand": "JEEP",
+    "model": "Compass",
+    "engine": "2.0L Multijet II Turbo Diesel (1956 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "9AT"
+    ],
+    "price": "\u20b917.99 Lakh"
+  },
+  {
+    "id": 116,
+    "brand": "JEEP",
+    "model": "Meridian",
+    "engine": "2.0L Multijet II Turbo Diesel (1956 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "6MT",
+      "9AT",
+      "4x4 AT"
+    ],
+    "price": "\u20b930.45 Lakh"
+  },
+  {
+    "id": 117,
+    "brand": "JEEP",
+    "model": "Wrangler",
+    "engine": "2.0L Turbo Petrol (1995 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "4x4"
+    ],
+    "price": "\u20b964.58 Lakh"
+  },
+  {
+    "id": 118,
+    "brand": "JEEP",
+    "model": "Grand Cherokee",
+    "engine": "2.0L Turbo Petrol (1995 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "AWD"
+    ],
+    "price": "\u20b963.00 Lakh"
+  },
+  {
+    "id": 119,
+    "brand": "HONDA",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 120,
+    "brand": "HONDA",
+    "model": "Amaze 2nd Gen",
+    "engine": "1.2L i-VTEC Petrol (1199 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT"
+    ],
+    "price": "\u20b97.00 Lakh"
+  },
+  {
+    "id": 121,
+    "brand": "HONDA",
+    "model": "Amaze",
+    "engine": "1.2L i-VTEC Petrol (1199 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "CVT"
+    ],
+    "price": "\u20b97.55 Lakh"
+  },
+  {
+    "id": 122,
+    "brand": "HONDA",
+    "model": "Elevate",
+    "engine": "1.5L i-VTEC Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "CVT"
+    ],
+    "price": "\u20b911.64 Lakh"
+  },
+  {
+    "id": 123,
+    "brand": "HONDA",
+    "model": "City",
+    "engine": "1.5L i-VTEC Petrol (1498 cc), 1.5L e:HEV Strong Hybrid",
+    "fuel": [
+      "Petrol",
+      "Hybrid"
+    ],
+    "transmission": [
+      "6MT",
+      "CVT",
+      "e-CVT"
+    ],
+    "price": "\u20b912.04 Lakh"
+  },
+  {
+    "id": 124,
+    "brand": "HONDA",
+    "model": "ZR-V",
+    "engine": "2.0L e:HEV Strong Hybrid (1993 cc)",
+    "fuel": [
+      "Strong Hybrid"
+    ],
+    "transmission": [
+      "e-CVT"
+    ],
+    "price": "\u20b947.99 Lakh"
+  },
+  {
+    "id": 125,
+    "brand": "VOLKSWAGEN",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 126,
+    "brand": "VOLKSWAGEN",
+    "model": "Virtus",
+    "engine": "1.0L TSI Turbo Petrol (999 cc), 1.5L TSI EVO Turbo Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "7DSG"
+    ],
+    "price": "\u20b910.71 Lakh"
+  },
+  {
+    "id": 127,
+    "brand": "VOLKSWAGEN",
+    "model": "Taigun",
+    "engine": "1.0L TSI Turbo Petrol (999 cc), 1.5L TSI EVO Turbo Petrol (1498 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "6MT",
+      "6AT",
+      "7DSG"
+    ],
+    "price": "\u20b910.99 Lakh"
+  },
+  {
+    "id": 128,
+    "brand": "VOLKSWAGEN",
+    "model": "Tayron Life",
+    "engine": "2.0L TSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7DSG",
+      "AWD"
+    ],
+    "price": "\u20b941.99 Lakh"
+  },
+  {
+    "id": 129,
+    "brand": "VOLKSWAGEN",
+    "model": "Tiguan R-Line",
+    "engine": "2.0L TSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7DSG",
+      "AWD"
+    ],
+    "price": "\u20b947.11 Lakh"
+  },
+  {
+    "id": 130,
+    "brand": "VOLKSWAGEN",
+    "model": "Golf GTI",
+    "engine": "2.0L TSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7DSG"
+    ],
+    "price": "\u20b950.91 Lakh"
+  },
+  {
+    "id": 131,
+    "brand": "CITROEN",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 132,
+    "brand": "CITROEN",
+    "model": "C3",
+    "engine": "1.2L PureTech Petrol (1199 cc), 1.2L Turbo Petrol (1199 cc)",
+    "fuel": [
+      "Petrol",
+      "CNG*"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b94.99 Lakh"
+  },
+  {
+    "id": 133,
+    "brand": "CITROEN",
+    "model": "Basalt",
+    "engine": "1.2L PureTech Petrol (1199 cc), 1.2L Turbo Petrol (1199 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b98.55 Lakh"
+  },
+  {
+    "id": 134,
+    "brand": "CITROEN",
+    "model": "Aircross",
+    "engine": "1.2L PureTech Petrol (1199 cc), 1.2L Turbo Petrol (1199 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "5MT",
+      "6AT"
+    ],
+    "price": "\u20b98.89 Lakh"
+  },
+  {
+    "id": 135,
+    "brand": "CITROEN",
+    "model": "\u00eb-C3",
+    "engine": "29.2 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b911.99 Lakh"
+  },
+  {
+    "id": 136,
+    "brand": "CITROEN",
+    "model": "C5 Aircross",
+    "engine": "2.0L Turbo Diesel (1997 cc)",
+    "fuel": [
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b937.32 Lakh"
+  },
+  {
+    "id": 137,
+    "brand": "MERCEDES BENZ",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 138,
+    "brand": "MERCEDES BENZ",
+    "model": "A-Class Limousine",
+    "engine": "1.3L Turbo Petrol (1332 cc), 2.0L Diesel (1950 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "7DCT",
+      "8AT"
+    ],
+    "price": "\u20b947.90 Lakh"
+  },
+  {
+    "id": 139,
+    "brand": "MERCEDES BENZ",
+    "model": "GLA",
+    "engine": "1.3L Turbo Petrol (1332 cc), 2.0L Diesel (1950 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "7DCT",
+      "8AT"
+    ],
+    "price": "\u20b951.80 Lakh"
+  },
+  {
+    "id": 140,
+    "brand": "MERCEDES BENZ",
+    "model": "C-Class",
+    "engine": "2.0L Turbo Petrol (1999 cc), 2.0L Diesel (1993 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "9G-TRONIC AT"
+    ],
+    "price": "\u20b959.90 Lakh"
+  },
+  {
+    "id": 141,
+    "brand": "MERCEDES BENZ",
+    "model": "GLC",
+    "engine": "2.0L Turbo Petrol (1999 cc), 2.0L Diesel (1993 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "9G-TRONIC AT",
+      "AWD"
+    ],
+    "price": "\u20b977.00 Lakh"
+  },
+  {
+    "id": 142,
+    "brand": "MERCEDES BENZ",
+    "model": "E-Class LWB",
+    "engine": "2.0L Turbo Petrol (1999 cc), 2.0L Diesel (1993 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "9G-TRONIC AT"
+    ],
+    "price": "\u20b980.00 Lakh"
+  },
+  {
+    "id": 143,
+    "brand": "MERCEDES BENZ",
+    "model": "CLE Cabriolet",
+    "engine": "2.0L Turbo Petrol (1999 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "9G-TRONIC AT"
+    ],
+    "price": "\u20b91.15 Crore"
+  },
+  {
+    "id": 144,
+    "brand": "MERCEDES BENZ",
+    "model": "GLE",
+    "engine": "2.0L Diesel (1993 cc), 3.0L Petrol (2999 cc)",
+    "fuel": [
+      "Diesel",
+      "Petrol"
+    ],
+    "transmission": [
+      "9G-TRONIC AT",
+      "AWD"
+    ],
+    "price": "\u20b91.00 Crore"
+  },
+  {
+    "id": 145,
+    "brand": "MERCEDES BENZ",
+    "model": "GLS",
+    "engine": "3.0L Petrol (2999 cc), 3.0L Diesel (2989 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "9G-TRONIC AT",
+      "AWD"
+    ],
+    "price": "\u20b91.32 Crore"
+  },
+  {
+    "id": 146,
+    "brand": "MERCEDES BENZ",
+    "model": "S-Class",
+    "engine": "3.0L Mild Hybrid Petrol (2999 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "9G-TRONIC AT"
+    ],
+    "price": "\u20b92.20 Crore"
+  },
+  {
+    "id": 147,
+    "brand": "MERCEDES BENZ",
+    "model": "EQA",
+    "engine": "70.5 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b967.20 Lakh"
+  },
+  {
+    "id": 148,
+    "brand": "MERCEDES BENZ",
+    "model": "EQB",
+    "engine": "70.5 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b972.20 Lakh"
+  },
+  {
+    "id": 149,
+    "brand": "MERCEDES BENZ",
+    "model": "EQE SUV",
+    "engine": "96 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b91.41 Crore"
+  },
+  {
+    "id": 150,
+    "brand": "MERCEDES BENZ",
+    "model": "EQS",
+    "engine": "118 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b91.30 Crore"
+  },
+  {
+    "id": 151,
+    "brand": "MERCEDES BENZ",
+    "model": "EQS SUV",
+    "engine": "122 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b91.34 Crore"
+  },
+  {
+    "id": 152,
+    "brand": "MERCEDES BENZ",
+    "model": "G 580 with EQ Technology",
+    "engine": "116 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b93.10 Crore"
+  },
+  {
+    "id": 153,
+    "brand": "BMW",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 154,
+    "brand": "BMW",
+    "model": "2 Series Gran Coupe",
+    "engine": "1.5L Turbo Petrol (1499 cc), 2.0L Diesel (1995 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "7DCT"
+    ],
+    "price": "\u20b945.80 Lakh"
+  },
+  {
+    "id": 155,
+    "brand": "BMW",
+    "model": "X1",
+    "engine": "1.5L Turbo Petrol (1499 cc), 2.0L Diesel (1995 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "7DCT"
+    ],
+    "price": "\u20b950.90 Lakh"
+  },
+  {
+    "id": 156,
+    "brand": "BMW",
+    "model": "iX1 LWB",
+    "engine": "Electric Motor (66.4 kWh Battery)",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b951.40 Lakh"
+  },
+  {
+    "id": 157,
+    "brand": "BMW",
+    "model": "3 Series LWB",
+    "engine": "2.0L Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b960.55 Lakh"
+  },
+  {
+    "id": 158,
+    "brand": "BMW",
+    "model": "X3",
+    "engine": "2.0L Turbo Petrol (1998 cc), 2.0L Diesel (1995 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b969.90 Lakh"
+  },
+  {
+    "id": 159,
+    "brand": "BMW",
+    "model": "M340i xDrive",
+    "engine": "3.0L TwinPower Turbo Petrol (2998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b972.75 Lakh"
+  },
+  {
+    "id": 160,
+    "brand": "BMW",
+    "model": "5 Series",
+    "engine": "2.0L Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b972.35 Lakh"
+  },
+  {
+    "id": 161,
+    "brand": "BMW",
+    "model": "X5",
+    "engine": "3.0L Turbo Petrol (2998 cc), 3.0L Diesel (2993 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b996.90 Lakh"
+  },
+  {
+    "id": 162,
+    "brand": "BMW",
+    "model": "Z4 M40i",
+    "engine": "3.0L TwinPower Turbo Petrol (2998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b990.50 Lakh"
+  },
+  {
+    "id": 163,
+    "brand": "BMW",
+    "model": "M2",
+    "engine": "3.0L Twin-Turbo Petrol (2993 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b91.00 Crore"
+  },
+  {
+    "id": 164,
+    "brand": "BMW",
+    "model": "X6 M60i",
+    "engine": "4.4L Twin-Turbo V8 Mild Hybrid (4395 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b91.78 Crore"
+  },
+  {
+    "id": 165,
+    "brand": "BMW",
+    "model": "X7",
+    "engine": "3.0L Mild Hybrid Petrol (2998 cc), 3.0L Mild Hybrid Diesel (2993 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b91.26 Crore"
+  },
+  {
+    "id": 166,
+    "brand": "BMW",
+    "model": "M4 Competition",
+    "engine": "3.0L Twin-Turbo Petrol (2993 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b91.55 Crore"
+  },
+  {
+    "id": 167,
+    "brand": "BMW",
+    "model": "7 Series",
+    "engine": "3.0L Turbo Petrol Mild Hybrid (2998 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8AT"
+    ],
+    "price": "\u20b91.84 Crore"
+  },
+  {
+    "id": 168,
+    "brand": "BMW",
+    "model": "i5",
+    "engine": "Electric Motor (81.2 kWh Battery)",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b91.20 Crore"
+  },
+  {
+    "id": 169,
+    "brand": "BMW",
+    "model": "i7",
+    "engine": "Electric Motor (101.7 kWh Battery)",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b92.05 Crore"
+  },
+  {
+    "id": 170,
+    "brand": "BMW",
+    "model": "XM",
+    "engine": "4.4L Twin-Turbo V8 Plug-in Hybrid (4395 cc)",
+    "fuel": [
+      "Plug-in Hybrid (PHEV)"
+    ],
+    "transmission": [
+      "8AT",
+      "xDrive AWD"
+    ],
+    "price": "\u20b92.55 Crore"
+  },
+  {
+    "id": 171,
+    "brand": "AUDI",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 172,
+    "brand": "AUDI",
+    "model": "Q3",
+    "engine": "2.0L TFSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed S tronic DCT",
+      "quattro AWD"
+    ],
+    "price": "\u20b945.24 Lakh"
+  },
+  {
+    "id": 173,
+    "brand": "AUDI",
+    "model": "Q3 Sportback",
+    "engine": "2.0L TFSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed S tronic DCT",
+      "quattro AWD"
+    ],
+    "price": "\u20b956.24 Lakh"
+  },
+  {
+    "id": 174,
+    "brand": "AUDI",
+    "model": "A4",
+    "engine": "2.0L TFSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed S tronic DCT"
+    ],
+    "price": "\u20b947.93 Lakh"
+  },
+  {
+    "id": 175,
+    "brand": "AUDI",
+    "model": "A6",
+    "engine": "2.0L TFSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed S tronic DCT"
+    ],
+    "price": "\u20b966.05 Lakh"
+  },
+  {
+    "id": 176,
+    "brand": "AUDI",
+    "model": "Q5",
+    "engine": "2.0L TFSI Turbo Petrol (1984 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed S tronic DCT",
+      "quattro AWD"
+    ],
+    "price": "\u20b966.99 Lakh"
+  },
+  {
+    "id": 177,
+    "brand": "AUDI",
+    "model": "Q7",
+    "engine": "3.0L V6 TFSI Mild Hybrid Petrol (2995 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Tiptronic AT",
+      "quattro AWD"
+    ],
+    "price": "\u20b991.81 Lakh"
+  },
+  {
+    "id": 178,
+    "brand": "AUDI",
+    "model": "Q8",
+    "engine": "3.0L V6 TFSI Mild Hybrid Petrol (2995 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Tiptronic AT",
+      "quattro AWD"
+    ],
+    "price": "\u20b91.18 Crore"
+  },
+  {
+    "id": 179,
+    "brand": "AUDI",
+    "model": "A8 L",
+    "engine": "3.0L V6 TFSI Mild Hybrid Petrol (2995 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Tiptronic AT",
+      "quattro AWD"
+    ],
+    "price": "\u20b91.36 Crore"
+  },
+  {
+    "id": 180,
+    "brand": "AUDI",
+    "model": "RS Q8 Performance",
+    "engine": "4.0L Twin-Turbo V8 Mild Hybrid (3996 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Tiptronic AT",
+      "quattro AWD"
+    ],
+    "price": "\u20b92.49 Crore"
+  },
+  {
+    "id": 181,
+    "brand": "AUDI",
+    "model": "e-tron GT",
+    "engine": "97 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic",
+      "quattro AWD"
+    ],
+    "price": "\u20b91.72 Crore"
+  },
+  {
+    "id": 182,
+    "brand": "AUDI",
+    "model": "RS e-tron GT",
+    "engine": "97 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic",
+      "quattro AWD"
+    ],
+    "price": "\u20b92.05 Crore"
+  },
+  {
+    "id": 183,
+    "brand": "AUDI",
+    "model": "Q6 e-tron",
+    "engine": "100 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic",
+      "quattro AWD"
+    ],
+    "price": "\u20b91.05 Crore"
+  },
+  {
+    "id": 184,
+    "brand": "AUDI",
+    "model": "Q8 e-tron",
+    "engine": "114 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic",
+      "quattro AWD"
+    ],
+    "price": "\u20b91.18 Crore"
+  },
+  {
+    "id": 185,
+    "brand": "VOLVO",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 186,
+    "brand": "VOLVO",
+    "model": "EX30",
+    "engine": "69 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (RWD)"
+    ],
+    "price": "\u20b941.00 Lakh"
+  },
+  {
+    "id": 187,
+    "brand": "VOLVO",
+    "model": "EX40",
+    "engine": "69 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (RWD)"
+    ],
+    "price": "\u20b949.00 Lakh"
+  },
+  {
+    "id": 188,
+    "brand": "VOLVO",
+    "model": "EC40",
+    "engine": "78 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b959.00 Lakh"
+  },
+  {
+    "id": 189,
+    "brand": "VOLVO",
+    "model": "XC60",
+    "engine": "2.0L Turbo Petrol Mild Hybrid (1969 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Automatic",
+      "AWD"
+    ],
+    "price": "\u20b969.60 Lakh"
+  },
+  {
+    "id": 190,
+    "brand": "VOLVO",
+    "model": "XC90",
+    "engine": "2.0L Turbo Petrol Mild Hybrid (1969 cc)",
+    "fuel": [
+      "Mild Hybrid Petrol"
+    ],
+    "transmission": [
+      "8-Speed Automatic",
+      "AWD"
+    ],
+    "price": "\u20b998.80 Lakh"
+  },
+  {
+    "id": 191,
+    "brand": "VOLVO",
+    "model": "EX90*",
+    "engine": "111 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic (AWD)"
+    ],
+    "price": "\u20b91.00 Crore (Expected)"
+  },
+  {
+    "id": 192,
+    "brand": "LAND ROVER",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 193,
+    "brand": "LAND ROVER",
+    "model": "Range Rover Evoque",
+    "engine": "2.0L Ingenium Turbo Petrol (1997 cc), 2.0L Ingenium Diesel Mild Hybrid (1998 cc)",
+    "fuel": [
+      "Petrol",
+      "Mild Hybrid Diesel"
+    ],
+    "transmission": [
+      "9AT",
+      "AWD"
+    ],
+    "price": "\u20b971.10 Lakh"
+  },
+  {
+    "id": 194,
+    "brand": "LAND ROVER",
+    "model": "Discovery Sport",
+    "engine": "2.0L Ingenium Turbo Petrol (1997 cc), 2.0L Ingenium Diesel (1998 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "9AT",
+      "AWD"
+    ],
+    "price": "\u20b969.48 Lakh"
+  },
+  {
+    "id": 195,
+    "brand": "LAND ROVER",
+    "model": "Range Rover Velar",
+    "engine": "2.0L Ingenium Turbo Petrol (1997 cc), 2.0L Ingenium Diesel (1997 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "AWD"
+    ],
+    "price": "\u20b995.97 Lakh"
+  },
+  {
+    "id": 196,
+    "brand": "LAND ROVER",
+    "model": "Defender",
+    "engine": "2.0L Turbo Petrol, 3.0L Mild Hybrid Petrol, 3.0L Mild Hybrid Diesel, 5.0L Supercharged V8",
+    "fuel": [
+      "Petrol",
+      "Mild Hybrid Petrol",
+      "Mild Hybrid Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "4WD"
+    ],
+    "price": "\u20b91.17 Crore"
+  },
+  {
+    "id": 197,
+    "brand": "LAND ROVER",
+    "model": "Discovery",
+    "engine": "3.0L Ingenium Mild Hybrid Diesel (2997 cc)",
+    "fuel": [
+      "Mild Hybrid Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "AWD"
+    ],
+    "price": "\u20b91.38 Crore"
+  },
+  {
+    "id": 198,
+    "brand": "LAND ROVER",
+    "model": "Range Rover Sport",
+    "engine": "3.0L Mild Hybrid Petrol, 3.0L Mild Hybrid Diesel",
+    "fuel": [
+      "Mild Hybrid Petrol",
+      "Mild Hybrid Diesel"
+    ],
+    "transmission": [
+      "8AT",
+      "AWD"
+    ],
+    "price": "\u20b91.56 Crore"
+  },
+  {
+    "id": 199,
+    "brand": "LAND ROVER",
+    "model": "Range Rover",
+    "engine": "3.0L Mild Hybrid Petrol, 3.0L Mild Hybrid Diesel, 4.4L V8 Petrol",
+    "fuel": [
+      "Mild Hybrid Petrol",
+      "Mild Hybrid Diesel",
+      "Petrol"
+    ],
+    "transmission": [
+      "8AT",
+      "AWD"
+    ],
+    "price": "\u20b92.62 Crore"
+  },
+  {
+    "id": 200,
+    "brand": "JAGUAR",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 201,
+    "brand": "JAGUAR",
+    "model": "F-PACE R-Dynamic S",
+    "engine": "2.0L Ingenium Turbo Petrol (1997 cc), 2.0L Ingenium Diesel (1997 cc)",
+    "fuel": [
+      "Petrol",
+      "Diesel"
+    ],
+    "transmission": [
+      "8-Speed Automatic",
+      "AWD"
+    ],
+    "price": "\u20b968.96 Lakh"
+  },
+  {
+    "id": 202,
+    "brand": "MINI",
+    "model": "Model",
+    "engine": "Engine Size & Options",
+    "fuel": [
+      "Fuel Options"
+    ],
+    "transmission": [
+      "Transmission Options"
+    ],
+    "price": "Ex-Showroom Starts From"
+  },
+  {
+    "id": 203,
+    "brand": "MINI",
+    "model": "Cooper S (3-Door)",
+    "engine": "2.0L TwinPower Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed DCT"
+    ],
+    "price": "\u20b953.03 Lakh"
+  },
+  {
+    "id": 204,
+    "brand": "MINI",
+    "model": "Cooper Convertible",
+    "engine": "2.0L TwinPower Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed DCT"
+    ],
+    "price": "\u20b959.00 Lakh"
+  },
+  {
+    "id": 205,
+    "brand": "MINI",
+    "model": "Cooper Convertible Stardust Edition",
+    "engine": "2.0L TwinPower Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed DCT"
+    ],
+    "price": "\u20b962.90 Lakh"
+  },
+  {
+    "id": 206,
+    "brand": "MINI",
+    "model": "Countryman C",
+    "engine": "1.5L TwinPower Turbo Petrol (1499 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed DCT"
+    ],
+    "price": "\u20b947.50 Lakh"
+  },
+  {
+    "id": 207,
+    "brand": "MINI",
+    "model": "Countryman Electric",
+    "engine": "66.5 kWh Battery",
+    "fuel": [
+      "Electric"
+    ],
+    "transmission": [
+      "Single-Speed Automatic"
+    ],
+    "price": "\u20b954.90 Lakh"
+  },
+  {
+    "id": 208,
+    "brand": "MINI",
+    "model": "JCW Countryman ALL4",
+    "engine": "2.0L TwinPower Turbo Petrol (1998 cc)",
+    "fuel": [
+      "Petrol"
+    ],
+    "transmission": [
+      "7-Speed DCT",
+      "AWD"
+    ],
+    "price": "\u20b966.15 Lakh"
+  }
+]

@@ -121,3 +121,24 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   cursor: pointer;
 }
+/* ===========================
+   Bank Marquee
+=========================== */
+
+@keyframes bank-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bank-marquee {
+  animation: bank-marquee 30s linear infinite;
+}
+
+.bank-marquee:hover {
+  animation-play-state: paused;
+}
