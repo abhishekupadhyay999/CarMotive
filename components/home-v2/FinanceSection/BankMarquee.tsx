@@ -79,7 +79,7 @@ export default function BankMarquee() {
                 alt={logo.alt}
                 width={160}
                 height={70}
-                className="h-12 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:scale-110 hover:grayscale-0 hover:opacity-100"
+                className="object-contain transition duration-300 hover:scale-110"
               />
             </div>
           ))}

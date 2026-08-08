@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import BankMarquee from "./BankMarquee";
 import EMIcalculator from "./EMICalculator";
 
@@ -15,7 +16,7 @@ export default function FinanceSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(229,9,20,0.18),transparent_40%)]" />
         <div className="absolute -left-32 top-0 h-[380px] w-[380px] rounded-full bg-red-600/10 blur-[140px]" />
         <div className="absolute -right-32 bottom-0 h-[500px] w-[500px] rounded-full bg-red-600/10 blur-[150px]" />
-    </div>
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
@@ -31,13 +32,14 @@ export default function FinanceSection() {
           </span>
 
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-            Finance Your Dream Car
+            Flexible Car Finance Solutions
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
             Compare loan offers from India's leading banks and NBFCs.
-            Calculate your monthly EMI instantly and let our finance
-            experts help you choose the perfect loan for your budget.
+            Calculate your monthly EMI instantly and connect with our
+            finance experts to find the right loan with competitive
+            interest rates and flexible repayment options.
           </p>
         </motion.div>
 
@@ -63,19 +65,19 @@ export default function FinanceSection() {
               We partner with India's most trusted banks and NBFCs to
               provide competitive interest rates, quick approvals,
               flexible repayment options and hassle-free documentation,
-              making your luxury car ownership journey smooth.
+              making your car ownership journey smooth and stress-free.
             </p>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
               {[
-                "150+ Banking Partners",
+                "20+ Banking Partners",
                 "Lowest Interest Rates",
                 "Approval in 24 Hours",
                 "Minimal Documentation",
               ].map((item) => (
                 <motion.div
-                  whileHover={{ y: -6 }}
                   key={item}
+                  whileHover={{ y: -6 }}
                   className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:border-red-500/50 hover:bg-white/10"
                 >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-xl font-bold text-white shadow-lg shadow-red-600/30">
@@ -89,18 +91,26 @@ export default function FinanceSection() {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-full bg-[#E50914] px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-red-700">
-                Apply for Loan
-              </button>
-
-              <button className="rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-md transition duration-300 hover:border-red-500 hover:text-red-400">
+            {/* CTA */}
+            <div className="mt-10">
+              <a
+                href="https://wa.me/+91 98881 97553
+?text=Hi%20Carmotive,%20I'm%20interested%20in%20car%20finance.%20Please%20help%20me%20choose%20the%20best%20loan%20option."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-full bg-[#E50914] px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-red-700 hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]"
+              >
                 Talk to Finance Expert
-              </button>
+
+                <ArrowRight
+                  size={20}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </a>
             </div>
           </motion.div>
 
-          {/* Right */}
+          {/* Right Side */}
           <EMIcalculator />
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { Phone, Mail, MapPin, Clock3 } from "lucide-react";
 import { SITE } from "@/lib/site";
-
 export default function TopBar() {
   return (
     <div className="hidden lg:block border-b border-white/10 bg-black/40 backdrop-blur-md">

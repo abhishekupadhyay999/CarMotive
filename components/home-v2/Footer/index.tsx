@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import {
@@ -8,7 +9,6 @@ import {
   Mail,
   MapPin,
   Clock,
-  CarFront,
 } from "lucide-react";
 
 import {
@@ -47,35 +47,35 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-black text-white">      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#E5091415,transparent_40%)]" />
+    <footer className="relative overflow-hidden bg-[#050505] text-white">
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#151515_0%,#050505_65%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        {/* ================= COMPANY / LINKS / SERVICES ================= */}
 
         <div className="grid gap-14 lg:grid-cols-3">
-
-          {/* ================= Company ================= */}
-
+          {/* Company */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#E50914]">
-                <CarFront className="h-7 w-7 text-white" />
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold">
-                  Carmotive India
-                </h2>
-
-                <p className="text-sm text-gray-400">
-                  Premium Multi-Brand Car Dealer
-                </p>
-              </div>
-            </div>
+            {/* Logo */}
+            <Link
+              href="#home"
+              className="mb-6 inline-flex items-center"
+            >
+              <Image
+                src="/logo/logo3.png"
+                alt="Carmotive India"
+                width={220}
+                height={70}
+                className="h-auto w-[200px] object-contain"
+                priority
+              />
+            </Link>
 
             <p className="leading-8 text-gray-400">
               Carmotive India is one of Mumbai's trusted destinations
@@ -85,8 +85,7 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          {/* ================= Quick Links ================= */}
-
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,24 +100,19 @@ export default function Footer() {
             </h3>
 
             <div className="grid gap-4">
-
               {quickLinks.map((item) => (
-
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="transition-all duration-300 hover:translate-x-2 hover:text-[#E50914]"
+                  className="text-gray-300 transition-all duration-300 hover:translate-x-2 hover:text-[#E50914]"
                 >
                   {item.name}
                 </Link>
-
               ))}
-
             </div>
           </motion.div>
 
-          {/* ================= Services ================= */}
-
+          {/* Services */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,27 +127,22 @@ export default function Footer() {
             </h3>
 
             <div className="grid gap-4">
-
               {services.map((service) => (
-
                 <p
                   key={service}
                   className="text-gray-400 transition-all duration-300 hover:translate-x-2 hover:text-[#E50914]"
                 >
                   {service}
                 </p>
-
               ))}
-
             </div>
           </motion.div>
+        </div>
 
-        </div>        {/* ================= Contact & Map ================= */}
+        {/* ================= CONTACT & MAP ================= */}
 
         <div className="mt-20 grid gap-12 lg:grid-cols-2">
-
           {/* Contact */}
-
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -165,9 +154,12 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-6">
-
+              {/* Phone */}
               <div className="flex items-start gap-4">
-                <Phone className="mt-1 text-[#E50914]" />
+                <Phone
+                  className="mt-1 text-[#E50914]"
+                  size={22}
+                />
 
                 <div>
                   <p className="text-sm text-gray-500">
@@ -183,8 +175,12 @@ export default function Footer() {
                 </div>
               </div>
 
+              {/* Email */}
               <div className="flex items-start gap-4">
-                <Mail className="mt-1 text-[#E50914]" />
+                <Mail
+                  className="mt-1 text-[#E50914]"
+                  size={22}
+                />
 
                 <div>
                   <p className="text-sm text-gray-500">
@@ -200,8 +196,12 @@ export default function Footer() {
                 </div>
               </div>
 
+              {/* Address */}
               <div className="flex items-start gap-4">
-                <MapPin className="mt-1 text-[#E50914]" />
+                <MapPin
+                  className="mt-1 text-[#E50914]"
+                  size={22}
+                />
 
                 <div>
                   <p className="text-sm text-gray-500">
@@ -210,13 +210,18 @@ export default function Footer() {
 
                   <p className="text-gray-300">
                     Carmotive India,
+                    <br />
                     Mumbai, Maharashtra
                   </p>
                 </div>
               </div>
 
+              {/* Working Hours */}
               <div className="flex items-start gap-4">
-                <Clock className="mt-1 text-[#E50914]" />
+                <Clock
+                  className="mt-1 text-[#E50914]"
+                  size={22}
+                />
 
                 <div>
                   <p className="text-sm text-gray-500">
@@ -228,13 +233,10 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-
             </div>
 
             {/* Social */}
-
             <div className="mt-10 flex gap-4">
-
               {socialLinks.map((item, index) => {
                 const Icon = item.icon;
 
@@ -254,13 +256,10 @@ export default function Footer() {
                   </motion.a>
                 );
               })}
-
             </div>
-
           </motion.div>
 
           {/* Google Map */}
-
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -268,7 +267,6 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="overflow-hidden rounded-3xl border border-white/10">
-
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.184420394984!2d72.8034709!3d19.447613999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ab00021d86e1%3A0xcd86574557684753!2sCarmotive%20India%20(India%E2%80%99s%20Best%20Multibrand%20Car%20Dealer)!5e0!3m2!1sen!2sin!4v1785477821971!5m2!1sen!2sin"
                 width="100%"
@@ -276,26 +274,22 @@ export default function Footer() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Carmotive India Location"
               />
-
             </div>
           </motion.div>
-
         </div>
 
-        {/* Bottom */}
+        {/* ================= BOTTOM ================= */}
 
         <div className="mt-20 border-t border-white/10 pt-8">
-
           <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-gray-500 md:flex-row">
-
             <p>
               © {new Date().getFullYear()} Carmotive India.
               All Rights Reserved.
             </p>
 
             <div className="flex gap-8">
-
               <Link
                 href="#"
                 className="transition hover:text-[#E50914]"
@@ -309,15 +303,10 @@ export default function Footer() {
               >
                 Terms & Conditions
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </footer>
   );
 }

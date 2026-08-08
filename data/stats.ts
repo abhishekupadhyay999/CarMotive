@@ -1,6 +1,6 @@
 export const stats = [
   {
-    number: "5000+",
+    number: "1000+",
     label: "Happy Customers",
     description: "Across India",
   },
@@ -15,7 +15,7 @@ export const stats = [
     description: "Easy Approvals",
   },
   {
-    number: "4.9★",
+    number: "5★",
     label: "Google Rating",
     description: "Verified Reviews",
   },

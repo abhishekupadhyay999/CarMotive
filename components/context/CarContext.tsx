@@ -9,10 +9,12 @@ import {
 
 import carsData from "@/datas/cars.json";
 
-interface Car {
+export interface Car {
   id: number;
   brand: string;
   model: string;
+  slug: string;
+  image: string;
   engine: string;
   fuel: string[];
   transmission: string[];
@@ -57,21 +59,23 @@ function getPriceValue(price: string | null | undefined) {
   if (!price) return -1;
 
   const cleaned = price
-    .replace(/[₹,\s]/g, "")
-    .replace(/\*/g, "");
+    .replace(/₹/g, "")
+    .replace(/,/g, "")
+    .replace(/\*/g, "")
+    .trim();
 
   if (cleaned.includes("Crore")) {
-    const num = parseFloat(cleaned.replace("Crore", ""));
-    return isNaN(num) ? -1 : num * 10000000;
+    const value = parseFloat(cleaned.replace("Crore", "").trim());
+    return isNaN(value) ? -1 : value * 10000000;
   }
 
   if (cleaned.includes("Lakh")) {
-    const num = parseFloat(cleaned.replace("Lakh", ""));
-    return isNaN(num) ? -1 : num * 100000;
+    const value = parseFloat(cleaned.replace("Lakh", "").trim());
+    return isNaN(value) ? -1 : value * 100000;
   }
 
-  const num = parseFloat(cleaned);
-  return isNaN(num) ? -1 : num;
+  const value = parseFloat(cleaned);
+  return isNaN(value) ? -1 : value;
 }
 
 function matchBudget(price: number, budget: string) {
@@ -104,8 +108,7 @@ export function CarProvider({
 }: {
   children: ReactNode;
 }) {
-  const [filters, setFilters] =
-    useState<Filters>(initialFilters);
+  const [filters, setFilters] = useState<Filters>(initialFilters);
 
   const [filteredCars, setFilteredCars] = useState<Car[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
@@ -115,10 +118,8 @@ export function CarProvider({
       const price = getPriceValue(car.price);
 
       return (
-        (filters.brand === "all" ||
-          car.brand === filters.brand) &&
-        (filters.fuel === "all" ||
-          car.fuel.includes(filters.fuel)) &&
+        (filters.brand === "all" || car.brand === filters.brand) &&
+        (filters.fuel === "all" || car.fuel.includes(filters.fuel)) &&
         (filters.transmission === "all" ||
           car.transmission.includes(filters.transmission)) &&
         (filters.budget === "all" ||
@@ -130,11 +131,10 @@ export function CarProvider({
     setHasSearched(true);
 
     setTimeout(() => {
-      document
-        .getElementById("search-results")
-        ?.scrollIntoView({
-          behavior: "smooth",
-        });
+      document.getElementById("search-results")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }, 100);
   };
 
@@ -142,6 +142,11 @@ export function CarProvider({
     setFilters(initialFilters);
     setFilteredCars([]);
     setHasSearched(false);
+
+    document.getElementById("search")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -165,9 +170,7 @@ export function useCars() {
   const context = useContext(CarContext);
 
   if (!context) {
-    throw new Error(
-      "useCars must be used inside CarProvider"
-    );
+    throw new Error("useCars must be used inside CarProvider");
   }
 
   return context;

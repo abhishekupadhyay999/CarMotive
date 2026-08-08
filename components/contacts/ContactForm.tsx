@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useMemo, useRef, useState } from "react";
+
 
 const vehicleData: Record<string, string[]> = {
   "Maruti Suzuki": [
@@ -136,11 +138,52 @@ const vehicleData: Record<string, string[]> = {
 };
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [brand, setBrand] = useState("");
+  const [model, setModel] = useState("");
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const models = useMemo(() => {
     return vehicleData[brand] || [];
   }, [brand]);
+
+  const sendEmail = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(
+        "service_pzbzax4",
+        "template_ro69vel",
+        formRef.current,
+        "eUIBMV2tMsvzvBaEb"
+      );
+
+      setSuccess(true);
+
+      formRef.current.reset();
+
+      setBrand("");
+      setModel("");
+
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+    } catch (error) {
+      console.error("EmailJS ERROR:",error);
+      alert(JSON.stringify(error));
+    }
+
+    setLoading(false);
+  };
 
   return (
     <motion.div
@@ -152,15 +195,18 @@ export default function ContactForm() {
       </span>
 
       <h3 className="mt-5 text-3xl font-bold text-gray-900">
-        Let's Find Your Dream Car
+        Send Enquiry 
       </h3>
 
       <p className="mt-4 leading-8 text-gray-600">
         Fill in your details and our experts will contact you shortly.
       </p>
 
-      <form className="mt-10 space-y-6">
-
+      <form
+        ref={formRef}
+        onSubmit={sendEmail}
+        className="mt-10 space-y-6"
+      >        {/* Full Name */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Full Name
@@ -168,11 +214,14 @@ export default function ContactForm() {
 
           <input
             type="text"
+            name="from_name"
+            required
             placeholder="Enter your full name"
             className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
           />
         </div>
 
+        {/* Phone Number */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Phone Number
@@ -180,11 +229,14 @@ export default function ContactForm() {
 
           <input
             type="tel"
+            name="phone"
+            required
             placeholder="Enter your phone number"
             className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
           />
         </div>
 
+        {/* Email */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Email Address
@@ -192,52 +244,66 @@ export default function ContactForm() {
 
           <input
             type="email"
+            name="reply_to"
+            required
             placeholder="Enter your email"
             className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
           />
         </div>
 
         {/* Brand */}
-
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Select Brand
           </label>
 
           <select
+            name="brand"
+            required
             value={brand}
-            onChange={(e) => setBrand(e.target.value)}
+            onChange={(e) => {
+              setBrand(e.target.value);
+              setModel("");
+            }}
             className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
           >
             <option value="">Choose Brand</option>
 
             {Object.keys(vehicleData).map((item) => (
-              <option key={item}>{item}</option>
+              <option key={item} value={item}>
+                {item}
+              </option>
             ))}
           </select>
         </div>
 
         {/* Model */}
-
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Select Model
           </label>
 
           <select
+            name="model"
+            required
+            value={model}
             disabled={!brand}
+            onChange={(e) => setModel(e.target.value)}
             className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100 disabled:bg-gray-100 disabled:text-gray-400"
           >
-            <option>
+            <option value="">
               {brand ? "Choose Model" : "Select Brand First"}
             </option>
 
             {models.map((item) => (
-              <option key={item}>{item}</option>
+              <option key={item} value={item}>
+                {item}
+              </option>
             ))}
           </select>
         </div>
 
+        {/* Message */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Message
@@ -245,22 +311,36 @@ export default function ContactForm() {
 
           <textarea
             rows={5}
+            name="message"
             placeholder="Tell us what you're looking for..."
             className="w-full resize-none rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
           />
-        </div>
-
-        <button
+        </div>        <button
           type="submit"
-          className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#FF5A1F] px-6 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-[#E84A12]"
+          disabled={loading}
+          className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#FF5A1F] px-6 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-[#E84A12] disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Let's Find Your Dream Car
+          {loading ? "Sending Enquiry..." : "Let's Find Your Dream Car"}
 
-          <ArrowRight
-            size={20}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
+          {!loading && (
+            <ArrowRight
+              size={20}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          )}
         </button>
+
+        {success && (
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-4 text-center">
+            <p className="font-semibold text-green-700">
+              ✅ Thank you! Your enquiry has been sent successfully.
+            </p>
+
+            <p className="mt-2 text-sm text-green-600">
+              Our team will contact you shortly.
+            </p>
+          </div>
+        )}
       </form>
     </motion.div>
   );

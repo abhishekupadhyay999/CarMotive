@@ -12,7 +12,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b93.70 Lakh"
+    "price": "₹3.70 Lakh",
+    "slug": "maruti-suzuki-s-presso",
+    "image": "/images/cars/maruti-suzuki/s-presso.webp"
   },
   {
     "id": 2,
@@ -27,7 +29,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b93.70 Lakh"
+    "price": "₹3.70 Lakh",
+    "slug": "maruti-suzuki-alto-k10",
+    "image": "/images/cars/maruti-suzuki/alto-k10.webp"
   },
   {
     "id": 3,
@@ -42,7 +46,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b94.70 Lakh"
+    "price": "₹4.70 Lakh",
+    "slug": "maruti-suzuki-celerio",
+    "image": "/images/cars/maruti-suzuki/celerio.webp"
   },
   {
     "id": 4,
@@ -57,7 +63,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b94.99 Lakh"
+    "price": "₹4.99 Lakh",
+    "slug": "maruti-suzuki-wagonr",
+    "image": "/images/cars/maruti-suzuki/wagonr.webp"
   },
   {
     "id": 5,
@@ -72,7 +80,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b95.79 Lakh"
+    "price": "₹5.79 Lakh",
+    "slug": "maruti-suzuki-swift",
+    "image": "/images/cars/maruti-suzuki/swift.webp"
   },
   {
     "id": 6,
@@ -87,7 +97,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.26 Lakh"
+    "price": "₹6.26 Lakh",
+    "slug": "maruti-suzuki-dzire",
+    "image": "/images/cars/maruti-suzuki/dzire.webp"
   },
   {
     "id": 7,
@@ -102,7 +114,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b95.99 Lakh"
+    "price": "₹5.99 Lakh",
+    "slug": "maruti-suzuki-baleno",
+    "image": "/images/cars/maruti-suzuki/baleno.webp"
   },
   {
     "id": 8,
@@ -119,7 +133,9 @@
       "AMT",
       "6AT"
     ],
-    "price": "\u20b96.85 Lakh"
+    "price": "₹6.85 Lakh",
+    "slug": "maruti-suzuki-fronx",
+    "image": "/images/cars/maruti-suzuki/fronx.webp"
   },
   {
     "id": 9,
@@ -135,7 +151,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b97.40 Lakh"
+    "price": "₹7.40 Lakh",
+    "slug": "maruti-suzuki-brezza",
+    "image": "/images/cars/maruti-suzuki/brezza.webp"
   },
   {
     "id": 10,
@@ -150,7 +168,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b98.85 Lakh"
+    "price": "₹8.85 Lakh",
+    "slug": "maruti-suzuki-ertiga",
+    "image": "/images/cars/maruti-suzuki/ertiga.webp"
   },
   {
     "id": 11,
@@ -165,7 +185,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b911.57 Lakh"
+    "price": "₹11.57 Lakh",
+    "slug": "maruti-suzuki-xl6",
+    "image": "/images/cars/maruti-suzuki/xl6.webp"
   },
   {
     "id": 12,
@@ -182,7 +204,9 @@
       "e-CVT",
       "AWD AT"
     ],
-    "price": "\u20b910.77 Lakh"
+    "price": "₹10.77 Lakh",
+    "slug": "maruti-suzuki-grand-vitara",
+    "image": "/images/cars/maruti-suzuki/grand-vitara.webp"
   },
   {
     "id": 13,
@@ -196,7 +220,9 @@
       "5MT",
       "4AT"
     ],
-    "price": "\u20b912.39 Lakh"
+    "price": "₹12.39 Lakh",
+    "slug": "maruti-suzuki-jimny",
+    "image": "/images/cars/maruti-suzuki/jimny.webp"
   },
   {
     "id": 14,
@@ -209,7 +235,9 @@
     "transmission": [
       "e-CVT"
     ],
-    "price": "\u20b924.97 Lakh"
+    "price": "₹24.97 Lakh",
+    "slug": "maruti-suzuki-invicto",
+    "image": "/images/cars/maruti-suzuki/invicto.webp"
   },
   {
     "id": 15,
@@ -222,7 +250,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b913.49 Lakh*"
+    "price": "₹13.49 Lakh*",
+    "slug": "maruti-suzuki-e-vitara",
+    "image": "/images/cars/maruti-suzuki/e-vitara.webp"
   },
   {
     "id": 16,
@@ -235,7 +265,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "hyundai-model",
+    "image": "/images/cars/hyundai/model.webp"
   },
   {
     "id": 17,
@@ -250,7 +282,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.50 Lakh"
+    "price": "₹6.50 Lakh",
+    "slug": "hyundai-grand-i10-nios",
+    "image": "/images/cars/hyundai/grand-i10-nios.webp"
   },
   {
     "id": 18,
@@ -265,7 +299,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.73 Lakh"
+    "price": "₹6.73 Lakh",
+    "slug": "hyundai-exter",
+    "image": "/images/cars/hyundai/exter.webp"
   },
   {
     "id": 19,
@@ -280,7 +316,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b97.04 Lakh"
+    "price": "₹7.04 Lakh",
+    "slug": "hyundai-aura",
+    "image": "/images/cars/hyundai/aura.webp"
   },
   {
     "id": 20,
@@ -294,7 +332,9 @@
       "5MT",
       "CVT (iVT)"
     ],
-    "price": "\u20b96.94 Lakh"
+    "price": "₹6.94 Lakh",
+    "slug": "hyundai-i20",
+    "image": "/images/cars/hyundai/i20.webp"
   },
   {
     "id": 21,
@@ -308,7 +348,9 @@
       "6MT",
       "7DCT"
     ],
-    "price": "\u20b910.56 Lakh"
+    "price": "₹10.56 Lakh",
+    "slug": "hyundai-i20-n-line",
+    "image": "/images/cars/hyundai/i20-n-line.webp"
   },
   {
     "id": 22,
@@ -326,7 +368,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b99.18 Lakh"
+    "price": "₹9.18 Lakh",
+    "slug": "hyundai-venue",
+    "image": "/images/cars/hyundai/venue.webp"
   },
   {
     "id": 23,
@@ -340,7 +384,9 @@
       "6MT",
       "7DCT"
     ],
-    "price": "\u20b912.48 Lakh"
+    "price": "₹12.48 Lakh",
+    "slug": "hyundai-venue-n-line",
+    "image": "/images/cars/hyundai/venue-n-line.webp"
   },
   {
     "id": 24,
@@ -356,7 +402,9 @@
       "6MT (Turbo)",
       "7DCT"
     ],
-    "price": "\u20b912.86 Lakh"
+    "price": "₹12.86 Lakh",
+    "slug": "hyundai-verna",
+    "image": "/images/cars/hyundai/verna.webp"
   },
   {
     "id": 25,
@@ -374,7 +422,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b912.76 Lakh"
+    "price": "₹12.76 Lakh",
+    "slug": "hyundai-creta",
+    "image": "/images/cars/hyundai/creta.webp"
   },
   {
     "id": 26,
@@ -388,7 +438,9 @@
       "6MT",
       "7DCT"
     ],
-    "price": "\u20b922.09 Lakh"
+    "price": "₹22.09 Lakh",
+    "slug": "hyundai-creta-n-line",
+    "image": "/images/cars/hyundai/creta-n-line.webp"
   },
   {
     "id": 27,
@@ -404,7 +456,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b916.80 Lakh"
+    "price": "₹16.80 Lakh",
+    "slug": "hyundai-alcazar",
+    "image": "/images/cars/hyundai/alcazar.webp"
   },
   {
     "id": 28,
@@ -417,7 +471,9 @@
     "transmission": [
       "Sing"
     ],
-    "price": null
+    "price": null,
+    "slug": "hyundai-creta-electric",
+    "image": "/images/cars/hyundai/creta-electric.webp"
   },
   {
     "id": 29,
@@ -430,7 +486,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "kia-model",
+    "image": "/images/cars/kia/model.webp"
   },
   {
     "id": 30,
@@ -448,7 +506,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b97.41 Lakh"
+    "price": "₹7.41 Lakh",
+    "slug": "kia-sonet",
+    "image": "/images/cars/kia/sonet.webp"
   },
   {
     "id": 31,
@@ -464,7 +524,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b99.50 Lakh*"
+    "price": "₹9.50 Lakh*",
+    "slug": "kia-syros",
+    "image": "/images/cars/kia/syros.webp"
   },
   {
     "id": 32,
@@ -477,7 +539,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b913.49 Lakh"
+    "price": "₹13.49 Lakh",
+    "slug": "kia-syros-ev",
+    "image": "/images/cars/kia/syros-ev.webp"
   },
   {
     "id": 33,
@@ -495,7 +559,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b911.00 Lakh"
+    "price": "₹11.00 Lakh",
+    "slug": "kia-seltos",
+    "image": "/images/cars/kia/seltos.webp"
   },
   {
     "id": 34,
@@ -512,7 +578,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b911.02 Lakh"
+    "price": "₹11.02 Lakh",
+    "slug": "kia-carens",
+    "image": "/images/cars/kia/carens.webp"
   },
   {
     "id": 35,
@@ -529,7 +597,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b911.27 Lakh"
+    "price": "₹11.27 Lakh",
+    "slug": "kia-carens-clavis",
+    "image": "/images/cars/kia/carens-clavis.webp"
   },
   {
     "id": 36,
@@ -542,7 +612,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b917.99 Lakh*"
+    "price": "₹17.99 Lakh*",
+    "slug": "kia-carens-clavis-ev",
+    "image": "/images/cars/kia/carens-clavis-ev.webp"
   },
   {
     "id": 37,
@@ -555,7 +627,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b963.91 Lakh"
+    "price": "₹63.91 Lakh",
+    "slug": "kia-carnival",
+    "image": "/images/cars/kia/carnival.webp"
   },
   {
     "id": 38,
@@ -568,7 +642,9 @@
     "transmission": [
       "Single-Speed Automatic (RWD/AWD)"
     ],
-    "price": "\u20b965.97 Lakh"
+    "price": "₹65.97 Lakh",
+    "slug": "kia-ev6",
+    "image": "/images/cars/kia/ev6.webp"
   },
   {
     "id": 39,
@@ -581,7 +657,9 @@
     "transmission": [
       "Single-Speed Automatic AWD"
     ],
-    "price": "\u20b91.30 Crore"
+    "price": "₹1.30 Crore",
+    "slug": "kia-ev9",
+    "image": "/images/cars/kia/ev9.webp"
   },
   {
     "id": 40,
@@ -594,7 +672,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "mg-model",
+    "image": "/images/cars/mg/model.webp"
   },
   {
     "id": 41,
@@ -607,7 +687,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b97.00 Lakh"
+    "price": "₹7.00 Lakh",
+    "slug": "mg-comet-ev",
+    "image": "/images/cars/mg/comet-ev.webp"
   },
   {
     "id": 42,
@@ -620,7 +702,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b914.10 Lakh"
+    "price": "₹14.10 Lakh",
+    "slug": "mg-windsor-ev",
+    "image": "/images/cars/mg/windsor-ev.webp"
   },
   {
     "id": 43,
@@ -633,7 +717,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b918.10 Lakh"
+    "price": "₹18.10 Lakh",
+    "slug": "mg-windsor-ev-pro",
+    "image": "/images/cars/mg/windsor-ev-pro.webp"
   },
   {
     "id": 44,
@@ -646,7 +732,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b915.50 Lakh"
+    "price": "₹15.50 Lakh",
+    "slug": "mg-zs-ev",
+    "image": "/images/cars/mg/zs-ev.webp"
   },
   {
     "id": 45,
@@ -660,7 +748,9 @@
       "5MT",
       "CVT"
     ],
-    "price": "\u20b911.00 Lakh"
+    "price": "₹11.00 Lakh",
+    "slug": "mg-astor",
+    "image": "/images/cars/mg/astor.webp"
   },
   {
     "id": 46,
@@ -674,7 +764,9 @@
       "6MT",
       "CVT"
     ],
-    "price": "\u20b911.99 Lakh"
+    "price": "₹11.99 Lakh",
+    "slug": "mg-hector",
+    "image": "/images/cars/mg/hector.webp"
   },
   {
     "id": 47,
@@ -688,7 +780,9 @@
       "6MT",
       "CVT"
     ],
-    "price": "\u20b917.29 Lakh"
+    "price": "₹17.29 Lakh",
+    "slug": "mg-hector-plus",
+    "image": "/images/cars/mg/hector-plus.webp"
   },
   {
     "id": 48,
@@ -701,7 +795,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b938.33 Lakh"
+    "price": "₹38.33 Lakh",
+    "slug": "mg-gloster",
+    "image": "/images/cars/mg/gloster.webp"
   },
   {
     "id": 49,
@@ -714,7 +810,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b940.99 Lakh"
+    "price": "₹40.99 Lakh",
+    "slug": "mg-majestor",
+    "image": "/images/cars/mg/majestor.webp"
   },
   {
     "id": 50,
@@ -727,7 +825,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b969.90 Lakh*"
+    "price": "₹69.90 Lakh*",
+    "slug": "mg-m9",
+    "image": "/images/cars/mg/m9.webp"
   },
   {
     "id": 51,
@@ -740,7 +840,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b974.99 Lakh*"
+    "price": "₹74.99 Lakh*",
+    "slug": "mg-cyberster",
+    "image": "/images/cars/mg/cyberster.webp"
   },
   {
     "id": 52,
@@ -753,7 +855,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "mahindra-model",
+    "image": "/images/cars/mahindra/model.webp"
   },
   {
     "id": 53,
@@ -769,7 +873,9 @@
       "6AT",
       "AMT"
     ],
-    "price": "\u20b97.79 Lakh"
+    "price": "₹7.79 Lakh",
+    "slug": "mahindra-xuv-3xo",
+    "image": "/images/cars/mahindra/xuv-3xo.webp"
   },
   {
     "id": 54,
@@ -782,7 +888,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b913.89 Lakh"
+    "price": "₹13.89 Lakh",
+    "slug": "mahindra-xuv-3xo-ev",
+    "image": "/images/cars/mahindra/xuv-3xo-ev.webp"
   },
   {
     "id": 55,
@@ -795,7 +903,9 @@
     "transmission": [
       "5MT"
     ],
-    "price": "\u20b99.79 Lakh"
+    "price": "₹9.79 Lakh",
+    "slug": "mahindra-bolero",
+    "image": "/images/cars/mahindra/bolero.webp"
   },
   {
     "id": 56,
@@ -808,7 +918,9 @@
     "transmission": [
       "5MT"
     ],
-    "price": "\u20b99.97 Lakh"
+    "price": "₹9.97 Lakh",
+    "slug": "mahindra-bolero-neo",
+    "image": "/images/cars/mahindra/bolero-neo.webp"
   },
   {
     "id": 57,
@@ -821,7 +933,9 @@
     "transmission": [
       "6MT"
     ],
-    "price": "\u20b911.72 Lakh"
+    "price": "₹11.72 Lakh",
+    "slug": "mahindra-bolero-neo-plus",
+    "image": "/images/cars/mahindra/bolero-neo-plus.webp"
   },
   {
     "id": 58,
@@ -836,7 +950,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b911.50 Lakh"
+    "price": "₹11.50 Lakh",
+    "slug": "mahindra-thar",
+    "image": "/images/cars/mahindra/thar.webp"
   },
   {
     "id": 59,
@@ -851,7 +967,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b912.52 Lakh"
+    "price": "₹12.52 Lakh",
+    "slug": "mahindra-thar-roxx",
+    "image": "/images/cars/mahindra/thar-roxx.webp"
   },
   {
     "id": 60,
@@ -864,7 +982,9 @@
     "transmission": [
       "6MT"
     ],
-    "price": "\u20b913.77 Lakh"
+    "price": "₹13.77 Lakh",
+    "slug": "mahindra-scorpio-classic",
+    "image": "/images/cars/mahindra/scorpio-classic.webp"
   },
   {
     "id": 61,
@@ -880,7 +1000,9 @@
       "6AT",
       "4WD"
     ],
-    "price": "\u20b913.49 Lakh"
+    "price": "₹13.49 Lakh",
+    "slug": "mahindra-scorpio-n",
+    "image": "/images/cars/mahindra/scorpio-n.webp"
   },
   {
     "id": 62,
@@ -896,7 +1018,9 @@
       "6AT",
       "AWD (Diesel AT)"
     ],
-    "price": "\u20b914.49 Lakh"
+    "price": "₹14.49 Lakh",
+    "slug": "mahindra-xuv700",
+    "image": "/images/cars/mahindra/xuv700.webp"
   },
   {
     "id": 63,
@@ -912,7 +1036,9 @@
       "6AT",
       "AWD"
     ],
-    "price": "\u20b913.99 Lakh"
+    "price": "₹13.99 Lakh",
+    "slug": "mahindra-xuv-7xo",
+    "image": "/images/cars/mahindra/xuv-7xo.webp"
   },
   {
     "id": 64,
@@ -925,7 +1051,9 @@
     "transmission": [
       "6MT"
     ],
-    "price": "\u20b914.06 Lakh"
+    "price": "₹14.06 Lakh",
+    "slug": "mahindra-marazzo",
+    "image": "/images/cars/mahindra/marazzo.webp"
   },
   {
     "id": 65,
@@ -938,7 +1066,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b918.90 Lakh"
+    "price": "₹18.90 Lakh",
+    "slug": "mahindra-be-6",
+    "image": "/images/cars/mahindra/be-6.webp"
   },
   {
     "id": 66,
@@ -951,7 +1081,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b921.90 Lakh"
+    "price": "₹21.90 Lakh",
+    "slug": "mahindra-xev-9e",
+    "image": "/images/cars/mahindra/xev-9e.webp"
   },
   {
     "id": 67,
@@ -964,7 +1096,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "toyota-model",
+    "image": "/images/cars/toyota/model.webp"
   },
   {
     "id": 68,
@@ -979,7 +1113,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.73 Lakh"
+    "price": "₹6.73 Lakh",
+    "slug": "toyota-glanza",
+    "image": "/images/cars/toyota/glanza.webp"
   },
   {
     "id": 69,
@@ -996,7 +1132,9 @@
       "5MT (Turbo)",
       "6AT"
     ],
-    "price": "\u20b97.74 Lakh"
+    "price": "₹7.74 Lakh",
+    "slug": "toyota-urban-cruiser-taisor",
+    "image": "/images/cars/toyota/urban-cruiser-taisor.webp"
   },
   {
     "id": 70,
@@ -1011,7 +1149,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b910.66 Lakh"
+    "price": "₹10.66 Lakh",
+    "slug": "toyota-rumion",
+    "image": "/images/cars/toyota/rumion.webp"
   },
   {
     "id": 71,
@@ -1029,7 +1169,9 @@
       "e-CVT",
       "AWD AT"
     ],
-    "price": "\u20b911.31 Lakh"
+    "price": "₹11.31 Lakh",
+    "slug": "toyota-urban-cruiser-hyryder",
+    "image": "/images/cars/toyota/urban-cruiser-hyryder.webp"
   },
   {
     "id": 72,
@@ -1042,7 +1184,9 @@
     "transmission": [
       "6AT (4x2 / 4x4)"
     ],
-    "price": "\u20b931.99 Lakh"
+    "price": "₹31.99 Lakh",
+    "slug": "toyota-hilux-2026",
+    "image": "/images/cars/toyota/hilux-2026.webp"
   },
   {
     "id": 73,
@@ -1055,7 +1199,9 @@
     "transmission": [
       "5MT"
     ],
-    "price": "\u20b919.72 Lakh"
+    "price": "₹19.72 Lakh",
+    "slug": "toyota-innova-crysta",
+    "image": "/images/cars/toyota/innova-crysta.webp"
   },
   {
     "id": 74,
@@ -1070,7 +1216,9 @@
       "CVT",
       "e-CVT"
     ],
-    "price": "\u20b918.70 Lakh"
+    "price": "₹18.70 Lakh",
+    "slug": "toyota-innova-hycross",
+    "image": "/images/cars/toyota/innova-hycross.webp"
   },
   {
     "id": 75,
@@ -1085,7 +1233,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b934.76 Lakh"
+    "price": "₹34.76 Lakh",
+    "slug": "toyota-fortuner",
+    "image": "/images/cars/toyota/fortuner.webp"
   },
   {
     "id": 76,
@@ -1098,7 +1248,9 @@
     "transmission": [
       "6AT"
     ],
-    "price": "\u20b944.11 Lakh"
+    "price": "₹44.11 Lakh",
+    "slug": "toyota-fortuner-legender",
+    "image": "/images/cars/toyota/fortuner-legender.webp"
   },
   {
     "id": 77,
@@ -1111,7 +1263,9 @@
     "transmission": [
       "e-CVT"
     ],
-    "price": "\u20b948.50 Lakh"
+    "price": "₹48.50 Lakh",
+    "slug": "toyota-camry",
+    "image": "/images/cars/toyota/camry.webp"
   },
   {
     "id": 78,
@@ -1124,7 +1278,9 @@
     "transmission": [
       "e-CVT"
     ],
-    "price": "\u20b91.22 Crore"
+    "price": "₹1.22 Crore",
+    "slug": "toyota-vellfire",
+    "image": "/images/cars/toyota/vellfire.webp"
   },
   {
     "id": 79,
@@ -1137,7 +1293,9 @@
     "transmission": [
       "10AT"
     ],
-    "price": "\u20b92.31 Crore"
+    "price": "₹2.31 Crore",
+    "slug": "toyota-land-cruiser-300",
+    "image": "/images/cars/toyota/land-cruiser-300.webp"
   },
   {
     "id": 80,
@@ -1150,7 +1308,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "tata-model",
+    "image": "/images/cars/tata/model.webp"
   },
   {
     "id": 81,
@@ -1165,7 +1325,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b95.64 Lakh"
+    "price": "₹5.64 Lakh",
+    "slug": "tata-tiago",
+    "image": "/images/cars/tata/tiago.webp"
   },
   {
     "id": 82,
@@ -1178,7 +1340,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b97.99 Lakh"
+    "price": "₹7.99 Lakh",
+    "slug": "tata-tiago-ev",
+    "image": "/images/cars/tata/tiago-ev.webp"
   },
   {
     "id": 83,
@@ -1193,7 +1357,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.39 Lakh"
+    "price": "₹6.39 Lakh",
+    "slug": "tata-tigor",
+    "image": "/images/cars/tata/tigor.webp"
   },
   {
     "id": 84,
@@ -1206,7 +1372,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b912.49 Lakh"
+    "price": "₹12.49 Lakh",
+    "slug": "tata-tigor-ev",
+    "image": "/images/cars/tata/tigor-ev.webp"
   },
   {
     "id": 85,
@@ -1224,7 +1392,9 @@
       "AMT",
       "DCT"
     ],
-    "price": "\u20b96.89 Lakh"
+    "price": "₹6.89 Lakh",
+    "slug": "tata-altroz",
+    "image": "/images/cars/tata/altroz.webp"
   },
   {
     "id": 86,
@@ -1239,7 +1409,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b96.84 Lakh"
+    "price": "₹6.84 Lakh",
+    "slug": "tata-punch",
+    "image": "/images/cars/tata/punch.webp"
   },
   {
     "id": 87,
@@ -1252,7 +1424,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b910.30 Lakh"
+    "price": "₹10.30 Lakh",
+    "slug": "tata-punch-ev",
+    "image": "/images/cars/tata/punch-ev.webp"
   },
   {
     "id": 88,
@@ -1270,7 +1444,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b98.75 Lakh"
+    "price": "₹8.75 Lakh",
+    "slug": "tata-nexon",
+    "image": "/images/cars/tata/nexon.webp"
   },
   {
     "id": 89,
@@ -1283,7 +1459,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b912.49 Lakh"
+    "price": "₹12.49 Lakh",
+    "slug": "tata-nexon-ev",
+    "image": "/images/cars/tata/nexon-ev.webp"
   },
   {
     "id": 90,
@@ -1298,7 +1476,9 @@
       "6MT",
       "7DCT"
     ],
-    "price": "\u20b99.76 Lakh"
+    "price": "₹9.76 Lakh",
+    "slug": "tata-curvv",
+    "image": "/images/cars/tata/curvv.webp"
   },
   {
     "id": 91,
@@ -1311,7 +1491,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b917.49 Lakh"
+    "price": "₹17.49 Lakh",
+    "slug": "tata-curvv-ev",
+    "image": "/images/cars/tata/curvv-ev.webp"
   },
   {
     "id": 92,
@@ -1327,7 +1509,9 @@
       "7DCT",
       "6AT"
     ],
-    "price": "\u20b913.60 Lakh"
+    "price": "₹13.60 Lakh",
+    "slug": "tata-sierra",
+    "image": "/images/cars/tata/sierra.webp"
   },
   {
     "id": 93,
@@ -1340,7 +1524,9 @@
     "transmission": [
       "Single-Speed Automatic (RWD/AWD)"
     ],
-    "price": "\u20b918.79 Lakh"
+    "price": "₹18.79 Lakh",
+    "slug": "tata-sierra-ev",
+    "image": "/images/cars/tata/sierra-ev.webp"
   },
   {
     "id": 94,
@@ -1354,7 +1540,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b915.49 Lakh"
+    "price": "₹15.49 Lakh",
+    "slug": "tata-harrier",
+    "image": "/images/cars/tata/harrier.webp"
   },
   {
     "id": 95,
@@ -1367,7 +1555,9 @@
     "transmission": [
       "Single-Speed Automatic (RWD/AWD)"
     ],
-    "price": "\u20b921.49 Lakh"
+    "price": "₹21.49 Lakh",
+    "slug": "tata-harrier-ev",
+    "image": "/images/cars/tata/harrier-ev.webp"
   },
   {
     "id": 96,
@@ -1381,7 +1571,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b916.99 Lakh"
+    "price": "₹16.99 Lakh",
+    "slug": "tata-safari",
+    "image": "/images/cars/tata/safari.webp"
   },
   {
     "id": 97,
@@ -1394,7 +1586,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "skoda-model",
+    "image": "/images/cars/skoda/model.webp"
   },
   {
     "id": 98,
@@ -1408,7 +1602,9 @@
       "6MT",
       "6AT"
     ],
-    "price": "\u20b98.54 Lakh"
+    "price": "₹8.54 Lakh",
+    "slug": "skoda-kylaq",
+    "image": "/images/cars/skoda/kylaq.webp"
   },
   {
     "id": 99,
@@ -1423,7 +1619,9 @@
       "6AT",
       "7DSG"
     ],
-    "price": "\u20b910.69 Lakh"
+    "price": "₹10.69 Lakh",
+    "slug": "skoda-kushaq",
+    "image": "/images/cars/skoda/kushaq.webp"
   },
   {
     "id": 100,
@@ -1438,7 +1636,9 @@
       "6AT",
       "7DSG"
     ],
-    "price": "\u20b910.00 Lakh"
+    "price": "₹10.00 Lakh",
+    "slug": "skoda-slavia",
+    "image": "/images/cars/skoda/slavia.webp"
   },
   {
     "id": 101,
@@ -1451,7 +1651,9 @@
     "transmission": [
       "7DSG AWD"
     ],
-    "price": "\u20b936.99 Lakh"
+    "price": "₹36.99 Lakh",
+    "slug": "skoda-kodiaq",
+    "image": "/images/cars/skoda/kodiaq.webp"
   },
   {
     "id": 102,
@@ -1464,7 +1666,9 @@
     "transmission": [
       "7DSG AWD"
     ],
-    "price": "\u20b966.99 Lakh"
+    "price": "₹66.99 Lakh",
+    "slug": "skoda-kodiaq-rs",
+    "image": "/images/cars/skoda/kodiaq-rs.webp"
   },
   {
     "id": 103,
@@ -1477,7 +1681,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "nissan-model",
+    "image": "/images/cars/nissan/model.webp"
   },
   {
     "id": 104,
@@ -1493,7 +1699,9 @@
       "AMT",
       "CVT"
     ],
-    "price": "\u20b95.65 Lakh"
+    "price": "₹5.65 Lakh",
+    "slug": "nissan-magnite",
+    "image": "/images/cars/nissan/magnite.webp"
   },
   {
     "id": 105,
@@ -1508,7 +1716,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b95.73 Lakh"
+    "price": "₹5.73 Lakh",
+    "slug": "nissan-gravite",
+    "image": "/images/cars/nissan/gravite.webp"
   },
   {
     "id": 106,
@@ -1522,7 +1732,9 @@
       "6MT",
       "7DCT"
     ],
-    "price": "\u20b910.49 Lakh"
+    "price": "₹10.49 Lakh",
+    "slug": "nissan-tekton",
+    "image": "/images/cars/nissan/tekton.webp"
   },
   {
     "id": 107,
@@ -1535,7 +1747,9 @@
     "transmission": [
       "CVT (X-Tronic)"
     ],
-    "price": "\u20b948.20 Lakh"
+    "price": "₹48.20 Lakh",
+    "slug": "nissan-x-trail",
+    "image": "/images/cars/nissan/x-trail.webp"
   },
   {
     "id": 108,
@@ -1548,7 +1762,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "renault-model",
+    "image": "/images/cars/renault/model.webp"
   },
   {
     "id": 109,
@@ -1562,7 +1778,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b94.53 Lakh"
+    "price": "₹4.53 Lakh",
+    "slug": "renault-kwid",
+    "image": "/images/cars/renault/kwid.webp"
   },
   {
     "id": 110,
@@ -1578,7 +1796,9 @@
       "AMT",
       "CVT"
     ],
-    "price": "\u20b95.81 Lakh"
+    "price": "₹5.81 Lakh",
+    "slug": "renault-kiger",
+    "image": "/images/cars/renault/kiger.webp"
   },
   {
     "id": 111,
@@ -1593,7 +1813,9 @@
       "5MT",
       "AMT"
     ],
-    "price": "\u20b95.81 Lakh"
+    "price": "₹5.81 Lakh",
+    "slug": "renault-triber",
+    "image": "/images/cars/renault/triber.webp"
   },
   {
     "id": 112,
@@ -1609,7 +1831,9 @@
       "7DCT",
       "e-CVT"
     ],
-    "price": "\u20b910.49 Lakh"
+    "price": "₹10.49 Lakh",
+    "slug": "renault-duster",
+    "image": "/images/cars/renault/duster.webp"
   },
   {
     "id": 113,
@@ -1624,7 +1848,9 @@
       "7DCT",
       "e-CVT"
     ],
-    "price": "\u20b913.00 Lakh (Expected)"
+    "price": "₹13.00 Lakh (Expected)",
+    "slug": "renault-boreal-bigster",
+    "image": "/images/cars/renault/boreal-bigster.webp"
   },
   {
     "id": 114,
@@ -1637,7 +1863,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "jeep-model",
+    "image": "/images/cars/jeep/model.webp"
   },
   {
     "id": 115,
@@ -1651,7 +1879,9 @@
       "6MT",
       "9AT"
     ],
-    "price": "\u20b917.99 Lakh"
+    "price": "₹17.99 Lakh",
+    "slug": "jeep-compass",
+    "image": "/images/cars/jeep/compass.webp"
   },
   {
     "id": 116,
@@ -1666,7 +1896,9 @@
       "9AT",
       "4x4 AT"
     ],
-    "price": "\u20b930.45 Lakh"
+    "price": "₹30.45 Lakh",
+    "slug": "jeep-meridian",
+    "image": "/images/cars/jeep/meridian.webp"
   },
   {
     "id": 117,
@@ -1680,7 +1912,9 @@
       "8AT",
       "4x4"
     ],
-    "price": "\u20b964.58 Lakh"
+    "price": "₹64.58 Lakh",
+    "slug": "jeep-wrangler",
+    "image": "/images/cars/jeep/wrangler.webp"
   },
   {
     "id": 118,
@@ -1694,7 +1928,9 @@
       "8AT",
       "AWD"
     ],
-    "price": "\u20b963.00 Lakh"
+    "price": "₹63.00 Lakh",
+    "slug": "jeep-grand-cherokee",
+    "image": "/images/cars/jeep/grand-cherokee.webp"
   },
   {
     "id": 119,
@@ -1707,7 +1943,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "honda-model",
+    "image": "/images/cars/honda/model.webp"
   },
   {
     "id": 120,
@@ -1720,7 +1958,9 @@
     "transmission": [
       "5MT"
     ],
-    "price": "\u20b97.00 Lakh"
+    "price": "₹7.00 Lakh",
+    "slug": "honda-amaze-2nd-gen",
+    "image": "/images/cars/honda/amaze-2nd-gen.webp"
   },
   {
     "id": 121,
@@ -1734,7 +1974,9 @@
       "5MT",
       "CVT"
     ],
-    "price": "\u20b97.55 Lakh"
+    "price": "₹7.55 Lakh",
+    "slug": "honda-amaze",
+    "image": "/images/cars/honda/amaze.webp"
   },
   {
     "id": 122,
@@ -1748,7 +1990,9 @@
       "6MT",
       "CVT"
     ],
-    "price": "\u20b911.64 Lakh"
+    "price": "₹11.64 Lakh",
+    "slug": "honda-elevate",
+    "image": "/images/cars/honda/elevate.webp"
   },
   {
     "id": 123,
@@ -1764,7 +2008,9 @@
       "CVT",
       "e-CVT"
     ],
-    "price": "\u20b912.04 Lakh"
+    "price": "₹12.04 Lakh",
+    "slug": "honda-city",
+    "image": "/images/cars/honda/city.webp"
   },
   {
     "id": 124,
@@ -1777,7 +2023,9 @@
     "transmission": [
       "e-CVT"
     ],
-    "price": "\u20b947.99 Lakh"
+    "price": "₹47.99 Lakh",
+    "slug": "honda-zr-v",
+    "image": "/images/cars/honda/zr-v.webp"
   },
   {
     "id": 125,
@@ -1790,7 +2038,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "volkswagen-model",
+    "image": "/images/cars/volkswagen/model.webp"
   },
   {
     "id": 126,
@@ -1805,7 +2055,9 @@
       "6AT",
       "7DSG"
     ],
-    "price": "\u20b910.71 Lakh"
+    "price": "₹10.71 Lakh",
+    "slug": "volkswagen-virtus",
+    "image": "/images/cars/volkswagen/virtus.webp"
   },
   {
     "id": 127,
@@ -1820,7 +2072,9 @@
       "6AT",
       "7DSG"
     ],
-    "price": "\u20b910.99 Lakh"
+    "price": "₹10.99 Lakh",
+    "slug": "volkswagen-taigun",
+    "image": "/images/cars/volkswagen/taigun.webp"
   },
   {
     "id": 128,
@@ -1834,7 +2088,9 @@
       "7DSG",
       "AWD"
     ],
-    "price": "\u20b941.99 Lakh"
+    "price": "₹41.99 Lakh",
+    "slug": "volkswagen-tayron-life",
+    "image": "/images/cars/volkswagen/tayron-life.webp"
   },
   {
     "id": 129,
@@ -1848,7 +2104,9 @@
       "7DSG",
       "AWD"
     ],
-    "price": "\u20b947.11 Lakh"
+    "price": "₹47.11 Lakh",
+    "slug": "volkswagen-tiguan-r-line",
+    "image": "/images/cars/volkswagen/tiguan-r-line.webp"
   },
   {
     "id": 130,
@@ -1861,7 +2119,9 @@
     "transmission": [
       "7DSG"
     ],
-    "price": "\u20b950.91 Lakh"
+    "price": "₹50.91 Lakh",
+    "slug": "volkswagen-golf-gti",
+    "image": "/images/cars/volkswagen/golf-gti.webp"
   },
   {
     "id": 131,
@@ -1874,7 +2134,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "citroen-model",
+    "image": "/images/cars/citroen/model.webp"
   },
   {
     "id": 132,
@@ -1889,7 +2151,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b94.99 Lakh"
+    "price": "₹4.99 Lakh",
+    "slug": "citroen-c3",
+    "image": "/images/cars/citroen/c3.webp"
   },
   {
     "id": 133,
@@ -1903,7 +2167,9 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b98.55 Lakh"
+    "price": "₹8.55 Lakh",
+    "slug": "citroen-basalt",
+    "image": "/images/cars/citroen/basalt.webp"
   },
   {
     "id": 134,
@@ -1917,12 +2183,14 @@
       "5MT",
       "6AT"
     ],
-    "price": "\u20b98.89 Lakh"
+    "price": "₹8.89 Lakh",
+    "slug": "citroen-aircross",
+    "image": "/images/cars/citroen/aircross.webp"
   },
   {
     "id": 135,
     "brand": "CITROEN",
-    "model": "\u00eb-C3",
+    "model": "ë-C3",
     "engine": "29.2 kWh Battery",
     "fuel": [
       "Electric"
@@ -1930,7 +2198,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b911.99 Lakh"
+    "price": "₹11.99 Lakh",
+    "slug": "citroen-c3",
+    "image": "/images/cars/citroen/c3.webp"
   },
   {
     "id": 136,
@@ -1943,7 +2213,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b937.32 Lakh"
+    "price": "₹37.32 Lakh",
+    "slug": "citroen-c5-aircross",
+    "image": "/images/cars/citroen/c5-aircross.webp"
   },
   {
     "id": 137,
@@ -1956,7 +2228,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "mercedes-benz-model",
+    "image": "/images/cars/mercedes-benz/model.webp"
   },
   {
     "id": 138,
@@ -1971,7 +2245,9 @@
       "7DCT",
       "8AT"
     ],
-    "price": "\u20b947.90 Lakh"
+    "price": "₹47.90 Lakh",
+    "slug": "mercedes-benz-a-class-limousine",
+    "image": "/images/cars/mercedes-benz/a-class-limousine.webp"
   },
   {
     "id": 139,
@@ -1986,7 +2262,9 @@
       "7DCT",
       "8AT"
     ],
-    "price": "\u20b951.80 Lakh"
+    "price": "₹51.80 Lakh",
+    "slug": "mercedes-benz-gla",
+    "image": "/images/cars/mercedes-benz/gla.webp"
   },
   {
     "id": 140,
@@ -2000,7 +2278,9 @@
     "transmission": [
       "9G-TRONIC AT"
     ],
-    "price": "\u20b959.90 Lakh"
+    "price": "₹59.90 Lakh",
+    "slug": "mercedes-benz-c-class",
+    "image": "/images/cars/mercedes-benz/c-class.webp"
   },
   {
     "id": 141,
@@ -2015,7 +2295,9 @@
       "9G-TRONIC AT",
       "AWD"
     ],
-    "price": "\u20b977.00 Lakh"
+    "price": "₹77.00 Lakh",
+    "slug": "mercedes-benz-glc",
+    "image": "/images/cars/mercedes-benz/glc.webp"
   },
   {
     "id": 142,
@@ -2029,7 +2311,9 @@
     "transmission": [
       "9G-TRONIC AT"
     ],
-    "price": "\u20b980.00 Lakh"
+    "price": "₹80.00 Lakh",
+    "slug": "mercedes-benz-e-class-lwb",
+    "image": "/images/cars/mercedes-benz/e-class-lwb.webp"
   },
   {
     "id": 143,
@@ -2042,7 +2326,9 @@
     "transmission": [
       "9G-TRONIC AT"
     ],
-    "price": "\u20b91.15 Crore"
+    "price": "₹1.15 Crore",
+    "slug": "mercedes-benz-cle-cabriolet",
+    "image": "/images/cars/mercedes-benz/cle-cabriolet.webp"
   },
   {
     "id": 144,
@@ -2057,7 +2343,9 @@
       "9G-TRONIC AT",
       "AWD"
     ],
-    "price": "\u20b91.00 Crore"
+    "price": "₹1.00 Crore",
+    "slug": "mercedes-benz-gle",
+    "image": "/images/cars/mercedes-benz/gle.webp"
   },
   {
     "id": 145,
@@ -2072,7 +2360,9 @@
       "9G-TRONIC AT",
       "AWD"
     ],
-    "price": "\u20b91.32 Crore"
+    "price": "₹1.32 Crore",
+    "slug": "mercedes-benz-gls",
+    "image": "/images/cars/mercedes-benz/gls.webp"
   },
   {
     "id": 146,
@@ -2085,7 +2375,9 @@
     "transmission": [
       "9G-TRONIC AT"
     ],
-    "price": "\u20b92.20 Crore"
+    "price": "₹2.20 Crore",
+    "slug": "mercedes-benz-s-class",
+    "image": "/images/cars/mercedes-benz/s-class.webp"
   },
   {
     "id": 147,
@@ -2098,7 +2390,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b967.20 Lakh"
+    "price": "₹67.20 Lakh",
+    "slug": "mercedes-benz-eqa",
+    "image": "/images/cars/mercedes-benz/eqa.webp"
   },
   {
     "id": 148,
@@ -2111,7 +2405,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b972.20 Lakh"
+    "price": "₹72.20 Lakh",
+    "slug": "mercedes-benz-eqb",
+    "image": "/images/cars/mercedes-benz/eqb.webp"
   },
   {
     "id": 149,
@@ -2124,7 +2420,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b91.41 Crore"
+    "price": "₹1.41 Crore",
+    "slug": "mercedes-benz-eqe-suv",
+    "image": "/images/cars/mercedes-benz/eqe-suv.webp"
   },
   {
     "id": 150,
@@ -2137,7 +2435,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b91.30 Crore"
+    "price": "₹1.30 Crore",
+    "slug": "mercedes-benz-eqs",
+    "image": "/images/cars/mercedes-benz/eqs.webp"
   },
   {
     "id": 151,
@@ -2150,7 +2450,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b91.34 Crore"
+    "price": "₹1.34 Crore",
+    "slug": "mercedes-benz-eqs-suv",
+    "image": "/images/cars/mercedes-benz/eqs-suv.webp"
   },
   {
     "id": 152,
@@ -2163,7 +2465,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b93.10 Crore"
+    "price": "₹3.10 Crore",
+    "slug": "mercedes-benz-g-580-with-eq-technology",
+    "image": "/images/cars/mercedes-benz/g-580-with-eq-technology.webp"
   },
   {
     "id": 153,
@@ -2176,7 +2480,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "bmw-model",
+    "image": "/images/cars/bmw/model.webp"
   },
   {
     "id": 154,
@@ -2190,7 +2496,9 @@
     "transmission": [
       "7DCT"
     ],
-    "price": "\u20b945.80 Lakh"
+    "price": "₹45.80 Lakh",
+    "slug": "bmw-2-series-gran-coupe",
+    "image": "/images/cars/bmw/2-series-gran-coupe.webp"
   },
   {
     "id": 155,
@@ -2204,7 +2512,9 @@
     "transmission": [
       "7DCT"
     ],
-    "price": "\u20b950.90 Lakh"
+    "price": "₹50.90 Lakh",
+    "slug": "bmw-x1",
+    "image": "/images/cars/bmw/x1.webp"
   },
   {
     "id": 156,
@@ -2217,7 +2527,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b951.40 Lakh"
+    "price": "₹51.40 Lakh",
+    "slug": "bmw-ix1-lwb",
+    "image": "/images/cars/bmw/ix1-lwb.webp"
   },
   {
     "id": 157,
@@ -2230,7 +2542,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b960.55 Lakh"
+    "price": "₹60.55 Lakh",
+    "slug": "bmw-3-series-lwb",
+    "image": "/images/cars/bmw/3-series-lwb.webp"
   },
   {
     "id": 158,
@@ -2245,7 +2559,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b969.90 Lakh"
+    "price": "₹69.90 Lakh",
+    "slug": "bmw-x3",
+    "image": "/images/cars/bmw/x3.webp"
   },
   {
     "id": 159,
@@ -2259,7 +2575,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b972.75 Lakh"
+    "price": "₹72.75 Lakh",
+    "slug": "bmw-m340i-xdrive",
+    "image": "/images/cars/bmw/m340i-xdrive.webp"
   },
   {
     "id": 160,
@@ -2272,7 +2590,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b972.35 Lakh"
+    "price": "₹72.35 Lakh",
+    "slug": "bmw-5-series",
+    "image": "/images/cars/bmw/5-series.webp"
   },
   {
     "id": 161,
@@ -2287,7 +2607,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b996.90 Lakh"
+    "price": "₹96.90 Lakh",
+    "slug": "bmw-x5",
+    "image": "/images/cars/bmw/x5.webp"
   },
   {
     "id": 162,
@@ -2300,7 +2622,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b990.50 Lakh"
+    "price": "₹90.50 Lakh",
+    "slug": "bmw-z4-m40i",
+    "image": "/images/cars/bmw/z4-m40i.webp"
   },
   {
     "id": 163,
@@ -2313,7 +2637,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b91.00 Crore"
+    "price": "₹1.00 Crore",
+    "slug": "bmw-m2",
+    "image": "/images/cars/bmw/m2.webp"
   },
   {
     "id": 164,
@@ -2327,7 +2653,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b91.78 Crore"
+    "price": "₹1.78 Crore",
+    "slug": "bmw-x6-m60i",
+    "image": "/images/cars/bmw/x6-m60i.webp"
   },
   {
     "id": 165,
@@ -2342,7 +2670,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b91.26 Crore"
+    "price": "₹1.26 Crore",
+    "slug": "bmw-x7",
+    "image": "/images/cars/bmw/x7.webp"
   },
   {
     "id": 166,
@@ -2356,7 +2686,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b91.55 Crore"
+    "price": "₹1.55 Crore",
+    "slug": "bmw-m4-competition",
+    "image": "/images/cars/bmw/m4-competition.webp"
   },
   {
     "id": 167,
@@ -2369,7 +2701,9 @@
     "transmission": [
       "8AT"
     ],
-    "price": "\u20b91.84 Crore"
+    "price": "₹1.84 Crore",
+    "slug": "bmw-7-series",
+    "image": "/images/cars/bmw/7-series.webp"
   },
   {
     "id": 168,
@@ -2382,7 +2716,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b91.20 Crore"
+    "price": "₹1.20 Crore",
+    "slug": "bmw-i5",
+    "image": "/images/cars/bmw/i5.webp"
   },
   {
     "id": 169,
@@ -2395,7 +2731,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b92.05 Crore"
+    "price": "₹2.05 Crore",
+    "slug": "bmw-i7",
+    "image": "/images/cars/bmw/i7.webp"
   },
   {
     "id": 170,
@@ -2409,7 +2747,9 @@
       "8AT",
       "xDrive AWD"
     ],
-    "price": "\u20b92.55 Crore"
+    "price": "₹2.55 Crore",
+    "slug": "bmw-xm",
+    "image": "/images/cars/bmw/xm.webp"
   },
   {
     "id": 171,
@@ -2422,7 +2762,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "audi-model",
+    "image": "/images/cars/audi/model.webp"
   },
   {
     "id": 172,
@@ -2436,7 +2778,9 @@
       "7-Speed S tronic DCT",
       "quattro AWD"
     ],
-    "price": "\u20b945.24 Lakh"
+    "price": "₹45.24 Lakh",
+    "slug": "audi-q3",
+    "image": "/images/cars/audi/q3.webp"
   },
   {
     "id": 173,
@@ -2450,7 +2794,9 @@
       "7-Speed S tronic DCT",
       "quattro AWD"
     ],
-    "price": "\u20b956.24 Lakh"
+    "price": "₹56.24 Lakh",
+    "slug": "audi-q3-sportback",
+    "image": "/images/cars/audi/q3-sportback.webp"
   },
   {
     "id": 174,
@@ -2463,7 +2809,9 @@
     "transmission": [
       "7-Speed S tronic DCT"
     ],
-    "price": "\u20b947.93 Lakh"
+    "price": "₹47.93 Lakh",
+    "slug": "audi-a4",
+    "image": "/images/cars/audi/a4.webp"
   },
   {
     "id": 175,
@@ -2476,7 +2824,9 @@
     "transmission": [
       "7-Speed S tronic DCT"
     ],
-    "price": "\u20b966.05 Lakh"
+    "price": "₹66.05 Lakh",
+    "slug": "audi-a6",
+    "image": "/images/cars/audi/a6.webp"
   },
   {
     "id": 176,
@@ -2490,7 +2840,9 @@
       "7-Speed S tronic DCT",
       "quattro AWD"
     ],
-    "price": "\u20b966.99 Lakh"
+    "price": "₹66.99 Lakh",
+    "slug": "audi-q5",
+    "image": "/images/cars/audi/q5.webp"
   },
   {
     "id": 177,
@@ -2504,7 +2856,9 @@
       "8-Speed Tiptronic AT",
       "quattro AWD"
     ],
-    "price": "\u20b991.81 Lakh"
+    "price": "₹91.81 Lakh",
+    "slug": "audi-q7",
+    "image": "/images/cars/audi/q7.webp"
   },
   {
     "id": 178,
@@ -2518,7 +2872,9 @@
       "8-Speed Tiptronic AT",
       "quattro AWD"
     ],
-    "price": "\u20b91.18 Crore"
+    "price": "₹1.18 Crore",
+    "slug": "audi-q8",
+    "image": "/images/cars/audi/q8.webp"
   },
   {
     "id": 179,
@@ -2532,7 +2888,9 @@
       "8-Speed Tiptronic AT",
       "quattro AWD"
     ],
-    "price": "\u20b91.36 Crore"
+    "price": "₹1.36 Crore",
+    "slug": "audi-a8-l",
+    "image": "/images/cars/audi/a8-l.webp"
   },
   {
     "id": 180,
@@ -2546,7 +2904,9 @@
       "8-Speed Tiptronic AT",
       "quattro AWD"
     ],
-    "price": "\u20b92.49 Crore"
+    "price": "₹2.49 Crore",
+    "slug": "audi-rs-q8-performance",
+    "image": "/images/cars/audi/rs-q8-performance.webp"
   },
   {
     "id": 181,
@@ -2560,7 +2920,9 @@
       "Single-Speed Automatic",
       "quattro AWD"
     ],
-    "price": "\u20b91.72 Crore"
+    "price": "₹1.72 Crore",
+    "slug": "audi-e-tron-gt",
+    "image": "/images/cars/audi/e-tron-gt.webp"
   },
   {
     "id": 182,
@@ -2574,7 +2936,9 @@
       "Single-Speed Automatic",
       "quattro AWD"
     ],
-    "price": "\u20b92.05 Crore"
+    "price": "₹2.05 Crore",
+    "slug": "audi-rs-e-tron-gt",
+    "image": "/images/cars/audi/rs-e-tron-gt.webp"
   },
   {
     "id": 183,
@@ -2588,7 +2952,9 @@
       "Single-Speed Automatic",
       "quattro AWD"
     ],
-    "price": "\u20b91.05 Crore"
+    "price": "₹1.05 Crore",
+    "slug": "audi-q6-e-tron",
+    "image": "/images/cars/audi/q6-e-tron.webp"
   },
   {
     "id": 184,
@@ -2602,7 +2968,9 @@
       "Single-Speed Automatic",
       "quattro AWD"
     ],
-    "price": "\u20b91.18 Crore"
+    "price": "₹1.18 Crore",
+    "slug": "audi-q8-e-tron",
+    "image": "/images/cars/audi/q8-e-tron.webp"
   },
   {
     "id": 185,
@@ -2615,7 +2983,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "volvo-model",
+    "image": "/images/cars/volvo/model.webp"
   },
   {
     "id": 186,
@@ -2628,7 +2998,9 @@
     "transmission": [
       "Single-Speed Automatic (RWD)"
     ],
-    "price": "\u20b941.00 Lakh"
+    "price": "₹41.00 Lakh",
+    "slug": "volvo-ex30",
+    "image": "/images/cars/volvo/ex30.webp"
   },
   {
     "id": 187,
@@ -2641,7 +3013,9 @@
     "transmission": [
       "Single-Speed Automatic (RWD)"
     ],
-    "price": "\u20b949.00 Lakh"
+    "price": "₹49.00 Lakh",
+    "slug": "volvo-ex40",
+    "image": "/images/cars/volvo/ex40.webp"
   },
   {
     "id": 188,
@@ -2654,7 +3028,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b959.00 Lakh"
+    "price": "₹59.00 Lakh",
+    "slug": "volvo-ec40",
+    "image": "/images/cars/volvo/ec40.webp"
   },
   {
     "id": 189,
@@ -2668,7 +3044,9 @@
       "8-Speed Automatic",
       "AWD"
     ],
-    "price": "\u20b969.60 Lakh"
+    "price": "₹69.60 Lakh",
+    "slug": "volvo-xc60",
+    "image": "/images/cars/volvo/xc60.webp"
   },
   {
     "id": 190,
@@ -2682,7 +3060,9 @@
       "8-Speed Automatic",
       "AWD"
     ],
-    "price": "\u20b998.80 Lakh"
+    "price": "₹98.80 Lakh",
+    "slug": "volvo-xc90",
+    "image": "/images/cars/volvo/xc90.webp"
   },
   {
     "id": 191,
@@ -2695,7 +3075,9 @@
     "transmission": [
       "Single-Speed Automatic (AWD)"
     ],
-    "price": "\u20b91.00 Crore (Expected)"
+    "price": "₹1.00 Crore (Expected)",
+    "slug": "volvo-ex90",
+    "image": "/images/cars/volvo/ex90.webp"
   },
   {
     "id": 192,
@@ -2708,7 +3090,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "land-rover-model",
+    "image": "/images/cars/land-rover/model.webp"
   },
   {
     "id": 193,
@@ -2723,7 +3107,9 @@
       "9AT",
       "AWD"
     ],
-    "price": "\u20b971.10 Lakh"
+    "price": "₹71.10 Lakh",
+    "slug": "land-rover-range-rover-evoque",
+    "image": "/images/cars/land-rover/range-rover-evoque.webp"
   },
   {
     "id": 194,
@@ -2738,7 +3124,9 @@
       "9AT",
       "AWD"
     ],
-    "price": "\u20b969.48 Lakh"
+    "price": "₹69.48 Lakh",
+    "slug": "land-rover-discovery-sport",
+    "image": "/images/cars/land-rover/discovery-sport.webp"
   },
   {
     "id": 195,
@@ -2753,7 +3141,9 @@
       "8AT",
       "AWD"
     ],
-    "price": "\u20b995.97 Lakh"
+    "price": "₹95.97 Lakh",
+    "slug": "land-rover-range-rover-velar",
+    "image": "/images/cars/land-rover/range-rover-velar.webp"
   },
   {
     "id": 196,
@@ -2769,7 +3159,9 @@
       "8AT",
       "4WD"
     ],
-    "price": "\u20b91.17 Crore"
+    "price": "₹1.17 Crore",
+    "slug": "land-rover-defender",
+    "image": "/images/cars/land-rover/defender.webp"
   },
   {
     "id": 197,
@@ -2783,7 +3175,9 @@
       "8AT",
       "AWD"
     ],
-    "price": "\u20b91.38 Crore"
+    "price": "₹1.38 Crore",
+    "slug": "land-rover-discovery",
+    "image": "/images/cars/land-rover/discovery.webp"
   },
   {
     "id": 198,
@@ -2798,7 +3192,9 @@
       "8AT",
       "AWD"
     ],
-    "price": "\u20b91.56 Crore"
+    "price": "₹1.56 Crore",
+    "slug": "land-rover-range-rover-sport",
+    "image": "/images/cars/land-rover/range-rover-sport.webp"
   },
   {
     "id": 199,
@@ -2814,7 +3210,9 @@
       "8AT",
       "AWD"
     ],
-    "price": "\u20b92.62 Crore"
+    "price": "₹2.62 Crore",
+    "slug": "land-rover-range-rover",
+    "image": "/images/cars/land-rover/range-rover.webp"
   },
   {
     "id": 200,
@@ -2827,7 +3225,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "jaguar-model",
+    "image": "/images/cars/jaguar/model.webp"
   },
   {
     "id": 201,
@@ -2842,7 +3242,9 @@
       "8-Speed Automatic",
       "AWD"
     ],
-    "price": "\u20b968.96 Lakh"
+    "price": "₹68.96 Lakh",
+    "slug": "jaguar-f-pace-r-dynamic-s",
+    "image": "/images/cars/jaguar/f-pace-r-dynamic-s.webp"
   },
   {
     "id": 202,
@@ -2855,7 +3257,9 @@
     "transmission": [
       "Transmission Options"
     ],
-    "price": "Ex-Showroom Starts From"
+    "price": "Ex-Showroom Starts From",
+    "slug": "mini-model",
+    "image": "/images/cars/mini/model.webp"
   },
   {
     "id": 203,
@@ -2868,7 +3272,9 @@
     "transmission": [
       "7-Speed DCT"
     ],
-    "price": "\u20b953.03 Lakh"
+    "price": "₹53.03 Lakh",
+    "slug": "mini-cooper-s-3-door",
+    "image": "/images/cars/mini/cooper-s-3-door.webp"
   },
   {
     "id": 204,
@@ -2881,7 +3287,9 @@
     "transmission": [
       "7-Speed DCT"
     ],
-    "price": "\u20b959.00 Lakh"
+    "price": "₹59.00 Lakh",
+    "slug": "mini-cooper-convertible",
+    "image": "/images/cars/mini/cooper-convertible.webp"
   },
   {
     "id": 205,
@@ -2894,7 +3302,9 @@
     "transmission": [
       "7-Speed DCT"
     ],
-    "price": "\u20b962.90 Lakh"
+    "price": "₹62.90 Lakh",
+    "slug": "mini-cooper-convertible-stardust-edition",
+    "image": "/images/cars/mini/cooper-convertible-stardust-edition.webp"
   },
   {
     "id": 206,
@@ -2907,7 +3317,9 @@
     "transmission": [
       "7-Speed DCT"
     ],
-    "price": "\u20b947.50 Lakh"
+    "price": "₹47.50 Lakh",
+    "slug": "mini-countryman-c",
+    "image": "/images/cars/mini/countryman-c.webp"
   },
   {
     "id": 207,
@@ -2920,7 +3332,9 @@
     "transmission": [
       "Single-Speed Automatic"
     ],
-    "price": "\u20b954.90 Lakh"
+    "price": "₹54.90 Lakh",
+    "slug": "mini-countryman-electric",
+    "image": "/images/cars/mini/countryman-electric.webp"
   },
   {
     "id": 208,
@@ -2934,6 +3348,8 @@
       "7-Speed DCT",
       "AWD"
     ],
-    "price": "\u20b966.15 Lakh"
+    "price": "₹66.15 Lakh",
+    "slug": "mini-jcw-countryman-all4",
+    "image": "/images/cars/mini/jcw-countryman-all4.webp"
   }
 ]

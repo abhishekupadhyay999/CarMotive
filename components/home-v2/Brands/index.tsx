@@ -1,4 +1,5 @@
 "use client";
+
 import { brands } from "./brands";
 import type { BrandCategory } from "./brands";
 
@@ -7,11 +8,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import BrandCard from "./BrandCard";
 
-
-const filters: BrandCategory[] = ["All", "Luxury", "Popular", "EV"];
+const filters: BrandCategory[] = [
+  "All",
+  "Luxury",
+  "Popular",
+  "EV",
+];
 
 export default function Brands() {
-  const [activeFilter, setActiveFilter] = useState<BrandCategory>("All");
+  const [activeFilter, setActiveFilter] =
+    useState<BrandCategory>("All");
+
   const [expanded, setExpanded] = useState(false);
 
   const filteredBrands = useMemo(() => {
@@ -27,24 +34,31 @@ export default function Brands() {
     : filteredBrands.slice(0, 12);
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] py-28">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#1b1b1b_0%,#050505_70%)] opacity-70" />
+    <section
+      id="brands"
+      className="relative overflow-hidden bg-[#050505] py-28"
+    >
+      {/* Background */}
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#1b1b1b_0%,#050505_75%)]" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+
         {/* Badge */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-5 flex justify-center"
         >
-          <span className="rounded-full border border-[#E50914]/30 bg-[#E50914]/10 px-5 py-2 text-sm font-medium text-[#E50914]">
+          <span className="inline-flex rounded-full border border-red-500/30 bg-red-500/10 px-5 py-2 text-sm font-medium text-[#E50914]">
             {brands.length}+ Automotive Brands
           </span>
         </motion.div>
 
         {/* Heading */}
+
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,17 +67,18 @@ export default function Brands() {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Our Brand Partners
+            Explore by Brand
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-400">
-            Explore the latest new cars from India's leading automotive brands.
-            From luxury sedans to family SUVs and electric vehicles,
-            Carmotive helps you find the perfect drive.
+            Discover India's leading automobile manufacturers.
+            Browse premium SUVs, hatchbacks, sedans and electric
+            vehicles from trusted brands—all in one place.
           </p>
         </motion.div>
 
         {/* Filters */}
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -89,12 +104,14 @@ export default function Brands() {
           ))}
         </motion.div>
 
-        {/* Result Count */}
+        {/* Count */}
+
         <div className="mt-8 text-center text-sm text-gray-500">
           Showing {visibleBrands.length} of {filteredBrands.length} brands
         </div>
 
-        {/* Brand Grid */}
+        {/* Grid */}
+
         <motion.div
           layout
           className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4"
@@ -104,10 +121,21 @@ export default function Brands() {
               <motion.div
                 key={brand.name}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.25 }}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.9,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
               >
                 <BrandCard brand={brand} />
               </motion.div>
@@ -115,7 +143,8 @@ export default function Brands() {
           </AnimatePresence>
         </motion.div>
 
-        {/* View All */}
+        {/* Button */}
+
         {filteredBrands.length > 12 && (
           <motion.div
             layout
@@ -123,11 +152,12 @@ export default function Brands() {
           >
             <button
               onClick={() => setExpanded(!expanded)}
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#111111] px-7 py-4 font-medium text-white transition-all duration-300 hover:border-[#E50914] hover:bg-[#161616]"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#111111] px-7 py-4 font-medium text-white transition-all duration-300 hover:border-[#E50914] hover:bg-[#181818]"
             >
               {expanded ? (
                 <>
                   Show Less
+
                   <ChevronUp
                     size={18}
                     className="transition group-hover:-translate-y-1"
@@ -136,6 +166,7 @@ export default function Brands() {
               ) : (
                 <>
                   View All Brands
+
                   <ChevronDown
                     size={18}
                     className="transition group-hover:translate-y-1"
@@ -145,11 +176,6 @@ export default function Brands() {
             </button>
           </motion.div>
         )}
-
-        {/* Featured Car Showcase Placeholder */}
-        <div className="mt-24">
-          {/* We'll build this next */}
-        </div>
       </div>
     </section>
   );
