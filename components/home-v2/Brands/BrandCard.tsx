@@ -20,17 +20,15 @@ export default function BrandCard({ brand }: Props) {
 
       <div className="flex h-full flex-col items-center justify-center">
         {/* Logo */}
-        <div className="flex h-16 items-center justify-center">
-          <Image
-            src={brand.logo}
-            alt={brand.name}
-            width={140}
-            height={60}
-            priority={false}
-            className="h-12 w-auto object-contain transition duration-300 group-hover:scale-110"
-          />
-        </div>
-
+       <div className="flex h-24 w-full items-center justify-center">
+  <Image
+    src={brand.logo}
+    alt={brand.name}
+    width={180}
+    height={90}
+    className="h-full w-full object-contain"
+  />
+</div>
         {/* Brand Name */}
         <p className="mt-5 text-sm font-semibold tracking-wide text-gray-700 transition-colors duration-300 group-hover:text-[#E50914]">
           {brand.name}
