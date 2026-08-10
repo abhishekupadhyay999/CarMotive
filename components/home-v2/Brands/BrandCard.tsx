@@ -33,9 +33,7 @@ export default function BrandCard({ brand }: Props) {
         dark:hover:shadow-[0_20px_50px_rgba(229,9,20,0.08)]
       "
     >
-      {/* =====================================================
-          RED ACCENT LINE
-      ===================================================== */}
+      {/* Red Accent Line */}
 
       <div
         className="
@@ -47,14 +45,11 @@ export default function BrandCard({ brand }: Props) {
         "
       />
 
-      {/* =====================================================
-          CARD CONTENT
-      ===================================================== */}
+      {/* Card Content */}
 
       <div className="flex h-full flex-col items-center justify-center">
-        {/* =================================================
-            LOGO CONTAINER
-        ================================================= */}
+
+        {/* Logo */}
 
         <div
           className="
@@ -80,9 +75,7 @@ export default function BrandCard({ brand }: Props) {
           />
         </div>
 
-        {/* =================================================
-            BRAND NAME
-        ================================================= */}
+        {/* Brand Name */}
 
         <h3
           className="
@@ -92,18 +85,14 @@ export default function BrandCard({ brand }: Props) {
             font-semibold
             text-gray-900
             transition-colors duration-300
-
             group-hover:text-[#E50914]
-
             dark:text-white
           "
         >
           {brand.name}
         </h3>
 
-        {/* =================================================
-            CATEGORY
-        ================================================= */}
+        {/* Category */}
 
         {brand.categories && brand.categories.length > 0 && (
           <p
@@ -112,20 +101,17 @@ export default function BrandCard({ brand }: Props) {
               text-center
               text-xs
               text-gray-500
-              dark:text-gray-500
+              dark:text-gray-400
             "
           >
             {brand.categories
-              .filter((category) => category !== "All")
               .slice(0, 2)
               .join(" • ")}
           </p>
         )}
       </div>
 
-      {/* =====================================================
-          HOVER GLOW
-      ===================================================== */}
+      {/* Hover Glow */}
 
       <div
         className="
