@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useMemo, useRef, useState } from "react";
 
-
 const vehicleData: Record<string, string[]> = {
   "Maruti Suzuki": [
     "Ertiga",
@@ -150,14 +149,13 @@ export default function ContactForm() {
     return vehicleData[brand] || [];
   }, [brand]);
 
-  const sendEmail = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formRef.current) return;
 
     setLoading(true);
+    setSuccess(false);
 
     try {
       await emailjs.sendForm(
@@ -178,37 +176,104 @@ export default function ContactForm() {
         setSuccess(false);
       }, 5000);
     } catch (error) {
-      console.error("EmailJS ERROR:",error);
-      alert(JSON.stringify(error));
-    }
+      console.error("EmailJS ERROR:", error);
 
-    setLoading(false);
+      alert(
+        "Unable to send your enquiry right now. Please try again or contact us directly."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="rounded-[32px] border border-gray-200 bg-white p-8 shadow-xl"
+      className="
+        rounded-[32px]
+        border border-gray-200
+        bg-white
+        p-8
+        shadow-xl
+        transition-colors
+        duration-300
+
+        dark:border-white/10
+        dark:bg-[#111111]
+        dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+      "
     >
-      <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-[#FF5A1F]">
+      {/* Badge */}
+
+      <span
+        className="
+          inline-flex
+          rounded-full
+          border border-[#E50914]/20
+          bg-[#E50914]/5
+          px-4
+          py-2
+          text-xs
+          font-semibold
+          uppercase
+          tracking-[0.25em]
+          text-[#E50914]
+        "
+      >
         Send an Enquiry
       </span>
 
-      <h3 className="mt-5 text-3xl font-bold text-gray-900">
-        Send Enquiry 
+      {/* Heading */}
+
+      <h3
+        className="
+          mt-5
+          text-3xl
+          font-bold
+          text-gray-900
+
+          dark:text-white
+        "
+      >
+        Send Enquiry
       </h3>
 
-      <p className="mt-4 leading-8 text-gray-600">
+      <p
+        className="
+          mt-4
+          leading-8
+          text-gray-600
+
+          dark:text-gray-400
+        "
+      >
         Fill in your details and our experts will contact you shortly.
       </p>
+
+      {/* =====================================================
+          FORM
+      ===================================================== */}
 
       <form
         ref={formRef}
         onSubmit={sendEmail}
         className="mt-10 space-y-6"
-      >        {/* Full Name */}
+      >
+        {/* =================================================
+            FULL NAME
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Full Name
           </label>
 
@@ -217,13 +282,46 @@ export default function ContactForm() {
             name="from_name"
             required
             placeholder="Enter your full name"
-            className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
+            className="
+              w-full
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              placeholder:text-gray-400
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              dark:border-white/10
+              dark:bg-white/5
+              dark:text-white
+              dark:placeholder:text-gray-500
+            "
           />
         </div>
 
-        {/* Phone Number */}
+        {/* =================================================
+            PHONE
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Phone Number
           </label>
 
@@ -232,13 +330,46 @@ export default function ContactForm() {
             name="phone"
             required
             placeholder="Enter your phone number"
-            className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
+            className="
+              w-full
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              placeholder:text-gray-400
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              dark:border-white/10
+              dark:bg-white/5
+              dark:text-white
+              dark:placeholder:text-gray-500
+            "
           />
         </div>
 
-        {/* Email */}
+        {/* =================================================
+            EMAIL
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Email Address
           </label>
 
@@ -247,13 +378,46 @@ export default function ContactForm() {
             name="reply_to"
             required
             placeholder="Enter your email"
-            className="w-full rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
+            className="
+              w-full
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              placeholder:text-gray-400
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              dark:border-white/10
+              dark:bg-white/5
+              dark:text-white
+              dark:placeholder:text-gray-500
+            "
           />
         </div>
 
-        {/* Brand */}
+        {/* =================================================
+            BRAND
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Select Brand
           </label>
 
@@ -265,7 +429,25 @@ export default function ContactForm() {
               setBrand(e.target.value);
               setModel("");
             }}
-            className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
+            className="
+              w-full
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              dark:border-white/10
+              dark:bg-[#181818]
+              dark:text-white
+            "
           >
             <option value="">Choose Brand</option>
 
@@ -277,9 +459,21 @@ export default function ContactForm() {
           </select>
         </div>
 
-        {/* Model */}
+        {/* =================================================
+            MODEL
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Select Model
           </label>
 
@@ -289,7 +483,31 @@ export default function ContactForm() {
             value={model}
             disabled={!brand}
             onChange={(e) => setModel(e.target.value)}
-            className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100 disabled:bg-gray-100 disabled:text-gray-400"
+            className="
+              w-full
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              disabled:cursor-not-allowed
+              disabled:bg-gray-100
+              disabled:text-gray-400
+
+              dark:border-white/10
+              dark:bg-[#181818]
+              dark:text-white
+              dark:disabled:bg-[#0d0d0d]
+              dark:disabled:text-gray-600
+            "
           >
             <option value="">
               {brand ? "Choose Model" : "Select Brand First"}
@@ -303,9 +521,21 @@ export default function ContactForm() {
           </select>
         </div>
 
-        {/* Message */}
+        {/* =================================================
+            MESSAGE
+        ================================================= */}
+
         <div>
-          <label className="mb-2 block font-medium text-gray-700">
+          <label
+            className="
+              mb-2
+              block
+              font-medium
+              text-gray-700
+
+              dark:text-gray-300
+            "
+          >
             Message
           </label>
 
@@ -313,33 +543,128 @@ export default function ContactForm() {
             rows={5}
             name="message"
             placeholder="Tell us what you're looking for..."
-            className="w-full resize-none rounded-2xl border border-gray-300 px-5 py-4 outline-none transition focus:border-[#FF5A1F] focus:ring-4 focus:ring-orange-100"
+            className="
+              w-full
+              resize-none
+              rounded-2xl
+              border border-gray-300
+              bg-white
+              px-5
+              py-4
+              text-gray-900
+              outline-none
+              transition-all
+
+              placeholder:text-gray-400
+
+              focus:border-[#E50914]
+              focus:ring-4
+              focus:ring-[#E50914]/10
+
+              dark:border-white/10
+              dark:bg-white/5
+              dark:text-white
+              dark:placeholder:text-gray-500
+            "
           />
-        </div>        <button
+        </div>
+
+        {/* =================================================
+            SUBMIT
+        ================================================= */}
+
+        <button
           type="submit"
           disabled={loading}
-          className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#FF5A1F] px-6 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-[#E84A12] disabled:cursor-not-allowed disabled:opacity-70"
+          className="
+            group
+            flex
+            w-full
+            items-center
+            justify-center
+            gap-2
+            rounded-full
+            bg-[#E50914]
+            px-6
+            py-4
+            text-lg
+            font-semibold
+            text-white
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:bg-red-700
+            hover:shadow-[0_15px_40px_rgba(229,9,20,0.25)]
+
+            disabled:cursor-not-allowed
+            disabled:opacity-70
+          "
         >
-          {loading ? "Sending Enquiry..." : "Let's Find Your Dream Car"}
+          {loading
+            ? "Sending Enquiry..."
+            : "Let's Find Your Dream Car"}
 
           {!loading && (
             <ArrowRight
               size={20}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
             />
           )}
         </button>
 
+        {/* =================================================
+            SUCCESS MESSAGE
+        ================================================= */}
+
         {success && (
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-4 text-center">
-            <p className="font-semibold text-green-700">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            className="
+              rounded-2xl
+              border border-green-200
+              bg-green-50
+              p-4
+              text-center
+
+              dark:border-green-500/20
+              dark:bg-green-500/10
+            "
+          >
+            <p
+              className="
+                font-semibold
+                text-green-700
+
+                dark:text-green-400
+              "
+            >
               ✅ Thank you! Your enquiry has been sent successfully.
             </p>
 
-            <p className="mt-2 text-sm text-green-600">
+            <p
+              className="
+                mt-2
+                text-sm
+                text-green-600
+
+                dark:text-green-500
+              "
+            >
               Our team will contact you shortly.
             </p>
-          </div>
+          </motion.div>
         )}
       </form>
     </motion.div>

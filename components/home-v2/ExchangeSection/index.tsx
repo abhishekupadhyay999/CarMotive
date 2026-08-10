@@ -17,6 +17,10 @@ import {
   Send,
 } from "lucide-react";
 
+/* =========================================================
+   FEATURES
+========================================================= */
+
 const features = [
   {
     icon: BadgeIndianRupee,
@@ -44,6 +48,10 @@ const features = [
   },
 ];
 
+/* =========================================================
+   VEHICLE OPTIONS
+========================================================= */
+
 const makes = [
   "Maruti Suzuki",
   "Hyundai",
@@ -62,13 +70,7 @@ const makes = [
   "Other",
 ];
 
-const fuels = [
-  "Petrol",
-  "Diesel",
-  "CNG",
-  "Electric",
-  "Hybrid",
-];
+const fuels = ["Petrol", "Diesel", "CNG", "Electric", "Hybrid"];
 
 const transmissions = [
   "Manual",
@@ -85,6 +87,10 @@ const owners = [
   "4th Owner",
   "4+ Owners",
 ];
+
+/* =========================================================
+   COMPONENT
+========================================================= */
 
 export default function ExchangeSection() {
   const [showValuation, setShowValuation] = useState(false);
@@ -107,6 +113,10 @@ export default function ExchangeSection() {
     mileage: "",
   });
 
+  /* =========================================================
+     HANDLE INPUT CHANGE
+  ========================================================= */
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -118,17 +128,23 @@ export default function ExchangeSection() {
     }));
   };
 
+  /* =========================================================
+     SEND VALUATION REQUEST
+  ========================================================= */
+
   const handleValuationSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
 
+    if (loading) return;
+
     setLoading(true);
 
     try {
-      await emailjs.send(
+      const response = await emailjs.send(
         "service_pzbzax4",
-        "template_ekb47qb",
+        "template_ro69vel",
         {
           from_name: formData.name,
           phone: formData.number,
@@ -141,6 +157,7 @@ export default function ExchangeSection() {
           color: formData.color,
           owner: formData.owner,
           mileage: formData.mileage,
+
           subject: "New Car Valuation Request",
 
           message: `
@@ -162,6 +179,8 @@ Mileage: ${formData.mileage}
         "eUIBMV2tMsvzvBaEb"
       );
 
+      console.log("Valuation EmailJS Success:", response);
+
       setSuccess(true);
 
       setFormData({
@@ -182,11 +201,16 @@ Mileage: ${formData.mileage}
         setSuccess(false);
         setShowValuation(false);
       }, 3000);
-    } catch (error) {
-      console.error("Valuation EmailJS Error:", error);
+    } catch (error: any) {
+      console.log("========== EMAILJS ERROR ==========");
+      console.log("Status:", error?.status);
+      console.log("Text:", error?.text);
+      console.log("Full Error:", error);
 
       alert(
-        "Unable to send your valuation request. Please try again."
+        `EmailJS Error: ${error?.status || "Unknown"} - ${
+          error?.text || "Unknown error"
+        }`
       );
     } finally {
       setLoading(false);
@@ -194,29 +218,103 @@ Mileage: ${formData.mileage}
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] py-24 text-white lg:py-28">
-      {/* ================= BACKGROUND ================= */}
+    <section
+      id="exchange"
+      className="
+        relative overflow-hidden
+        bg-white
+        py-24
+        text-gray-900
+        transition-colors duration-300
+        dark:bg-[#050505]
+        dark:text-white
+        lg:py-28
+      "
+    >
+      {/* =====================================================
+          BACKGROUND
+      ===================================================== */}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1b1b1b_0%,#050505_75%)]" />
+      {/* Light */}
+
+      <div
+        className="
+          absolute inset-0
+          bg-[radial-gradient(circle_at_top_right,#f4f4f4_0%,#ffffff_75%)]
+          dark:hidden
+        "
+      />
+
+      {/* Dark */}
+
+      <div
+        className="
+          absolute inset-0 hidden
+          bg-[radial-gradient(circle_at_top_right,#1b1b1b_0%,#050505_75%)]
+          dark:block
+        "
+      />
+
+      {/* =====================================================
+          MAIN CONTENT
+      ===================================================== */}
 
       <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        {/* ================= LEFT ================= */}
+        {/* =================================================
+            LEFT SIDE
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          initial={{
+            opacity: 0,
+            x: -60,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
         >
           {/* Badge */}
 
-          <span className="inline-flex rounded-full border border-[#E50914]/30 bg-[#E50914]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#E50914]">
+          <span
+            className="
+              inline-flex
+              rounded-full
+              border border-[#E50914]/30
+              bg-[#E50914]/10
+              px-5 py-2
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.35em]
+              text-[#E50914]
+            "
+          >
             Vehicle Exchange
           </span>
 
           {/* Heading */}
 
-          <h2 className="mt-7 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h2
+            className="
+              mt-7
+              text-4xl
+              font-bold
+              leading-tight
+              text-gray-900
+
+              dark:text-white
+
+              md:text-5xl
+              lg:text-6xl
+            "
+          >
             Exchange Your Car
             <br />
 
@@ -227,14 +325,26 @@ Mileage: ${formData.mileage}
 
           {/* Description */}
 
-          <p className="mt-7 max-w-xl text-lg leading-8 text-gray-400">
-            Upgrade to your dream car with confidence. Get a fair market value
-            for your existing vehicle, enjoy a hassle-free exchange process,
-            quick documentation, finance assistance and exclusive dealer
-            benefits—all under one roof.
+          <p
+            className="
+              mt-7
+              max-w-xl
+              text-lg
+              leading-8
+              text-gray-600
+
+              dark:text-gray-400
+            "
+          >
+            Upgrade to your dream car with confidence. Get a fair market
+            value for your existing vehicle, enjoy a hassle-free exchange
+            process, quick documentation, finance assistance and exclusive
+            dealer benefits—all under one roof.
           </p>
 
-          {/* ================= FEATURES ================= */}
+          {/* =================================================
+              FEATURES
+          ================================================= */}
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {features.map((feature, index) => {
@@ -251,25 +361,69 @@ Mileage: ${formData.mileage}
                     opacity: 1,
                     y: 0,
                   }}
-                  viewport={{ once: true }}
+                  viewport={{
+                    once: true,
+                  }}
                   transition={{
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="rounded-2xl border border-white/10 bg-[#111111] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#E50914]/40 hover:shadow-[0_20px_50px_rgba(229,9,20,0.15)]"
+                  className="
+                    rounded-2xl
+                    border border-gray-200
+                    bg-white
+                    p-6
+                    shadow-sm
+
+                    transition-all duration-300
+
+                    hover:-translate-y-2
+                    hover:border-[#E50914]/40
+                    hover:shadow-[0_20px_50px_rgba(229,9,20,0.10)]
+
+                    dark:border-white/10
+                    dark:bg-[#111111]
+                    dark:shadow-none
+                    dark:hover:shadow-[0_20px_50px_rgba(229,9,20,0.15)]
+                  "
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E50914]/10">
+                  <div
+                    className="
+                      flex h-12 w-12
+                      items-center justify-center
+                      rounded-xl
+                      bg-[#E50914]/10
+                    "
+                  >
                     <Icon
                       size={24}
                       className="text-[#E50914]"
                     />
                   </div>
 
-                  <h3 className="mt-5 text-lg font-semibold text-white">
+                  <h3
+                    className="
+                      mt-5
+                      text-lg
+                      font-semibold
+                      text-gray-900
+
+                      dark:text-white
+                    "
+                  >
                     {feature.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-gray-400">
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      leading-6
+                      text-gray-600
+
+                      dark:text-gray-400
+                    "
+                  >
                     {feature.description}
                   </p>
                 </motion.div>
@@ -277,7 +431,9 @@ Mileage: ${formData.mileage}
             })}
           </div>
 
-          {/* ================= CTA ================= */}
+          {/* =================================================
+              CTA BUTTONS
+          ================================================= */}
 
           <div className="mt-10 flex flex-wrap gap-4">
             {/* Get Free Valuation */}
@@ -285,7 +441,21 @@ Mileage: ${formData.mileage}
             <button
               type="button"
               onClick={() => setShowValuation(true)}
-              className="inline-flex rounded-full bg-[#E50914] px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]"
+              className="
+                inline-flex
+                rounded-full
+                bg-[#E50914]
+                px-8 py-4
+                text-sm
+                font-semibold
+                text-white
+
+                transition-all duration-300
+
+                hover:-translate-y-1
+                hover:bg-red-700
+                hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
+              "
             >
               Get Free Valuation
             </button>
@@ -295,18 +465,48 @@ Mileage: ${formData.mileage}
             <button
               type="button"
               onClick={() => setShowExpert(true)}
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-[#E50914] hover:bg-white/10"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+
+                border border-gray-200
+                bg-gray-50
+                px-8 py-4
+
+                text-sm
+                font-semibold
+                text-gray-800
+
+                transition-all duration-300
+
+                hover:border-[#E50914]
+                hover:text-[#E50914]
+
+                dark:border-white/10
+                dark:bg-white/5
+                dark:text-white
+                dark:hover:bg-white/10
+              "
             >
               Talk to Expert
 
               <ArrowRight
                 size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
               />
             </button>
           </div>
 
-          {/* ================= TRUST STRIP ================= */}
+          {/* =================================================
+              TRUST STRIP
+          ================================================= */}
 
           <div className="mt-8 flex flex-wrap gap-6">
             {[
@@ -316,7 +516,16 @@ Mileage: ${formData.mileage}
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2 text-sm font-medium text-gray-300"
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-medium
+                  text-gray-600
+
+                  dark:text-gray-300
+                "
               >
                 <CheckCircle2
                   size={18}
@@ -329,25 +538,55 @@ Mileage: ${formData.mileage}
           </div>
         </motion.div>
 
-        {/* ================= RIGHT IMAGE ================= */}
+        {/* =================================================
+            RIGHT SIDE IMAGE
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          initial={{
+            opacity: 0,
+            x: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
           className="relative lg:mt-8"
         >
-          {/* Image */}
+          <div
+            className="
+              overflow-hidden
+              rounded-[32px]
+              border border-gray-200
+              bg-gray-100
+              shadow-2xl
 
-          <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#111111] shadow-2xl">
+              dark:border-white/10
+              dark:bg-[#111111]
+            "
+          >
             <Image
               src="/images/home/exchange.png"
               alt="Exchange Your Car"
               width={900}
               height={700}
               priority
-              className="h-[500px] w-full object-cover transition duration-700 hover:scale-105 lg:h-[600px]"
+              className="
+                h-[500px]
+                w-full
+                object-cover
+                transition
+                duration-700
+                hover:scale-105
+
+                lg:h-[600px]
+              "
             />
           </div>
 
@@ -362,13 +601,38 @@ Mileage: ${formData.mileage}
               opacity: 1,
               y: 0,
             }}
-            viewport={{ once: true }}
+            viewport={{
+              once: true,
+            }}
             transition={{
               delay: 0.4,
             }}
-            className="absolute -bottom-8 -left-8 hidden rounded-3xl border border-white/10 bg-[#111111] p-6 shadow-2xl lg:block"
+            className="
+              absolute
+              -bottom-8
+              -left-8
+              hidden
+
+              rounded-3xl
+              border border-gray-200
+              bg-white
+              p-6
+              shadow-2xl
+
+              dark:border-white/10
+              dark:bg-[#111111]
+
+              lg:block
+            "
           >
-            <p className="text-sm text-gray-400">
+            <p
+              className="
+                text-sm
+                text-gray-500
+
+                dark:text-gray-400
+              "
+            >
               Successful Exchanges
             </p>
 
@@ -376,29 +640,57 @@ Mileage: ${formData.mileage}
               500+
             </h3>
 
-            <p className="mt-2 max-w-[220px] text-sm text-gray-400">
+            <p
+              className="
+                mt-2
+                max-w-[220px]
+                text-sm
+                text-gray-500
+
+                dark:text-gray-400
+              "
+            >
               Happy customers upgraded their cars with Carmotive
             </p>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* ========================================================= */}
-      {/* FREE VALUATION POPUP */}
-      {/* ========================================================= */}
+      {/* =====================================================
+          FREE VALUATION POPUP
+      ===================================================== */}
 
       <AnimatePresence>
         {showValuation && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
             onClick={() => {
               if (!loading) {
                 setShowValuation(false);
               }
             }}
-            className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/75 px-4 py-8 backdrop-blur-sm"
+            className="
+              fixed
+              inset-0
+              z-[100]
+              flex
+              items-center
+              justify-center
+              overflow-y-auto
+
+              bg-black/75
+              px-4
+              py-8
+              backdrop-blur-sm
+            "
           >
             <motion.div
               initial={{
@@ -420,7 +712,23 @@ Mileage: ${formData.mileage}
                 duration: 0.25,
               }}
               onClick={(event) => event.stopPropagation()}
-              className="relative my-auto w-full max-w-2xl rounded-[30px] border border-white/10 bg-[#111111] p-6 shadow-2xl sm:p-8"
+              className="
+                relative
+                my-auto
+                w-full
+                max-w-2xl
+                rounded-[30px]
+
+                border border-gray-200
+                bg-white
+                p-6
+                shadow-2xl
+
+                dark:border-white/10
+                dark:bg-[#111111]
+
+                sm:p-8
+              "
             >
               {/* Close */}
 
@@ -429,7 +737,31 @@ Mileage: ${formData.mileage}
                 onClick={() => setShowValuation(false)}
                 disabled={loading}
                 aria-label="Close valuation form"
-                className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-gray-400 transition hover:bg-[#E50914] hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                className="
+                  absolute
+                  right-5
+                  top-5
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+
+                  bg-gray-100
+                  text-gray-500
+
+                  transition
+
+                  hover:bg-[#E50914]
+                  hover:text-white
+
+                  dark:bg-white/5
+                  dark:text-gray-400
+
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
+                "
               >
                 <X size={20} />
               </button>
@@ -437,30 +769,66 @@ Mileage: ${formData.mileage}
               {/* Header */}
 
               <div className="pr-12">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E50914]">
+                <p
+                  className="
+                    text-sm
+                    font-semibold
+                    uppercase
+                    tracking-[0.25em]
+                    text-[#E50914]
+                  "
+                >
                   Free Car Valuation
                 </p>
 
-                <h3 className="mt-3 text-3xl font-bold text-white">
+                <h3
+                  className="
+                    mt-3
+                    text-3xl
+                    font-bold
+                    text-gray-900
+
+                    dark:text-white
+                  "
+                >
                   Get Your Car Valued
                 </h3>
 
-                <p className="mt-3 text-gray-400">
+                <p
+                  className="
+                    mt-3
+                    text-gray-500
+
+                    dark:text-gray-400
+                  "
+                >
                   Share your vehicle details and our team will contact you
                   with the next steps.
                 </p>
               </div>
 
-              {/* Form */}
+              {/* =================================================
+                  FORM
+              ================================================= */}
 
               <form
                 onSubmit={handleValuationSubmit}
                 className="mt-8 grid gap-5 sm:grid-cols-2"
               >
-                {/* Name */}
+                {/* NAME */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label
+                    className="
+                      mb-2
+                      block
+                      text-sm
+                      font-medium
+                      text-gray-700
+
+                      dark:text-gray-300
+                    "
+                  >
                     Name
                   </label>
 
@@ -471,14 +839,47 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="Enter your name"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+
+                      text-gray-900
+
+                      outline-none
+                      transition
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Number */}
+                {/* NUMBER */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label
+                    className="
+                      mb-2
+                      block
+                      text-sm
+                      font-medium
+                      text-gray-700
+
+                      dark:text-gray-300
+                    "
+                  >
                     Number
                   </label>
 
@@ -489,14 +890,37 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="Enter phone number"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+
+                      text-gray-900
+
+                      outline-none
+                      transition
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Make */}
+                {/* MAKE */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Make
                   </label>
 
@@ -505,7 +929,24 @@ Mileage: ${formData.mileage}
                     value={formData.make}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-2xl border border-white/10 bg-[#151515] px-4 py-3.5 text-white outline-none transition focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-[#151515]
+                      dark:text-white
+                    "
                   >
                     <option value="">Select Make</option>
 
@@ -517,10 +958,10 @@ Mileage: ${formData.mileage}
                   </select>
                 </div>
 
-                {/* Model */}
+                {/* MODEL */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Model
                   </label>
 
@@ -531,14 +972,34 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="e.g. Creta"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Mfg Year */}
+                {/* MFG YEAR */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Mfg Year
                   </label>
 
@@ -551,14 +1012,34 @@ Mileage: ${formData.mileage}
                     min="1990"
                     max={new Date().getFullYear()}
                     placeholder="e.g. 2022"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Variant */}
+                {/* VARIANT */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Variant
                   </label>
 
@@ -569,14 +1050,34 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="e.g. SX(O)"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Fuel */}
+                {/* FUEL */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Fuel
                   </label>
 
@@ -585,7 +1086,24 @@ Mileage: ${formData.mileage}
                     value={formData.fuel}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-2xl border border-white/10 bg-[#151515] px-4 py-3.5 text-white outline-none transition focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-[#151515]
+                      dark:text-white
+                    "
                   >
                     <option value="">Select Fuel</option>
 
@@ -597,10 +1115,10 @@ Mileage: ${formData.mileage}
                   </select>
                 </div>
 
-                {/* Transmission */}
+                {/* TRANSMISSION */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Transmission
                   </label>
 
@@ -609,7 +1127,24 @@ Mileage: ${formData.mileage}
                     value={formData.transmission}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-2xl border border-white/10 bg-[#151515] px-4 py-3.5 text-white outline-none transition focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-[#151515]
+                      dark:text-white
+                    "
                   >
                     <option value="">
                       Select Transmission
@@ -626,10 +1161,10 @@ Mileage: ${formData.mileage}
                   </select>
                 </div>
 
-                {/* Color */}
+                {/* COLOR */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Color
                   </label>
 
@@ -640,14 +1175,34 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="e.g. White"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Owner */}
+                {/* OWNER */}
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Owner
                   </label>
 
@@ -656,11 +1211,26 @@ Mileage: ${formData.mileage}
                     value={formData.owner}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-2xl border border-white/10 bg-[#151515] px-4 py-3.5 text-white outline-none transition focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-[#151515]
+                      dark:text-white
+                    "
                   >
-                    <option value="">
-                      Select Owner
-                    </option>
+                    <option value="">Select Owner</option>
 
                     {owners.map((owner) => (
                       <option key={owner} value={owner}>
@@ -670,10 +1240,10 @@ Mileage: ${formData.mileage}
                   </select>
                 </div>
 
-                {/* Mileage */}
+                {/* MILEAGE */}
 
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Mileage
                   </label>
 
@@ -684,31 +1254,80 @@ Mileage: ${formData.mileage}
                     onChange={handleChange}
                     required
                     placeholder="e.g. 45,000 km"
-                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-[#E50914] focus:ring-2 focus:ring-[#E50914]/20"
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-gray-200
+                      bg-gray-50
+                      px-4
+                      py-3.5
+                      text-gray-900
+                      outline-none
+
+                      placeholder:text-gray-400
+
+                      focus:border-[#E50914]
+                      focus:ring-2
+                      focus:ring-[#E50914]/20
+
+                      dark:border-white/10
+                      dark:bg-white/5
+                      dark:text-white
+                      dark:placeholder:text-gray-600
+                    "
                   />
                 </div>
 
-                {/* Success */}
+                {/* SUCCESS */}
 
                 {success && (
-                  <div className="sm:col-span-2 rounded-2xl border border-green-500/20 bg-green-500/10 p-4">
-                    <p className="font-semibold text-green-400">
+                  <div
+                    className="
+                      sm:col-span-2
+                      rounded-2xl
+                      border border-green-500/20
+                      bg-green-500/10
+                      p-4
+                    "
+                  >
+                    <p className="font-semibold text-green-500 dark:text-green-400">
                       Thank you! Your valuation request has been sent.
                     </p>
 
-                    <p className="mt-1 text-sm text-green-500/80">
+                    <p className="mt-1 text-sm text-green-600/80 dark:text-green-500/80">
                       Our team will contact you shortly.
                     </p>
                   </div>
                 )}
 
-                {/* Submit */}
+                {/* SUBMIT */}
 
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
                     disabled={loading}
-                    className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#E50914] px-6 py-4 font-semibold text-white transition-all duration-300 hover:bg-red-700 hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
+                    className="
+                      group
+                      flex
+                      w-full
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-full
+                      bg-[#E50914]
+                      px-6
+                      py-4
+                      font-semibold
+                      text-white
+
+                      transition-all duration-300
+
+                      hover:bg-red-700
+                      hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
+
+                      disabled:cursor-not-allowed
+                      disabled:opacity-60
+                    "
                   >
                     {loading ? (
                       "Sending Request..."
@@ -730,18 +1349,34 @@ Mileage: ${formData.mileage}
         )}
       </AnimatePresence>
 
-      {/* ========================================================= */}
-      {/* TALK TO EXPERT POPUP */}
-      {/* ========================================================= */}
+      {/* =====================================================
+          TALK TO EXPERT POPUP
+      ===================================================== */}
 
       <AnimatePresence>
         {showExpert && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
             onClick={() => setShowExpert(false)}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-6 backdrop-blur-sm"
+            className="
+              fixed
+              inset-0
+              z-[100]
+              flex
+              items-center
+              justify-center
+              bg-black/75
+              px-6
+              backdrop-blur-sm
+            "
           >
             <motion.div
               initial={{
@@ -763,7 +1398,20 @@ Mileage: ${formData.mileage}
                 duration: 0.25,
               }}
               onClick={(event) => event.stopPropagation()}
-              className="relative w-full max-w-md rounded-[28px] border border-white/10 bg-[#111111] p-8 text-center shadow-2xl"
+              className="
+                relative
+                w-full
+                max-w-md
+                rounded-[28px]
+                border border-gray-200
+                bg-white
+                p-8
+                text-center
+                shadow-2xl
+
+                dark:border-white/10
+                dark:bg-[#111111]
+              "
             >
               {/* Close */}
 
@@ -771,14 +1419,46 @@ Mileage: ${formData.mileage}
                 type="button"
                 onClick={() => setShowExpert(false)}
                 aria-label="Close"
-                className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-gray-400 transition hover:bg-[#E50914] hover:text-white"
+                className="
+                  absolute
+                  right-5
+                  top-5
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+
+                  bg-gray-100
+                  text-gray-500
+
+                  transition
+
+                  hover:bg-[#E50914]
+                  hover:text-white
+
+                  dark:bg-white/5
+                  dark:text-gray-400
+                "
               >
                 <X size={20} />
               </button>
 
               {/* Phone Icon */}
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#E50914]/10">
+              <div
+                className="
+                  mx-auto
+                  flex
+                  h-16
+                  w-16
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#E50914]/10
+                "
+              >
                 <Phone
                   size={28}
                   className="text-[#E50914]"
@@ -789,23 +1469,60 @@ Mileage: ${formData.mileage}
                 Talk to an Expert
               </p>
 
-              <h3 className="mt-3 text-3xl font-bold text-white">
+              <h3
+                className="
+                  mt-3
+                  text-3xl
+                  font-bold
+                  text-gray-900
+
+                  dark:text-white
+                "
+              >
                 Need Help Choosing a Car?
               </h3>
 
-              <p className="mt-4 leading-7 text-gray-400">
+              <p
+                className="
+                  mt-4
+                  leading-7
+                  text-gray-500
+
+                  dark:text-gray-400
+                "
+              >
                 Speak with our car experts for help with car selection,
                 exchange, finance and the buying process.
               </p>
 
               {/* Phone Number */}
 
-              <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-5">
-                <p className="text-sm text-gray-500">
+              <div
+                className="
+                  mt-7
+                  rounded-2xl
+                  border border-gray-200
+                  bg-gray-50
+                  p-5
+
+                  dark:border-white/10
+                  dark:bg-white/5
+                "
+              >
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   Call us directly
                 </p>
 
-                <p className="mt-2 text-2xl font-bold text-white">
+                <p
+                  className="
+                    mt-2
+                    text-2xl
+                    font-bold
+                    text-gray-900
+
+                    dark:text-white
+                  "
+                >
                   +91 98881 95553
                 </p>
               </div>
@@ -814,7 +1531,25 @@ Mileage: ${formData.mileage}
 
               <a
                 href="tel:+919888195553"
-                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#E50914] px-6 py-4 font-semibold text-white transition-all duration-300 hover:bg-red-700 hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]"
+                className="
+                  mt-6
+                  flex
+                  w-full
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-full
+                  bg-[#E50914]
+                  px-6
+                  py-4
+                  font-semibold
+                  text-white
+
+                  transition-all duration-300
+
+                  hover:bg-red-700
+                  hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
+                "
               >
                 <Phone size={19} />
                 Call Now
