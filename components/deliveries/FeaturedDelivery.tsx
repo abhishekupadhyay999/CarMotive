@@ -11,27 +11,83 @@ export default function FeaturedDelivery({ video }: Props) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="group relative h-[520px] overflow-hidden rounded-3xl"
+      className="
+        group
+        relative
+        h-[520px]
+        overflow-hidden
+        rounded-3xl
+        bg-black
+        shadow-xl
+        dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+      "
     >
+      {/* Video */}
+
       <video
         src={video}
         autoPlay
         muted
         loop
         playsInline
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+        "
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+      {/* Overlay */}
 
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black/80
+          via-black/30
+          to-transparent
+        "
+      />
+
+      {/* Play Icon */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          flex
+          items-center
+          justify-center
+          opacity-0
+          transition
+          duration-300
+          group-hover:opacity-100
+        "
+      >
         <div className="rounded-full bg-white/20 p-5 backdrop-blur-md">
-          <Play className="h-10 w-10 fill-white text-white" />
+          <Play
+            className="h-10 w-10 fill-white text-white"
+          />
         </div>
       </div>
 
+      {/* Content */}
+
       <div className="absolute bottom-8 left-8 max-w-lg">
-        <span className="rounded-full bg-[#D4AF37] px-4 py-2 text-sm font-semibold text-black">
+        <span
+          className="
+            rounded-full
+            bg-[#D4AF37]
+            px-4
+            py-2
+            text-sm
+            font-semibold
+            text-black
+          "
+        >
           OUR HAPPY CUSTOMERS
         </span>
 
@@ -42,7 +98,8 @@ export default function FeaturedDelivery({ video }: Props) {
         </h3>
 
         <p className="mt-4 text-zinc-300">
-          Thank you for trusting Carmotive India to be part of your journey.
+          Thank you for trusting Carmotive India to be part
+          of your journey.
         </p>
       </div>
     </motion.div>

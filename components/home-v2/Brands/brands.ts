@@ -10,7 +10,7 @@ export const brands: Brand[] = [
   // Luxury
   {
     name: "BMW",
-    logo: "/brands/BMW.svg",
+    logo: "/brands/bmw.avif",
     categories: ["Luxury", "EV"],
   },
   {
@@ -25,7 +25,7 @@ export const brands: Brand[] = [
   },
   {
     name: "Volvo",
-    logo: "/brands/volvo.jpeg",
+    logo: "/brands/volvo1.png",
     categories: ["Luxury", "EV"],
   },
   {
@@ -42,52 +42,52 @@ export const brands: Brand[] = [
   // Popular
   {
     name: "Maruti Suzuki",
-    logo: "/brands/maruti-suzuki.svg",
+    logo: "/brands/maruti-suzuki.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Toyota",
-    logo: "/brands/toyota.png",
+    logo: "/brands/toyota.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Honda",
-    logo: "/brands/honda.png",
+    logo: "/brands/honda.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Hyundai",
-    logo: "/brands/hyundai.png",
+    logo: "/brands/hyundai.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Kia",
-    logo: "/brands/kia.jpeg",
+    logo: "/brands/kia.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Tata",
-    logo: "/brands/tata.png",
+    logo: "/brands/tata.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Mahindra",
-    logo: "/brands/mahindra.png",
+    logo: "/brands/mahindra.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Volkswagen",
-    logo: "/brands/volkswagen.jpeg",
+    logo: "/brands/volkswagen.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "MG",
-    logo: "/brands/MG.png",
+    logo: "/brands/mg.avif",
     categories: ["Popular", "EV"],
   },
   {
     name: "Skoda",
-    logo: "/brands/skoda.png",
+    logo: "/brands/skoda.avif",
     categories: ["Popular", "EV"],
   },
   {
@@ -97,7 +97,7 @@ export const brands: Brand[] = [
   },
   {
     name: "Nissan",
-    logo: "/brands/nissan.png",
+    logo: "/brands/nissan.avif",
     categories: ["Popular"],
   },
   {
