@@ -120,7 +120,7 @@ export default function Testimonials() {
                     dark:text-white
                   "
                 >
-                  4.8/5
+                  4.9/5
                 </h2>
               </div>
 

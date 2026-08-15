@@ -9,9 +9,8 @@ interface Props {
 }
 
 /*
-  Some logo PNGs contain more transparent whitespace than others.
-  These classes slightly normalize the visual size without changing
-  the original image files.
+  Some logo PNGs contain different amounts of transparent
+  whitespace. These scales help visually normalize them.
 */
 const logoScale: Record<string, string> = {
   BMW: "scale-[0.82]",
@@ -35,12 +34,11 @@ const logoScale: Record<string, string> = {
   Nissan: "scale-[0.90]",
   Renault: "scale-[0.90]",
   MG: "scale-[0.90]",
-  "Isuzu": "scale-[0.90]",
+  Isuzu: "scale-[0.90]",
 };
 
 export default function BrandCard({ brand }: Props) {
-  const scaleClass =
-    logoScale[brand.name] || "scale-[0.9]";
+  const scaleClass = logoScale[brand.name] || "scale-[0.90]";
 
   return (
     <motion.div
@@ -71,7 +69,7 @@ export default function BrandCard({ brand }: Props) {
         dark:hover:shadow-[0_15px_40px_rgba(229,9,20,0.08)]
       "
     >
-      {/* Red accent */}
+      {/* Red Accent */}
       <div
         className="
           absolute
@@ -86,12 +84,10 @@ export default function BrandCard({ brand }: Props) {
         "
       />
 
-      {/* Main content */}
+      {/* Main Content */}
       <div className="flex flex-col items-center">
-        {/* ================================================
-            FIXED LOGO FRAME
-        ================================================= */}
 
+        {/* Fixed Logo Frame */}
         <div
           className="
             flex
@@ -132,10 +128,7 @@ export default function BrandCard({ brand }: Props) {
           </div>
         </div>
 
-        {/* ================================================
-            BRAND NAME
-        ================================================= */}
-
+        {/* Brand Name */}
         <h3
           className="
             mt-4
@@ -148,37 +141,15 @@ export default function BrandCard({ brand }: Props) {
             transition-colors
             duration-300
             group-hover:text-[#E50914]
-
             dark:text-white
           "
         >
           {brand.name}
         </h3>
 
-        {/* ================================================
-            CATEGORY
-        ================================================= */}
-
-        <p
-          className="
-            mt-1
-            min-h-[18px]
-            text-center
-            text-xs
-            leading-[18px]
-            text-gray-500
-
-            dark:text-gray-400
-          "
-        >
-          {brand.categories?.slice(0, 2).join(" • ") || "\u00A0"}
-        </p>
       </div>
 
-      {/* ================================================
-          HOVER GLOW
-      ================================================= */}
-
+      {/* Hover Glow */}
       <div
         className="
           pointer-events-none

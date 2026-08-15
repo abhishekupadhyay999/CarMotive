@@ -71,7 +71,7 @@ const stats = [
     label: "Happy Customers",
   },
   {
-    number: "500+",
+    number: "300+",
     label: "Premium Cars",
   },
   {

@@ -68,7 +68,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-white text-gray-900 dark:bg-[#050505] dark:text-white"
+      className="
+        relative
+        min-h-screen
+        overflow-hidden
+        bg-white
+        text-gray-900
+        dark:bg-[#050505]
+        dark:text-white
+      "
     >
       {/* =====================================================
           BACKGROUND IMAGE
@@ -113,9 +121,25 @@ export default function Hero() {
 
       {/* =====================================================
           HERO CONTENT
+          Positioned directly below navbar
       ===================================================== */}
 
-      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-32 pt-32 lg:px-8">
+      <div
+        className="
+          relative
+          z-20
+          mx-auto
+          flex
+          min-h-screen
+          max-w-7xl
+          items-start
+          px-6
+          pb-32
+          pt-10
+          lg:px-8
+          lg:pt-12
+        "
+      >
         <motion.div
           initial={{
             opacity: 0,
@@ -136,25 +160,68 @@ export default function Hero() {
           ================================================= */}
 
           <h1 className="leading-[0.95]">
-            {/* Drive Your */}
-
-            <span className="block text-4xl font-black uppercase tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+            <span
+              className="
+                block
+                text-4xl
+                font-black
+                uppercase
+                tracking-tight
+                text-gray-900
+                dark:text-white
+                md:text-5xl
+                lg:text-6xl
+              "
+            >
               Drive Your
             </span>
 
-            {/* Dream Car */}
-
-            <span className="mt-2 block text-6xl font-black uppercase tracking-tight text-[#E50914] md:text-7xl lg:text-8xl">
+            <span
+              className="
+                mt-2
+                block
+                text-6xl
+                font-black
+                uppercase
+                tracking-tight
+                text-[#E50914]
+                md:text-7xl
+                lg:text-8xl
+              "
+            >
               Dream Car
             </span>
 
-            {/* Subtitle */}
-
-            <span className="mt-6 block text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white md:text-2xl lg:text-3xl">
+            <span
+              className="
+                mt-6
+                block
+                text-lg
+                font-bold
+                uppercase
+                tracking-wide
+                text-gray-900
+                dark:text-white
+                md:text-2xl
+                lg:text-3xl
+              "
+            >
               From India's Leading
             </span>
 
-            <span className="block text-lg font-bold uppercase tracking-wide text-gray-900 dark:text-white md:text-2xl lg:text-3xl">
+            <span
+              className="
+                block
+                text-lg
+                font-bold
+                uppercase
+                tracking-wide
+                text-gray-900
+                dark:text-white
+                md:text-2xl
+                lg:text-3xl
+              "
+            >
               Multi-Brand Car Dealer
             </span>
           </h1>
@@ -163,7 +230,17 @@ export default function Hero() {
               DESCRIPTION
           ================================================= */}
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-gray-700 dark:text-gray-300 md:text-lg">
+          <p
+            className="
+              mt-6
+              max-w-xl
+              text-base
+              leading-7
+              text-gray-700
+              dark:text-gray-300
+              md:text-lg
+            "
+          >
             Discover premium cars, competitive deals, easy finance and
             complete car buying assistance — all under one roof.
           </p>
@@ -178,14 +255,18 @@ export default function Hero() {
                 key={feature}
                 className="
                   rounded-full
-                  border border-gray-300
+                  border
+                  border-gray-300
                   bg-white/70
-                  px-5 py-2
-                  text-sm font-medium
+                  px-5
+                  py-2
+                  text-sm
+                  font-medium
                   text-gray-800
                   shadow-sm
                   backdrop-blur-md
-                  transition-all duration-300
+                  transition-all
+                  duration-300
                   hover:border-[#E50914]
                   hover:bg-[#E50914]/10
 
@@ -206,34 +287,53 @@ export default function Hero() {
           ================================================= */}
 
           <div className="mt-10 flex flex-wrap gap-4">
-            {/* Explore Cars */}
-
             <Link
               href="#featured-cars"
-              className="group inline-flex items-center gap-3 rounded-xl bg-[#E50914] px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-[0_15px_35px_rgba(229,9,20,0.3)]"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-3
+                rounded-xl
+                bg-[#E50914]
+                px-8
+                py-4
+                font-semibold
+                text-white
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:bg-red-700
+                hover:shadow-[0_15px_35px_rgba(229,9,20,0.3)]
+              "
             >
               Explore Cars
 
               <ArrowRight
                 size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
               />
             </Link>
-
-            {/* Book Test Drive */}
 
             <Link
               href="#contact"
               className="
                 rounded-xl
-                border border-gray-300
+                border
+                border-gray-300
                 bg-white/70
-                px-8 py-4
+                px-8
+                py-4
                 font-semibold
                 text-gray-900
                 shadow-sm
                 backdrop-blur-xl
-                transition-all duration-300
+                transition-all
+                duration-300
                 hover:border-[#E50914]
                 hover:bg-white
 
@@ -281,32 +381,28 @@ export default function Hero() {
                   }}
                   className="
                     rounded-2xl
-                    border border-gray-300
+                    border
+                    border-gray-300
                     bg-white/75
                     p-5
                     shadow-lg
                     backdrop-blur-xl
-                    transition-all duration-300
+                    transition-all
+                    duration-300
 
                     dark:border-white/10
                     dark:bg-white/10
                     dark:shadow-none
                   "
                 >
-                  {/* Icon */}
-
                   <Icon
                     className="mb-4 text-[#E50914]"
                     size={28}
                   />
 
-                  {/* Value */}
-
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                     {item.value}
                   </h3>
-
-                  {/* Label */}
 
                   <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     {item.label}
@@ -319,44 +415,26 @@ export default function Hero() {
       </div>
 
       {/* =====================================================
-          SCROLL INDICATOR
-      ===================================================== */}
-
-      <motion.div
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 2,
-        }}
-        className="absolute bottom-6 left-1/2 z-40 hidden -translate-x-1/2 xl:flex"
-      >
-        <div className="flex flex-col items-center">
-          <span className="mb-3 text-xs uppercase tracking-[0.35em] text-gray-600 dark:text-gray-400">
-            Scroll
-          </span>
-
-          <div className="flex h-14 w-8 justify-center rounded-full border border-gray-400 dark:border-white/20">
-            <motion.div
-              animate={{
-                y: [5, 24, 5],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 1.8,
-              }}
-              className="mt-2 h-2 w-2 rounded-full bg-[#E50914]"
-            />
-          </div>
-        </div>
-      </motion.div>
-
-      {/* =====================================================
           BOTTOM GRADIENT
       ===================================================== */}
 
-      <div className="absolute bottom-0 left-0 z-10 h-44 w-full bg-gradient-to-t from-white via-white/60 to-transparent dark:from-[#050505] dark:via-[#050505]/70 dark:to-transparent" />
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          z-10
+          h-44
+          w-full
+          bg-gradient-to-t
+          from-white
+          via-white/60
+          to-transparent
+          dark:from-[#050505]
+          dark:via-[#050505]/70
+          dark:to-transparent
+        "
+      />
     </section>
   );
 }

@@ -222,6 +222,7 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex h-24 items-center justify-between">
+
             {/* =================================================
                 LOGO
             ================================================= */}
@@ -230,8 +231,10 @@ export default function Navbar() {
               href="#home"
               className="flex items-center"
             >
+              {/* LIGHT MODE LOGO */}
+
               <Image
-                src="/logo/logo3.png"
+                src="/logo/logo4.png"
                 alt="Carmotive India"
                 width={300}
                 height={100}
@@ -240,6 +243,30 @@ export default function Navbar() {
                   w-auto
                   transition-all
                   duration-500
+                  dark:hidden
+
+                  ${
+                    scrolled
+                      ? "h-16"
+                      : "h-20"
+                  }
+                `}
+              />
+
+              {/* DARK MODE LOGO */}
+
+              <Image
+                src="/logo/logo3.png"
+                alt="Carmotive India"
+                width={300}
+                height={100}
+                priority
+                className={`
+                  hidden
+                  w-auto
+                  transition-all
+                  duration-500
+                  dark:block
 
                   ${
                     scrolled
@@ -315,6 +342,7 @@ export default function Navbar() {
             ================================================= */}
 
             <div className="hidden items-center gap-3 lg:flex">
+
               {/* Theme Toggle */}
 
               <ThemeToggle />
@@ -376,6 +404,7 @@ export default function Navbar() {
             ================================================= */}
 
             <div className="flex items-center gap-3 lg:hidden">
+
               <ThemeToggle />
 
               <button
@@ -465,6 +494,7 @@ export default function Navbar() {
                   dark:bg-[#050505]
                 "
               >
+
                 {/* =================================================
                     DRAWER HEADER
                 ================================================= */}
@@ -482,12 +512,34 @@ export default function Navbar() {
                     dark:border-white/10
                   "
                 >
+
+                  {/* LIGHT MODE LOGO */}
+
                   <Image
                     src="/logo/logo3.png"
                     alt="Carmotive India"
                     width={180}
                     height={60}
-                    className="h-12 w-auto"
+                    className="
+                      h-12
+                      w-auto
+                      dark:hidden
+                    "
+                  />
+
+                  {/* DARK MODE LOGO */}
+
+                  <Image
+                    src="/logo/logo4.png"
+                    alt="Carmotive India"
+                    width={180}
+                    height={60}
+                    className="
+                      hidden
+                      h-12
+                      w-auto
+                      dark:block
+                    "
                   />
 
                   <button
@@ -518,6 +570,7 @@ export default function Navbar() {
                 ================================================= */}
 
                 <div className="flex flex-1 flex-col px-6 py-8">
+
                   {navLinks.map((item) => {
                     const isActive =
                       activeSection ===
@@ -620,6 +673,7 @@ export default function Navbar() {
                       dark:text-gray-400
                     "
                   >
+
                     <div className="flex items-center gap-3">
                       <Phone
                         size={16}
@@ -646,6 +700,7 @@ export default function Navbar() {
 
                       Virar (W), Maharashtra
                     </div>
+
                   </div>
                 </div>
               </motion.div>
