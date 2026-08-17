@@ -3,11 +3,13 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
   ReactNode,
 } from "react";
 
-import carsData from "@/datas/cars.json";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 export interface Car {
   id: number;
@@ -21,6 +23,37 @@ export interface Car {
   price: string | null;
 }
 
+interface SanityCar {
+  _id: string;
+
+  name: string;
+  brand: string;
+  price: string | null;
+
+  year?: number;
+  kilometers?: number;
+
+  fuel?: string;
+  transmission?: string;
+
+  bodyType?: string;
+  color?: string;
+  location?: string;
+
+  description?: string;
+
+  images?: Array<{
+    _key?: string;
+    asset?: {
+      _ref: string;
+    };
+  }>;
+
+  featured?: boolean;
+  available?: boolean;
+  sortOrder?: number;
+}
+
 interface Filters {
   brand: string;
   budget: string;
@@ -32,21 +65,20 @@ interface CarContextType {
   cars: Car[];
   filteredCars: Car[];
   filters: Filters;
+
   hasSearched: boolean;
-  setFilters: React.Dispatch<React.SetStateAction<Filters>>;
+
+  setFilters: React.Dispatch<
+    React.SetStateAction<Filters>
+  >;
+
   searchCars: () => void;
+
   resetFilters: () => void;
 }
 
-const CarContext = createContext<CarContextType | null>(null);
-
-// Remove invalid/header rows
-const cars = (carsData as Car[]).filter(
-  (car) =>
-    car.price &&
-    car.price !== "Ex-Showroom Starts From" &&
-    car.model !== "Model"
-);
+const CarContext =
+  createContext<CarContextType | null>(null);
 
 const initialFilters: Filters = {
   brand: "all",
@@ -55,7 +87,9 @@ const initialFilters: Filters = {
   transmission: "all",
 };
 
-function getPriceValue(price: string | null | undefined) {
+function getPriceValue(
+  price: string | null | undefined
+) {
   if (!price) return -1;
 
   const cleaned = price
@@ -65,35 +99,61 @@ function getPriceValue(price: string | null | undefined) {
     .trim();
 
   if (cleaned.includes("Crore")) {
-    const value = parseFloat(cleaned.replace("Crore", "").trim());
-    return isNaN(value) ? -1 : value * 10000000;
+    const value = parseFloat(
+      cleaned.replace("Crore", "").trim()
+    );
+
+    return isNaN(value)
+      ? -1
+      : value * 10000000;
   }
 
   if (cleaned.includes("Lakh")) {
-    const value = parseFloat(cleaned.replace("Lakh", "").trim());
-    return isNaN(value) ? -1 : value * 100000;
+    const value = parseFloat(
+      cleaned.replace("Lakh", "").trim()
+    );
+
+    return isNaN(value)
+      ? -1
+      : value * 100000;
   }
 
   const value = parseFloat(cleaned);
+
   return isNaN(value) ? -1 : value;
 }
 
-function matchBudget(price: number, budget: string) {
+function matchBudget(
+  price: number,
+  budget: string
+) {
   switch (budget) {
     case "Under ₹10 Lakh":
       return price < 1000000;
 
     case "₹10–15 Lakh":
-      return price >= 1000000 && price <= 1500000;
+      return (
+        price >= 1000000 &&
+        price <= 1500000
+      );
 
     case "₹15–20 Lakh":
-      return price > 1500000 && price <= 2000000;
+      return (
+        price > 1500000 &&
+        price <= 2000000
+      );
 
     case "₹20–30 Lakh":
-      return price > 2000000 && price <= 3000000;
+      return (
+        price > 2000000 &&
+        price <= 3000000
+      );
 
     case "₹30–50 Lakh":
-      return price > 3000000 && price <= 5000000;
+      return (
+        price > 3000000 &&
+        price <= 5000000
+      );
 
     case "Above ₹50 Lakh":
       return price > 5000000;
@@ -103,50 +163,197 @@ function matchBudget(price: number, budget: string) {
   }
 }
 
+/* =========================================
+   CONVERT SANITY CAR → EXISTING CAR FORMAT
+========================================= */
+
+function convertSanityCar(
+  car: SanityCar,
+  index: number
+): Car {
+  const firstImage =
+    car.images && car.images.length > 0
+      ? urlFor(car.images[0])
+          .width(1200)
+          .height(800)
+          .fit("crop")
+          .url()
+      : "/images/cars/no-image.webp";
+
+  return {
+    id: index + 1,
+
+    brand: car.brand,
+
+    model: car.name,
+
+    slug:
+      car.name
+        ?.toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "") ||
+      car._id,
+
+    image: firstImage,
+
+    engine:
+      car.bodyType ||
+      car.year
+        ? `${car.year || ""}${
+            car.bodyType
+              ? ` • ${car.bodyType}`
+              : ""
+          }`
+        : "",
+
+    fuel: car.fuel
+      ? [car.fuel]
+      : [],
+
+    transmission: car.transmission
+      ? [car.transmission]
+      : [],
+
+    price: car.price || null,
+  };
+}
+
+/* =========================================
+   PROVIDER
+========================================= */
+
 export function CarProvider({
   children,
 }: {
   children: ReactNode;
 }) {
-  const [filters, setFilters] = useState<Filters>(initialFilters);
+  const [cars, setCars] = useState<Car[]>([]);
 
-  const [filteredCars, setFilteredCars] = useState<Car[]>([]);
-  const [hasSearched, setHasSearched] = useState(false);
+  const [filters, setFilters] =
+    useState<Filters>(initialFilters);
+
+  const [filteredCars, setFilteredCars] =
+    useState<Car[]>([]);
+
+  const [hasSearched, setHasSearched] =
+    useState(false);
+
+  /* =========================================
+     FETCH CARS FROM SANITY
+  ========================================= */
+
+  useEffect(() => {
+    async function fetchCars() {
+      try {
+        const query = `
+          *[
+            _type == "car" &&
+            available != false
+          ]
+          | order(sortOrder asc, _createdAt desc)
+          {
+            _id,
+            name,
+            brand,
+            price,
+            year,
+            kilometers,
+            fuel,
+            transmission,
+            bodyType,
+            color,
+            location,
+            description,
+            images,
+            featured,
+            available,
+            sortOrder
+          }
+        `;
+
+        const sanityCars =
+          await client.fetch<SanityCar[]>(
+            query
+          );
+
+        const formattedCars =
+          sanityCars.map(
+            convertSanityCar
+          );
+
+        setCars(formattedCars);
+      } catch (error) {
+        console.error(
+          "Failed to load cars from Sanity:",
+          error
+        );
+
+        setCars([]);
+      }
+    }
+
+    fetchCars();
+  }, []);
+
+  /* =========================================
+     SEARCH
+  ========================================= */
 
   const searchCars = () => {
     const results = cars.filter((car) => {
-      const price = getPriceValue(car.price);
+      const price =
+        getPriceValue(car.price);
 
       return (
-        (filters.brand === "all" || car.brand === filters.brand) &&
-        (filters.fuel === "all" || car.fuel.includes(filters.fuel)) &&
+        (filters.brand === "all" ||
+          car.brand === filters.brand) &&
+
+        (filters.fuel === "all" ||
+          car.fuel.includes(filters.fuel)) &&
+
         (filters.transmission === "all" ||
-          car.transmission.includes(filters.transmission)) &&
+          car.transmission.includes(
+            filters.transmission
+          )) &&
+
         (filters.budget === "all" ||
-          matchBudget(price, filters.budget))
+          matchBudget(
+            price,
+            filters.budget
+          ))
       );
     });
 
     setFilteredCars(results);
+
     setHasSearched(true);
 
     setTimeout(() => {
-      document.getElementById("search-results")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      document
+        .getElementById("search-results")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
     }, 100);
   };
 
+  /* =========================================
+     RESET
+  ========================================= */
+
   const resetFilters = () => {
     setFilters(initialFilters);
+
     setFilteredCars([]);
+
     setHasSearched(false);
 
-    document.getElementById("search")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    document
+      .getElementById("search")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
   };
 
   return (
@@ -166,11 +373,18 @@ export function CarProvider({
   );
 }
 
+/* =========================================
+   HOOK
+========================================= */
+
 export function useCars() {
-  const context = useContext(CarContext);
+  const context =
+    useContext(CarContext);
 
   if (!context) {
-    throw new Error("useCars must be used inside CarProvider");
+    throw new Error(
+      "useCars must be used inside CarProvider"
+    );
   }
 
   return context;

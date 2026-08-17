@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   CarFront,
-  ShieldCheck,
   Truck,
   Headphones,
   Award,
@@ -37,11 +36,6 @@ const stats = [
     icon: CarFront,
     value: "20+",
     label: "Brands",
-  },
-  {
-    icon: ShieldCheck,
-    value: "100%",
-    label: "Verified Cars",
   },
   {
     icon: Truck,
@@ -121,7 +115,6 @@ export default function Hero() {
 
       {/* =====================================================
           HERO CONTENT
-          Positioned directly below navbar
       ===================================================== */}
 
       <div
@@ -257,21 +250,21 @@ export default function Hero() {
                   rounded-full
                   border
                   border-gray-300
-                  bg-white/70
+                  bg-white
                   px-5
                   py-2
                   text-sm
                   font-medium
                   text-gray-800
                   shadow-sm
-                  backdrop-blur-md
                   transition-all
                   duration-300
+
                   hover:border-[#E50914]
                   hover:bg-[#E50914]/10
 
                   dark:border-white/10
-                  dark:bg-white/10
+                  dark:bg-[#111111]
                   dark:text-white
                   dark:shadow-none
                   dark:hover:bg-[#E50914]/20
@@ -307,7 +300,7 @@ export default function Hero() {
                 hover:shadow-[0_15px_35px_rgba(229,9,20,0.3)]
               "
             >
-              Explore Cars
+              
 
               <ArrowRight
                 size={18}
@@ -325,26 +318,26 @@ export default function Hero() {
                 rounded-xl
                 border
                 border-gray-300
-                bg-white/70
+                bg-white
                 px-8
                 py-4
                 font-semibold
                 text-gray-900
                 shadow-sm
-                backdrop-blur-xl
                 transition-all
                 duration-300
+
                 hover:border-[#E50914]
-                hover:bg-white
+                hover:bg-gray-50
 
                 dark:border-white/20
-                dark:bg-white/10
+                dark:bg-[#111111]
                 dark:text-white
                 dark:shadow-none
-                dark:hover:bg-white/20
+                dark:hover:bg-white/10
               "
             >
-              Book Test Drive
+              
             </Link>
           </div>
         </motion.div>
@@ -356,7 +349,7 @@ export default function Hero() {
 
       <div className="absolute bottom-16 left-0 z-30 hidden w-full xl:block">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-5 gap-4">
             {stats.map((item, index) => {
               const Icon = item.icon;
 
@@ -382,29 +375,51 @@ export default function Hero() {
                   className="
                     rounded-2xl
                     border
-                    border-gray-300
-                    bg-white/75
+                    border-gray-200
+                    bg-white
                     p-5
-                    shadow-lg
-                    backdrop-blur-xl
+                    shadow-xl
                     transition-all
                     duration-300
 
+                    hover:border-[#E50914]/30
+
                     dark:border-white/10
-                    dark:bg-white/10
-                    dark:shadow-none
+                    dark:bg-[#151515]
+                    dark:shadow-[0_15px_40px_rgba(0,0,0,0.35)]
+                    dark:hover:border-[#E50914]/40
                   "
                 >
+                  {/* ICON */}
+
                   <Icon
                     className="mb-4 text-[#E50914]"
                     size={28}
                   />
 
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {/* VALUE */}
+
+                  <h3
+                    className="
+                      text-2xl
+                      font-bold
+                      text-gray-900
+                      dark:text-white
+                    "
+                  >
                     {item.value}
                   </h3>
 
-                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                  {/* LABEL */}
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      text-gray-600
+                      dark:text-gray-300
+                    "
+                  >
                     {item.label}
                   </p>
                 </motion.div>
@@ -430,6 +445,7 @@ export default function Hero() {
           from-white
           via-white/60
           to-transparent
+
           dark:from-[#050505]
           dark:via-[#050505]/70
           dark:to-transparent

@@ -32,15 +32,45 @@ export default function FindYourCar() {
     resetFilters,
   } = useCars();
 
-  const brands = [...new Set(cars.map((car) => car.brand))].sort();
+  /* =====================================================
+     DYNAMIC OPTIONS FROM SANITY
+  ===================================================== */
 
-  const fuels = [
-    ...new Set(cars.flatMap((car) => car.fuel)),
-  ].sort();
+  const brands = Array.from(
+    new Set(
+      cars
+        .map((car) => car.brand?.trim())
+        .filter(Boolean)
+    )
+  ).sort((a, b) => a.localeCompare(b));
 
-  const transmissions = [
-    ...new Set(cars.flatMap((car) => car.transmission)),
-  ].sort();
+  const fuels = Array.from(
+    new Set(
+      cars
+        .flatMap((car) => car.fuel || [])
+        .map((fuel) => fuel?.trim())
+        .filter(Boolean)
+    )
+  ).sort((a, b) => a.localeCompare(b));
+
+  const transmissions = Array.from(
+    new Set(
+      cars
+        .flatMap(
+          (car) => car.transmission || []
+        )
+        .map((transmission) =>
+          transmission?.trim()
+        )
+        .filter(Boolean)
+    )
+  ).sort((a, b) =>
+    a.localeCompare(b)
+  );
+
+  /* =====================================================
+     BUDGET OPTIONS
+  ===================================================== */
 
   const budgets = [
     "Under ₹10 Lakh",
@@ -51,38 +81,70 @@ export default function FindYourCar() {
     "Above ₹50 Lakh",
   ];
 
+  /* =====================================================
+     LOADING STATE
+  ===================================================== */
+
+  const isLoading = cars.length === 0;
+
   return (
     <section
       id="search"
       className="
-        relative overflow-hidden
+        relative
+        overflow-hidden
         bg-gray-50
         py-24
-        transition-colors duration-500
+        transition-colors
+        duration-500
         dark:bg-[#050505]
       "
     >
-      {/* ================= BACKGROUND ================= */}
+      {/* =================================================
+          BACKGROUND
+      ================================================= */}
 
       <div
         className="
-          absolute inset-0
+          absolute
+          inset-0
           bg-[radial-gradient(circle_at_top,rgba(229,9,20,0.06),transparent_55%)]
           dark:bg-[radial-gradient(circle_at_top,#1b1b1b_0%,#050505_70%)]
         "
       />
 
-      {/* ================= CONTENT ================= */}
+      {/* =================================================
+          CONTENT
+      ================================================= */}
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-
-        {/* ================= HEADING ================= */}
+      <div
+        className="
+          relative
+          mx-auto
+          max-w-7xl
+          px-6
+          lg:px-8
+        "
+      >
+        {/* =================================================
+            HEADING
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
           className="text-center"
         >
           {/* Badge */}
@@ -91,10 +153,14 @@ export default function FindYourCar() {
             className="
               inline-flex
               rounded-full
-              border border-[#E50914]/20
+              border
+              border-[#E50914]/20
               bg-[#E50914]/5
-              px-5 py-2
-              text-xs font-semibold uppercase
+              px-5
+              py-2
+              text-xs
+              font-semibold
+              uppercase
               tracking-[0.3em]
               text-[#E50914]
             "
@@ -107,9 +173,11 @@ export default function FindYourCar() {
           <h2
             className="
               mt-6
-              text-4xl font-bold
+              text-4xl
+              font-bold
               text-gray-900
-              transition-colors duration-500
+              transition-colors
+              duration-500
               md:text-5xl
               dark:text-white
             "
@@ -124,25 +192,38 @@ export default function FindYourCar() {
 
           <p
             className="
-              mx-auto mt-5 max-w-2xl
+              mx-auto
+              mt-5
+              max-w-2xl
               leading-8
               text-gray-600
-              transition-colors duration-500
+              transition-colors
+              duration-500
               dark:text-gray-400
             "
           >
-            Browse India's latest cars by brand, budget, fuel
-            type and transmission. Find your perfect match in
-            seconds.
+            Browse India's latest cars by brand,
+            budget, fuel type and transmission.
+            Find your perfect match in seconds.
           </p>
         </motion.div>
 
-        {/* ================= SEARCH CARD ================= */}
+        {/* =================================================
+            SEARCH CARD
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
           transition={{
             delay: 0.2,
             duration: 0.8,
@@ -152,34 +233,54 @@ export default function FindYourCar() {
           <Card
             className="
               rounded-3xl
-              border border-gray-200
+              border
+              border-gray-200
               bg-white
               p-8
               shadow-[0_20px_80px_rgba(0,0,0,0.08)]
-              transition-all duration-500
+              transition-all
+              duration-500
 
               dark:border-white/10
               dark:bg-[#111111]
               dark:shadow-[0_20px_80px_rgba(0,0,0,0.45)]
             "
           >
-            {/* ================= FILTER GRID ================= */}
+            {/* =================================================
+                FILTER GRID
+            ================================================= */}
 
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-
-              {/* ================= BRAND ================= */}
+            <div
+              className="
+                grid
+                gap-6
+                md:grid-cols-2
+                xl:grid-cols-4
+              "
+            >
+              {/* =================================================
+                  BRAND
+              ================================================= */}
 
               <div>
                 <label
                   className="
-                    mb-2 flex items-center gap-2
-                    text-sm font-medium
+                    mb-2
+                    flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-medium
                     text-gray-700
                     dark:text-gray-300
                   "
                 >
                   <CarFront
-                    className="h-4 w-4 text-[#E50914]"
+                    className="
+                      h-4
+                      w-4
+                      text-[#E50914]
+                    "
                   />
 
                   Brand
@@ -196,15 +297,14 @@ export default function FindYourCar() {
                 >
                   <SelectTrigger
                     className="
-                      h-12 rounded-xl
+                      h-12
+                      rounded-xl
                       border-gray-200
                       bg-gray-50
                       text-gray-900
-
-                      transition-all duration-300
-
+                      transition-all
+                      duration-300
                       hover:border-[#E50914]/50
-
                       focus:ring-[#E50914]/20
 
                       dark:border-white/10
@@ -230,31 +330,52 @@ export default function FindYourCar() {
                       All Brands
                     </SelectItem>
 
-                    {brands.map((brand) => (
+                    {brands.length > 0 ? (
+                      brands.map((brand) => (
+                        <SelectItem
+                          key={brand}
+                          value={brand}
+                        >
+                          {brand}
+                        </SelectItem>
+                      ))
+                    ) : (
                       <SelectItem
-                        key={brand}
-                        value={brand}
+                        value="no-brands"
+                        disabled
                       >
-                        {brand}
+                        {isLoading
+                          ? "Loading brands..."
+                          : "No brands available"}
                       </SelectItem>
-                    ))}
+                    )}
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* ================= BUDGET ================= */}
+              {/* =================================================
+                  BUDGET
+              ================================================= */}
 
               <div>
                 <label
                   className="
-                    mb-2 flex items-center gap-2
-                    text-sm font-medium
+                    mb-2
+                    flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-medium
                     text-gray-700
                     dark:text-gray-300
                   "
                 >
                   <Wallet
-                    className="h-4 w-4 text-[#E50914]"
+                    className="
+                      h-4
+                      w-4
+                      text-[#E50914]
+                    "
                   />
 
                   Budget
@@ -271,15 +392,14 @@ export default function FindYourCar() {
                 >
                   <SelectTrigger
                     className="
-                      h-12 rounded-xl
+                      h-12
+                      rounded-xl
                       border-gray-200
                       bg-gray-50
                       text-gray-900
-
-                      transition-all duration-300
-
+                      transition-all
+                      duration-300
                       hover:border-[#E50914]/50
-
                       focus:ring-[#E50914]/20
 
                       dark:border-white/10
@@ -317,19 +437,29 @@ export default function FindYourCar() {
                 </Select>
               </div>
 
-              {/* ================= FUEL ================= */}
+              {/* =================================================
+                  FUEL
+              ================================================= */}
 
               <div>
                 <label
                   className="
-                    mb-2 flex items-center gap-2
-                    text-sm font-medium
+                    mb-2
+                    flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-medium
                     text-gray-700
                     dark:text-gray-300
                   "
                 >
                   <Fuel
-                    className="h-4 w-4 text-[#E50914]"
+                    className="
+                      h-4
+                      w-4
+                      text-[#E50914]
+                    "
                   />
 
                   Fuel
@@ -346,15 +476,14 @@ export default function FindYourCar() {
                 >
                   <SelectTrigger
                     className="
-                      h-12 rounded-xl
+                      h-12
+                      rounded-xl
                       border-gray-200
                       bg-gray-50
                       text-gray-900
-
-                      transition-all duration-300
-
+                      transition-all
+                      duration-300
                       hover:border-[#E50914]/50
-
                       focus:ring-[#E50914]/20
 
                       dark:border-white/10
@@ -380,31 +509,52 @@ export default function FindYourCar() {
                       All Fuel Types
                     </SelectItem>
 
-                    {fuels.map((fuel) => (
+                    {fuels.length > 0 ? (
+                      fuels.map((fuel) => (
+                        <SelectItem
+                          key={fuel}
+                          value={fuel}
+                        >
+                          {fuel}
+                        </SelectItem>
+                      ))
+                    ) : (
                       <SelectItem
-                        key={fuel}
-                        value={fuel}
+                        value="no-fuel"
+                        disabled
                       >
-                        {fuel}
+                        {isLoading
+                          ? "Loading fuel types..."
+                          : "No fuel types available"}
                       </SelectItem>
-                    ))}
+                    )}
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* ================= TRANSMISSION ================= */}
+              {/* =================================================
+                  TRANSMISSION
+              ================================================= */}
 
               <div>
                 <label
                   className="
-                    mb-2 flex items-center gap-2
-                    text-sm font-medium
+                    mb-2
+                    flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-medium
                     text-gray-700
                     dark:text-gray-300
                   "
                 >
                   <Settings2
-                    className="h-4 w-4 text-[#E50914]"
+                    className="
+                      h-4
+                      w-4
+                      text-[#E50914]
+                    "
                   />
 
                   Transmission
@@ -421,15 +571,14 @@ export default function FindYourCar() {
                 >
                   <SelectTrigger
                     className="
-                      h-12 rounded-xl
+                      h-12
+                      rounded-xl
                       border-gray-200
                       bg-gray-50
                       text-gray-900
-
-                      transition-all duration-300
-
+                      transition-all
+                      duration-300
                       hover:border-[#E50914]/50
-
                       focus:ring-[#E50914]/20
 
                       dark:border-white/10
@@ -455,28 +604,43 @@ export default function FindYourCar() {
                       All Transmissions
                     </SelectItem>
 
-                    {transmissions.map(
-                      (transmission) => (
-                        <SelectItem
-                          key={transmission}
-                          value={transmission}
-                        >
-                          {transmission}
-                        </SelectItem>
+                    {transmissions.length > 0 ? (
+                      transmissions.map(
+                        (transmission) => (
+                          <SelectItem
+                            key={transmission}
+                            value={transmission}
+                          >
+                            {transmission}
+                          </SelectItem>
+                        )
                       )
+                    ) : (
+                      <SelectItem
+                        value="no-transmission"
+                        disabled
+                      >
+                        {isLoading
+                          ? "Loading transmissions..."
+                          : "No transmissions available"}
+                      </SelectItem>
                     )}
                   </SelectContent>
                 </Select>
               </div>
             </div>
 
-            {/* ================= BUTTONS ================= */}
+            {/* =================================================
+                BUTTONS
+            ================================================= */}
 
             <div
               className="
                 mt-8
-                flex flex-col
-                items-center justify-center
+                flex
+                flex-col
+                items-center
+                justify-center
                 gap-4
                 sm:flex-row
               "
@@ -485,6 +649,7 @@ export default function FindYourCar() {
 
               <Button
                 onClick={searchCars}
+                disabled={isLoading}
                 className="
                   h-12
                   rounded-xl
@@ -493,15 +658,19 @@ export default function FindYourCar() {
                   text-white
                   shadow-lg
                   shadow-red-500/20
-                  transition-all duration-300
-
+                  transition-all
+                  duration-300
                   hover:scale-[1.02]
                   hover:bg-red-700
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
                 "
               >
                 <Search className="mr-2 h-4 w-4" />
 
-                Search Cars
+                {isLoading
+                  ? "Loading Cars..."
+                  : "Search Cars"}
               </Button>
 
               {/* Reset */}
@@ -515,11 +684,9 @@ export default function FindYourCar() {
                   border-gray-200
                   bg-transparent
                   px-8
-
                   text-gray-700
-
-                  transition-all duration-300
-
+                  transition-all
+                  duration-300
                   hover:border-[#E50914]
                   hover:bg-[#E50914]/5
                   hover:text-[#E50914]

@@ -70,7 +70,13 @@ const makes = [
   "Other",
 ];
 
-const fuels = ["Petrol", "Diesel", "CNG", "Electric", "Hybrid"];
+const fuels = [
+  "Petrol",
+  "Diesel",
+  "CNG",
+  "Electric",
+  "Hybrid",
+];
 
 const transmissions = [
   "Manual",
@@ -221,11 +227,13 @@ Mileage: ${formData.mileage}
     <section
       id="exchange"
       className="
-        relative overflow-hidden
+        relative
+        overflow-hidden
         bg-white
         py-24
         text-gray-900
-        transition-colors duration-300
+        transition-colors
+        duration-300
         dark:bg-[#050505]
         dark:text-white
         lg:py-28
@@ -235,21 +243,24 @@ Mileage: ${formData.mileage}
           BACKGROUND
       ===================================================== */}
 
-      {/* Light */}
+      {/* LIGHT BACKGROUND */}
 
       <div
         className="
-          absolute inset-0
+          absolute
+          inset-0
           bg-[radial-gradient(circle_at_top_right,#f4f4f4_0%,#ffffff_75%)]
           dark:hidden
         "
       />
 
-      {/* Dark */}
+      {/* DARK BACKGROUND */}
 
       <div
         className="
-          absolute inset-0 hidden
+          absolute
+          inset-0
+          hidden
           bg-[radial-gradient(circle_at_top_right,#1b1b1b_0%,#050505_75%)]
           dark:block
         "
@@ -259,7 +270,20 @@ Mileage: ${formData.mileage}
           MAIN CONTENT
       ===================================================== */}
 
-      <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div
+        className="
+          relative
+          mx-auto
+          grid
+          max-w-7xl
+          items-start
+          gap-12
+          px-6
+          lg:grid-cols-2
+          lg:gap-16
+          lg:px-8
+        "
+      >
         {/* =================================================
             LEFT SIDE
         ================================================= */}
@@ -280,15 +304,17 @@ Mileage: ${formData.mileage}
             duration: 0.7,
           }}
         >
-          {/* Badge */}
+          {/* BADGE */}
 
           <span
             className="
               inline-flex
               rounded-full
-              border border-[#E50914]/30
+              border
+              border-[#E50914]/30
               bg-[#E50914]/10
-              px-5 py-2
+              px-5
+              py-2
               text-xs
               font-semibold
               uppercase
@@ -299,7 +325,7 @@ Mileage: ${formData.mileage}
             Vehicle Exchange
           </span>
 
-          {/* Heading */}
+          {/* HEADING */}
 
           <h2
             className="
@@ -308,9 +334,7 @@ Mileage: ${formData.mileage}
               font-bold
               leading-tight
               text-gray-900
-
               dark:text-white
-
               md:text-5xl
               lg:text-6xl
             "
@@ -323,7 +347,7 @@ Mileage: ${formData.mileage}
             </span>
           </h2>
 
-          {/* Description */}
+          {/* DESCRIPTION */}
 
           <p
             className="
@@ -332,7 +356,6 @@ Mileage: ${formData.mileage}
               text-lg
               leading-8
               text-gray-600
-
               dark:text-gray-400
             "
           >
@@ -370,17 +393,16 @@ Mileage: ${formData.mileage}
                   }}
                   className="
                     rounded-2xl
-                    border border-gray-200
+                    border
+                    border-gray-200
                     bg-white
                     p-6
                     shadow-sm
-
-                    transition-all duration-300
-
+                    transition-all
+                    duration-300
                     hover:-translate-y-2
                     hover:border-[#E50914]/40
                     hover:shadow-[0_20px_50px_rgba(229,9,20,0.10)]
-
                     dark:border-white/10
                     dark:bg-[#111111]
                     dark:shadow-none
@@ -389,8 +411,11 @@ Mileage: ${formData.mileage}
                 >
                   <div
                     className="
-                      flex h-12 w-12
-                      items-center justify-center
+                      flex
+                      h-12
+                      w-12
+                      items-center
+                      justify-center
                       rounded-xl
                       bg-[#E50914]/10
                     "
@@ -407,7 +432,6 @@ Mileage: ${formData.mileage}
                       text-lg
                       font-semibold
                       text-gray-900
-
                       dark:text-white
                     "
                   >
@@ -420,7 +444,6 @@ Mileage: ${formData.mileage}
                       text-sm
                       leading-6
                       text-gray-600
-
                       dark:text-gray-400
                     "
                   >
@@ -436,7 +459,7 @@ Mileage: ${formData.mileage}
           ================================================= */}
 
           <div className="mt-10 flex flex-wrap gap-4">
-            {/* Get Free Valuation */}
+            {/* GET FREE VALUATION */}
 
             <button
               type="button"
@@ -445,13 +468,13 @@ Mileage: ${formData.mileage}
                 inline-flex
                 rounded-full
                 bg-[#E50914]
-                px-8 py-4
+                px-8
+                py-4
                 text-sm
                 font-semibold
                 text-white
-
-                transition-all duration-300
-
+                transition-all
+                duration-300
                 hover:-translate-y-1
                 hover:bg-red-700
                 hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
@@ -460,7 +483,7 @@ Mileage: ${formData.mileage}
               Get Free Valuation
             </button>
 
-            {/* Talk To Expert */}
+            {/* TALK TO EXPERT */}
 
             <button
               type="button"
@@ -471,20 +494,18 @@ Mileage: ${formData.mileage}
                 items-center
                 gap-2
                 rounded-full
-
-                border border-gray-200
+                border
+                border-gray-200
                 bg-gray-50
-                px-8 py-4
-
+                px-8
+                py-4
                 text-sm
                 font-semibold
                 text-gray-800
-
-                transition-all duration-300
-
+                transition-all
+                duration-300
                 hover:border-[#E50914]
                 hover:text-[#E50914]
-
                 dark:border-white/10
                 dark:bg-white/5
                 dark:text-white
@@ -523,7 +544,6 @@ Mileage: ${formData.mileage}
                   text-sm
                   font-medium
                   text-gray-600
-
                   dark:text-gray-300
                 "
               >
@@ -539,7 +559,7 @@ Mileage: ${formData.mileage}
         </motion.div>
 
         {/* =================================================
-            RIGHT SIDE IMAGE
+            RIGHT SIDE
         ================================================= */}
 
         <motion.div
@@ -559,14 +579,18 @@ Mileage: ${formData.mileage}
           }}
           className="relative lg:mt-8"
         >
+          {/* =================================================
+              EXCHANGE IMAGE
+          ================================================= */}
+
           <div
             className="
               overflow-hidden
               rounded-[32px]
-              border border-gray-200
+              border
+              border-gray-200
               bg-gray-100
               shadow-2xl
-
               dark:border-white/10
               dark:bg-[#111111]
             "
@@ -584,18 +608,20 @@ Mileage: ${formData.mileage}
                 transition
                 duration-700
                 hover:scale-105
-
                 lg:h-[600px]
               "
             />
           </div>
 
-          {/* Floating Card */}
+          {/* =================================================
+              SUCCESSFUL EXCHANGES
+              NOW BELOW IMAGE
+          ================================================= */}
 
           <motion.div
             initial={{
               opacity: 0,
-              y: 30,
+              y: 20,
             }}
             whileInView={{
               opacity: 1,
@@ -606,47 +632,51 @@ Mileage: ${formData.mileage}
             }}
             transition={{
               delay: 0.4,
+              duration: 0.5,
             }}
             className="
-              absolute
-              -bottom-8
-              -left-8
-              hidden
-
-              rounded-3xl
-              border border-gray-200
+              mt-6
+              w-full
+              rounded-[28px]
+              border
+              border-gray-200
               bg-white
               p-6
-              shadow-2xl
-
+              shadow-xl
               dark:border-white/10
               dark:bg-[#111111]
-
-              lg:block
+              lg:p-7
             "
           >
             <p
               className="
-                text-sm
+                text-base
                 text-gray-500
-
                 dark:text-gray-400
               "
             >
               Successful Exchanges
             </p>
 
-            <h3 className="mt-2 text-5xl font-bold text-[#E50914]">
-              500+
+            <h3
+              className="
+                mt-2
+                text-5xl
+                font-bold
+                leading-none
+                text-[#E50914]
+              "
+            >
+              300+
             </h3>
 
             <p
               className="
-                mt-2
-                max-w-[220px]
+                mt-3
+                max-w-[280px]
                 text-sm
+                leading-6
                 text-gray-500
-
                 dark:text-gray-400
               "
             >
@@ -685,7 +715,6 @@ Mileage: ${formData.mileage}
               items-center
               justify-center
               overflow-y-auto
-
               bg-black/75
               px-4
               py-8
@@ -718,19 +747,17 @@ Mileage: ${formData.mileage}
                 w-full
                 max-w-2xl
                 rounded-[30px]
-
-                border border-gray-200
+                border
+                border-gray-200
                 bg-white
                 p-6
                 shadow-2xl
-
                 dark:border-white/10
                 dark:bg-[#111111]
-
                 sm:p-8
               "
             >
-              {/* Close */}
+              {/* CLOSE */}
 
               <button
                 type="button"
@@ -747,18 +774,13 @@ Mileage: ${formData.mileage}
                   items-center
                   justify-center
                   rounded-full
-
                   bg-gray-100
                   text-gray-500
-
                   transition
-
                   hover:bg-[#E50914]
                   hover:text-white
-
                   dark:bg-white/5
                   dark:text-gray-400
-
                   disabled:cursor-not-allowed
                   disabled:opacity-50
                 "
@@ -766,7 +788,7 @@ Mileage: ${formData.mileage}
                 <X size={20} />
               </button>
 
-              {/* Header */}
+              {/* HEADER */}
 
               <div className="pr-12">
                 <p
@@ -787,7 +809,6 @@ Mileage: ${formData.mileage}
                     text-3xl
                     font-bold
                     text-gray-900
-
                     dark:text-white
                   "
                 >
@@ -798,7 +819,6 @@ Mileage: ${formData.mileage}
                   className="
                     mt-3
                     text-gray-500
-
                     dark:text-gray-400
                   "
                 >
@@ -807,9 +827,7 @@ Mileage: ${formData.mileage}
                 </p>
               </div>
 
-              {/* =================================================
-                  FORM
-              ================================================= */}
+              {/* FORM */}
 
               <form
                 onSubmit={handleValuationSubmit}
@@ -818,17 +836,7 @@ Mileage: ${formData.mileage}
                 {/* NAME */}
 
                 <div>
-                  <label
-                    className="
-                      mb-2
-                      block
-                      text-sm
-                      font-medium
-                      text-gray-700
-
-                      dark:text-gray-300
-                    "
-                  >
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Name
                   </label>
 
@@ -842,22 +850,18 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
-
                       text-gray-900
-
                       outline-none
                       transition
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -869,17 +873,7 @@ Mileage: ${formData.mileage}
                 {/* NUMBER */}
 
                 <div>
-                  <label
-                    className="
-                      mb-2
-                      block
-                      text-sm
-                      font-medium
-                      text-gray-700
-
-                      dark:text-gray-300
-                    "
-                  >
+                  <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                     Number
                   </label>
 
@@ -893,22 +887,18 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
-
                       text-gray-900
-
                       outline-none
                       transition
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -932,17 +922,16 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-[#151515]
                       dark:text-white
@@ -975,19 +964,17 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -1015,19 +1002,17 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -1053,19 +1038,17 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -1089,17 +1072,16 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-[#151515]
                       dark:text-white
@@ -1130,17 +1112,16 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-[#151515]
                       dark:text-white
@@ -1178,19 +1159,17 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -1214,17 +1193,16 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-[#151515]
                       dark:text-white
@@ -1257,19 +1235,17 @@ Mileage: ${formData.mileage}
                     className="
                       w-full
                       rounded-2xl
-                      border border-gray-200
+                      border
+                      border-gray-200
                       bg-gray-50
                       px-4
                       py-3.5
                       text-gray-900
                       outline-none
-
                       placeholder:text-gray-400
-
                       focus:border-[#E50914]
                       focus:ring-2
                       focus:ring-[#E50914]/20
-
                       dark:border-white/10
                       dark:bg-white/5
                       dark:text-white
@@ -1278,14 +1254,15 @@ Mileage: ${formData.mileage}
                   />
                 </div>
 
-                {/* SUCCESS */}
+                {/* SUCCESS MESSAGE */}
 
                 {success && (
                   <div
                     className="
                       sm:col-span-2
                       rounded-2xl
-                      border border-green-500/20
+                      border
+                      border-green-500/20
                       bg-green-500/10
                       p-4
                     "
@@ -1319,12 +1296,10 @@ Mileage: ${formData.mileage}
                       py-4
                       font-semibold
                       text-white
-
-                      transition-all duration-300
-
+                      transition-all
+                      duration-300
                       hover:bg-red-700
                       hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
-
                       disabled:cursor-not-allowed
                       disabled:opacity-60
                     "
@@ -1337,7 +1312,11 @@ Mileage: ${formData.mileage}
 
                         <Send
                           size={18}
-                          className="transition-transform duration-300 group-hover:translate-x-1"
+                          className="
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                          "
                         />
                       </>
                     )}
@@ -1403,17 +1382,17 @@ Mileage: ${formData.mileage}
                 w-full
                 max-w-md
                 rounded-[28px]
-                border border-gray-200
+                border
+                border-gray-200
                 bg-white
                 p-8
                 text-center
                 shadow-2xl
-
                 dark:border-white/10
                 dark:bg-[#111111]
               "
             >
-              {/* Close */}
+              {/* CLOSE */}
 
               <button
                 type="button"
@@ -1429,15 +1408,11 @@ Mileage: ${formData.mileage}
                   items-center
                   justify-center
                   rounded-full
-
                   bg-gray-100
                   text-gray-500
-
                   transition
-
                   hover:bg-[#E50914]
                   hover:text-white
-
                   dark:bg-white/5
                   dark:text-gray-400
                 "
@@ -1445,7 +1420,7 @@ Mileage: ${formData.mileage}
                 <X size={20} />
               </button>
 
-              {/* Phone Icon */}
+              {/* PHONE ICON */}
 
               <div
                 className="
@@ -1465,7 +1440,16 @@ Mileage: ${formData.mileage}
                 />
               </div>
 
-              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-[#E50914]">
+              <p
+                className="
+                  mt-6
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-[0.25em]
+                  text-[#E50914]
+                "
+              >
                 Talk to an Expert
               </p>
 
@@ -1475,7 +1459,6 @@ Mileage: ${formData.mileage}
                   text-3xl
                   font-bold
                   text-gray-900
-
                   dark:text-white
                 "
               >
@@ -1487,7 +1470,6 @@ Mileage: ${formData.mileage}
                   mt-4
                   leading-7
                   text-gray-500
-
                   dark:text-gray-400
                 "
               >
@@ -1495,16 +1477,16 @@ Mileage: ${formData.mileage}
                 exchange, finance and the buying process.
               </p>
 
-              {/* Phone Number */}
+              {/* PHONE NUMBER */}
 
               <div
                 className="
                   mt-7
                   rounded-2xl
-                  border border-gray-200
+                  border
+                  border-gray-200
                   bg-gray-50
                   p-5
-
                   dark:border-white/10
                   dark:bg-white/5
                 "
@@ -1519,7 +1501,6 @@ Mileage: ${formData.mileage}
                     text-2xl
                     font-bold
                     text-gray-900
-
                     dark:text-white
                   "
                 >
@@ -1527,7 +1508,7 @@ Mileage: ${formData.mileage}
                 </p>
               </div>
 
-              {/* Call Button */}
+              {/* CALL BUTTON */}
 
               <a
                 href="tel:+919888195553"
@@ -1544,9 +1525,8 @@ Mileage: ${formData.mileage}
                   py-4
                   font-semibold
                   text-white
-
-                  transition-all duration-300
-
+                  transition-all
+                  duration-300
                   hover:bg-red-700
                   hover:shadow-[0_15px_40px_rgba(229,9,20,0.35)]
                 "

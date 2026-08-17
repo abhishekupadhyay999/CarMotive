@@ -34,23 +34,22 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const scrollY = window.scrollY;
 
-      const sections = navLinks.map((item) =>
-        item.href.replace("#", "")
-      );
+      setScrolled(scrollY > 40);
 
       let current = "home";
 
-      sections.forEach((section) => {
+      navLinks.forEach((item) => {
+        const section = item.href.replace("#", "");
         const element = document.getElementById(section);
 
-        if (element) {
-          const top = element.offsetTop - 140;
+        if (!element) return;
 
-          if (window.scrollY >= top) {
-            current = section;
-          }
+        const top = element.offsetTop - 140;
+
+        if (scrollY >= top) {
+          current = section;
         }
       });
 
@@ -67,21 +66,21 @@ export default function Navbar() {
   }, []);
 
   /* =========================================================
-     MOBILE BODY SCROLL
+     LOCK BODY SCROLL WHEN MOBILE MENU IS OPEN
   ========================================================= */
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
   return (
     <>
       {/* =====================================================
-          TOP BAR
+          TOP INFORMATION BAR
       ===================================================== */}
 
       <div
@@ -89,14 +88,9 @@ export default function Navbar() {
           hidden
           border-b
           border-gray-200
-          bg-white/95
-          backdrop-blur-xl
-          transition-colors
-          duration-300
-
+          bg-white
           dark:border-white/10
-          dark:bg-[#050505]/95
-
+          dark:bg-[#050505]
           lg:block
         "
       >
@@ -115,6 +109,7 @@ export default function Navbar() {
           {/* LEFT */}
 
           <div className="flex items-center gap-8">
+
             <a
               href="tel:+919888197553"
               className="
@@ -122,9 +117,8 @@ export default function Navbar() {
                 items-center
                 gap-2
                 text-gray-600
-                transition
+                transition-colors
                 hover:text-[#E50914]
-
                 dark:text-gray-300
               "
             >
@@ -142,7 +136,6 @@ export default function Navbar() {
                 items-center
                 gap-2
                 text-gray-600
-
                 dark:text-gray-300
               "
             >
@@ -160,7 +153,6 @@ export default function Navbar() {
                 items-center
                 gap-2
                 text-gray-600
-
                 dark:text-gray-300
               "
             >
@@ -171,6 +163,7 @@ export default function Navbar() {
 
               Virar (W), Maharashtra
             </div>
+
           </div>
 
           {/* RIGHT */}
@@ -187,7 +180,7 @@ export default function Navbar() {
       </div>
 
       {/* =====================================================
-          NAVBAR
+          MAIN NAVBAR
       ===================================================== */}
 
       <motion.header
@@ -198,29 +191,28 @@ export default function Navbar() {
           sticky
           top-0
           z-50
+          border-b
           transition-all
-          duration-500
+          duration-300
+
+          bg-white
+          border-gray-200
+
+          dark:bg-[#050505]
+          dark:border-white/10
 
           ${
             scrolled
               ? `
-                border-b
-                border-gray-200
-                bg-white/90
-                shadow-xl
-                backdrop-blur-2xl
-
-                dark:border-white/10
-                dark:bg-black/75
-                dark:shadow-2xl
+                shadow-lg
+                backdrop-blur-xl
               `
-              : `
-                bg-transparent
-              `
+              : ""
           }
         `}
       >
         <div className="mx-auto max-w-7xl px-6">
+
           <div className="flex h-24 items-center justify-between">
 
             {/* =================================================
@@ -229,9 +221,12 @@ export default function Navbar() {
 
             <Link
               href="#home"
-              className="flex items-center"
+              className="flex shrink-0 items-center"
             >
-              {/* LIGHT MODE LOGO */}
+
+              {/* LIGHT MODE LOGO
+                  logo4.png
+              */}
 
               <Image
                 src="/logo/logo4.png"
@@ -239,21 +234,17 @@ export default function Navbar() {
                 width={300}
                 height={100}
                 priority
-                className={`
+                className="
+                  h-16
                   w-auto
-                  transition-all
-                  duration-500
+                  object-contain
                   dark:hidden
-
-                  ${
-                    scrolled
-                      ? "h-16"
-                      : "h-20"
-                  }
-                `}
+                "
               />
 
-              {/* DARK MODE LOGO */}
+              {/* DARK MODE LOGO
+                  logo3.png
+              */}
 
               <Image
                 src="/logo/logo3.png"
@@ -261,31 +252,29 @@ export default function Navbar() {
                 width={300}
                 height={100}
                 priority
-                className={`
+                className="
                   hidden
+                  h-16
                   w-auto
-                  transition-all
-                  duration-500
+                  object-contain
                   dark:block
-
-                  ${
-                    scrolled
-                      ? "h-16"
-                      : "h-20"
-                  }
-                `}
+                "
               />
+
             </Link>
 
             {/* =================================================
                 DESKTOP NAVIGATION
             ================================================= */}
 
-            <nav className="hidden items-center gap-10 lg:flex">
+            <nav className="hidden items-center gap-9 lg:flex">
+
               {navLinks.map((item) => {
-                const isActive =
-                  activeSection ===
+                const section =
                   item.href.replace("#", "");
+
+                const isActive =
+                  activeSection === section;
 
                 return (
                   <Link
@@ -294,19 +283,21 @@ export default function Navbar() {
                     className={`
                       group
                       relative
+                      py-2
                       text-[15px]
                       font-medium
-                      transition-all
+                      transition-colors
                       duration-300
 
                       ${
                         isActive
                           ? "text-[#E50914]"
                           : `
-                            text-gray-700
+                            text-gray-800
                             hover:text-[#E50914]
 
-                            dark:text-gray-300
+                            dark:text-gray-200
+                            dark:hover:text-[#E50914]
                           `
                       }
                     `}
@@ -316,7 +307,7 @@ export default function Navbar() {
                     <span
                       className={`
                         absolute
-                        -bottom-2
+                        -bottom-1
                         left-1/2
                         h-[2px]
                         -translate-x-1/2
@@ -335,6 +326,7 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+
             </nav>
 
             {/* =================================================
@@ -343,18 +335,19 @@ export default function Navbar() {
 
             <div className="hidden items-center gap-3 lg:flex">
 
-              {/* Theme Toggle */}
+              {/* THEME TOGGLE */}
 
               <ThemeToggle />
 
-              {/* Call Now */}
+              {/* CALL NOW */}
 
               <a
-                href="tel:+919888197553"
+                href="tel:+919888195553"
                 className="
                   rounded-full
                   border
                   border-gray-300
+                  bg-transparent
                   px-6
                   py-3
                   text-sm
@@ -369,12 +362,14 @@ export default function Navbar() {
 
                   dark:border-white/20
                   dark:text-white
+                  dark:hover:border-[#E50914]
+                  dark:hover:bg-[#E50914]
                 "
               >
                 Call Now
               </a>
 
-              {/* Book Test Drive */}
+              {/* BOOK TEST DRIVE */}
 
               <Link
                 href="#contact"
@@ -386,24 +381,33 @@ export default function Navbar() {
                   text-sm
                   font-semibold
                   text-white
-                  shadow-xl
-                  shadow-red-700/30
+                  shadow-lg
+                  shadow-red-700/25
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
                   hover:bg-red-700
+                  hover:shadow-red-700/40
                 "
               >
                 Book Test Drive
               </Link>
+
             </div>
 
             {/* =================================================
                 MOBILE ACTIONS
             ================================================= */}
 
-            <div className="flex items-center gap-3 lg:hidden">
+            <div
+              className="
+                flex
+                items-center
+                gap-3
+                lg:hidden
+              "
+            >
 
               <ThemeToggle />
 
@@ -425,7 +429,8 @@ export default function Navbar() {
                   border
                   border-gray-300
                   text-gray-800
-                  transition
+                  transition-all
+                  duration-300
 
                   hover:border-[#E50914]
                   hover:text-[#E50914]
@@ -435,12 +440,14 @@ export default function Navbar() {
                 "
               >
                 {isOpen ? (
-                  <X size={24} />
+                  <X size={23} />
                 ) : (
-                  <Menu size={24} />
+                  <Menu size={23} />
                 )}
               </button>
+
             </div>
+
           </div>
         </div>
 
@@ -474,7 +481,10 @@ export default function Navbar() {
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
-                transition={{ duration: 0.35 }}
+                transition={{
+                  duration: 0.35,
+                  ease: "easeOut",
+                }}
                 className="
                   fixed
                   right-0
@@ -488,16 +498,13 @@ export default function Navbar() {
                   border-gray-200
                   bg-white
                   shadow-2xl
-                  transition-colors
 
                   dark:border-white/10
                   dark:bg-[#050505]
                 "
               >
 
-                {/* =================================================
-                    DRAWER HEADER
-                ================================================= */}
+                {/* DRAWER HEADER */}
 
                 <div
                   className="
@@ -516,13 +523,14 @@ export default function Navbar() {
                   {/* LIGHT MODE LOGO */}
 
                   <Image
-                    src="/logo/logo3.png"
+                    src="/logo/logo4.png"
                     alt="Carmotive India"
                     width={180}
                     height={60}
                     className="
                       h-12
                       w-auto
+                      object-contain
                       dark:hidden
                     "
                   />
@@ -530,7 +538,7 @@ export default function Navbar() {
                   {/* DARK MODE LOGO */}
 
                   <Image
-                    src="/logo/logo4.png"
+                    src="/logo/logo3.png"
                     alt="Carmotive India"
                     width={180}
                     height={60}
@@ -538,15 +546,14 @@ export default function Navbar() {
                       hidden
                       h-12
                       w-auto
+                      object-contain
                       dark:block
                     "
                   />
 
                   <button
                     type="button"
-                    onClick={() =>
-                      setIsOpen(false)
-                    }
+                    onClick={() => setIsOpen(false)}
                     aria-label="Close menu"
                     className="
                       rounded-full
@@ -563,33 +570,32 @@ export default function Navbar() {
                   >
                     <X size={24} />
                   </button>
+
                 </div>
 
-                {/* =================================================
-                    MOBILE LINKS
-                ================================================= */}
+                {/* MOBILE LINKS */}
 
                 <div className="flex flex-1 flex-col px-6 py-8">
 
                   {navLinks.map((item) => {
-                    const isActive =
-                      activeSection ===
+                    const section =
                       item.href.replace("#", "");
+
+                    const isActive =
+                      activeSection === section;
 
                     return (
                       <Link
                         key={item.label}
                         href={item.href}
-                        onClick={() =>
-                          setIsOpen(false)
-                        }
+                        onClick={() => setIsOpen(false)}
                         className={`
                           border-b
                           border-gray-200
                           py-4
                           text-lg
                           font-medium
-                          transition
+                          transition-colors
 
                           dark:border-white/10
 
@@ -600,7 +606,7 @@ export default function Navbar() {
                                 text-gray-800
                                 hover:text-[#E50914]
 
-                                dark:text-white
+                                dark:text-gray-200
                               `
                           }
                         `}
@@ -613,7 +619,7 @@ export default function Navbar() {
                   {/* CALL */}
 
                   <a
-                    href="tel:+919888197553"
+                    href="tel:+919888195553"
                     className="
                       mt-8
                       rounded-full
@@ -640,9 +646,7 @@ export default function Navbar() {
 
                   <Link
                     href="#contact"
-                    onClick={() =>
-                      setIsOpen(false)
-                    }
+                    onClick={() => setIsOpen(false)}
                     className="
                       mt-4
                       rounded-full
@@ -652,16 +656,13 @@ export default function Navbar() {
                       font-semibold
                       text-white
                       transition
-
                       hover:bg-red-700
                     "
                   >
                     Book Test Drive
                   </Link>
 
-                  {/* =================================================
-                      CONTACT DETAILS
-                  ================================================= */}
+                  {/* CONTACT DETAILS */}
 
                   <div
                     className="
@@ -679,7 +680,6 @@ export default function Navbar() {
                         size={16}
                         className="text-[#E50914]"
                       />
-
                       +91 98881 97553
                     </div>
 
@@ -688,7 +688,6 @@ export default function Navbar() {
                         size={16}
                         className="text-[#E50914]"
                       />
-
                       10:00 AM – 8:00 PM
                     </div>
 
@@ -697,16 +696,17 @@ export default function Navbar() {
                         size={16}
                         className="text-[#E50914]"
                       />
-
                       Virar (W), Maharashtra
                     </div>
 
                   </div>
+
                 </div>
               </motion.div>
             </>
           )}
         </AnimatePresence>
+
       </motion.header>
     </>
   );
