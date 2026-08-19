@@ -9,8 +9,8 @@ interface Props {
 }
 
 /*
-  Some logo PNGs contain different amounts of transparent
-  whitespace. These scales help visually normalize them.
+  Normalize different logo PNG sizes
+  so all brands look visually consistent.
 */
 const logoScale: Record<string, string> = {
   BMW: "scale-[0.82]",
@@ -62,19 +62,21 @@ export default function BrandCard({ brand }: Props) {
         hover:shadow-lg
 
         dark:border-white/10
-        dark:bg-[#111111]
+        dark:bg-white
         dark:shadow-none
-        dark:hover:border-[#E50914]/40
-        dark:hover:bg-[#151515]
-        dark:hover:shadow-[0_15px_40px_rgba(229,9,20,0.08)]
+
+        dark:hover:border-[#E50914]
+        dark:hover:bg-white
+        dark:hover:shadow-[0_15px_40px_rgba(229,9,20,0.12)]
       "
     >
-      {/* Red Accent */}
+      {/* Red Top Accent */}
       <div
         className="
           absolute
           left-0
           top-0
+          z-10
           h-[3px]
           w-0
           bg-[#E50914]
@@ -87,7 +89,7 @@ export default function BrandCard({ brand }: Props) {
       {/* Main Content */}
       <div className="flex flex-col items-center">
 
-        {/* Fixed Logo Frame */}
+        {/* Logo */}
         <div
           className="
             flex
@@ -97,35 +99,25 @@ export default function BrandCard({ brand }: Props) {
             justify-center
           "
         >
-          <div
-            className="
-              flex
-              h-[70px]
-              w-[150px]
-              items-center
-              justify-center
-            "
-          >
-            <Image
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              width={150}
-              height={70}
-              sizes="150px"
-              priority={false}
-              className={`
-                h-auto
-                max-h-[60px]
-                w-auto
-                max-w-[135px]
-                object-contain
-                transition-transform
-                duration-300
-                ${scaleClass}
-                group-hover:scale-[0.95]
-              `}
-            />
-          </div>
+          <Image
+            src={brand.logo}
+            alt={`${brand.name} logo`}
+            width={150}
+            height={70}
+            sizes="150px"
+            priority={false}
+            className={`
+              h-auto
+              max-h-[60px]
+              w-auto
+              max-w-[135px]
+              object-contain
+              transition-transform
+              duration-300
+              ${scaleClass}
+              group-hover:scale-[0.95]
+            `}
+          />
         </div>
 
         {/* Brand Name */}
@@ -141,12 +133,10 @@ export default function BrandCard({ brand }: Props) {
             transition-colors
             duration-300
             group-hover:text-[#E50914]
-            dark:text-white
           "
         >
           {brand.name}
         </h3>
-
       </div>
 
       {/* Hover Glow */}

@@ -166,13 +166,14 @@ export default function ExchangeSection() {
 
           subject: "New Car Valuation Request",
 
-          message: `
+  message: `
 New Car Valuation Request
 
 Name: ${formData.name}
 Number: ${formData.number}
-Make: ${formData.make}
-Model: ${formData.model}
+
+Vehicle to be Exchanged: ${formData.make}
+Model to be Exchanged: ${formData.model}
 Mfg Year: ${formData.mfg_year}
 Variant: ${formData.variant}
 Fuel: ${formData.fuel}
@@ -180,7 +181,7 @@ Transmission: ${formData.transmission}
 Color: ${formData.color}
 Owner: ${formData.owner}
 Mileage: ${formData.mileage}
-          `,
+`,
         },
         "eUIBMV2tMsvzvBaEb"
       );
@@ -744,6 +745,7 @@ Mileage: ${formData.mileage}
               className="
                 relative
                 my-auto
+                
                 w-full
                 max-w-2xl
                 rounded-[30px]

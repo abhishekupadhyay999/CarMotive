@@ -127,7 +127,7 @@ export default function Navbar() {
                 className="text-[#E50914]"
               />
 
-              +91 98881 97553
+              +91 98881 93335
             </a>
 
             <div
