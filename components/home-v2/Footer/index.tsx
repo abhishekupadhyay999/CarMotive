@@ -187,7 +187,7 @@ export default function Footer() {
             >
               <span className="h-2 w-2 rounded-full bg-[#E50914]" />
 
-              Trusted Multi-Brand Dealer
+              India's Trusted Multi-Brand Car Dealership
             </div>
           </motion.div>
 

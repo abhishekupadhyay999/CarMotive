@@ -16,10 +16,108 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/* =========================================================
+   SITE CONFIG
+========================================================= */
+
+const siteUrl = "https://car-motive.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Carmotive India | Premium Multi-Brand Car Dealer",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Carmotive India | Multi-Brand Car Dealer in Virar",
+    template: "%s | Carmotive India",
+  },
+
   description:
-    "Carmotive India offers premium cars, competitive deals, easy finance, exchange services and PAN India delivery.",
+    "Carmotive India is a multi-brand car dealership in Virar, Maharashtra. Explore new cars, car finance, vehicle exchange, latest car offers and more.",
+
+  applicationName: "Carmotive India",
+
+  authors: [
+    {
+      name: "Carmotive India",
+      url: siteUrl,
+    },
+  ],
+
+  creator: "Carmotive India",
+  publisher: "Carmotive India",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  keywords: [
+    "car dealer in Virar",
+    "car dealership in Virar",
+    "multi brand car dealer Virar",
+    "car showroom Virar",
+    "cars in Virar",
+    "new cars in Virar",
+    "car dealer Vasai",
+    "car dealer Nalasopara",
+    "Vasai Virar car dealer",
+    "car exchange Virar",
+    "car finance Virar",
+    "Carmotive India",
+  ],
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteUrl,
+
+    siteName: "Carmotive India",
+
+    title:
+      "Carmotive India | Multi-Brand Car Dealer in Virar",
+
+    description:
+      "Explore cars from leading brands, flexible car finance, vehicle exchange and the latest car updates from Carmotive India.",
+
+    images: [
+      {
+        url: "/images/og/carmotive-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Carmotive India - Multi-Brand Car Dealer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Carmotive India | Multi-Brand Car Dealer in Virar",
+
+    description:
+      "Explore cars, finance, vehicle exchange and the latest car updates from Carmotive India.",
+
+    images: ["/images/og/carmotive-og.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
+  category: "automotive",
 };
 
 export default function RootLayout({
@@ -29,13 +127,15 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <ThemeProvider>
-          <CarProvider>{children}</CarProvider>
+          <CarProvider>
+            {children}
+          </CarProvider>
         </ThemeProvider>
       </body>
     </html>

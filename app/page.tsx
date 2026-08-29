@@ -1,34 +1,83 @@
 import Navbar from "@/components/home-v2/Navbar";
 import Hero from "@/components/home-v2/Hero";
-import Brands from "@/components/home-v2/Brands";
+import FeaturedCars from "@/components/home-v2/FeaturedCars";
+import WhyChoose from "@/components/home-v2/WhyChoose";
 import RecentDeliveries from "@/components/deliveries/RecentDeliveries";
 import Testimonials from "@/components/Testimonal/Testimonials";
-import Contact from "@/components/contacts/Contacts";
-import FeaturedCars from "@/components/home-v2/FeaturedCars";
-import ExchangeSection from "@/components/home-v2/ExchangeSection";
-import FinanceSection from "@/components/home-v2/FinanceSection";
-import WhyChoose from "@/components/home-v2/WhyChoose";
 import Footer from "@/components/home-v2/Footer";
-import FindYourCar from "@/components/FindYourCar";
-import SearchResult from "@/components/SearchResult"
-
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505]">
+    <main className="min-h-screen bg-white dark:bg-[#050505]">
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
       <Navbar />
-      <Hero/>
-      <FindYourCar/>
-      <SearchResult/>
-      <Brands/>
-      <FeaturedCars/>
-      <ExchangeSection/>
-      <FinanceSection/>
-      <WhyChoose/>
-      <RecentDeliveries/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
+      <Hero />
+
+      {/* =====================================================
+          FEATURED CARS PREVIEW
+      ===================================================== */}
+
+      <section
+        className="
+          bg-white
+          dark:bg-[#050505]
+        "
+      >
+        <FeaturedCars />
+      </section>
+
+      {/* =====================================================
+          WHY CHOOSE CARMOTIVE
+      ===================================================== */}
+
+      <section
+        className="
+          bg-gray-50
+          dark:bg-[#080808]
+        "
+      >
+        <WhyChoose />
+      </section>
+
+      {/* =====================================================
+          RECENT DELIVERIES
+      ===================================================== */}
+
+      <section
+        className="
+          bg-white
+          dark:bg-[#050505]
+        "
+      >
+        <RecentDeliveries />
+      </section>
+
+      {/* =====================================================
+          TESTIMONIALS
+      ===================================================== */}
+
+      <section
+        className="
+          bg-gray-50
+          dark:bg-[#080808]
+        "
+      >
+        <Testimonials />
+      </section>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
+
+      <Footer />
     </main>
   );
 }

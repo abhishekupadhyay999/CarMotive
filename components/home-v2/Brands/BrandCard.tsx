@@ -8,38 +8,7 @@ interface Props {
   brand: Brand;
 }
 
-/*
-  Normalize different logo PNG sizes
-  so all brands look visually consistent.
-*/
-const logoScale: Record<string, string> = {
-  BMW: "scale-[0.82]",
-  "Mercedes-Benz": "scale-[0.78]",
-  Audi: "scale-[0.92]",
-  Volvo: "scale-[0.88]",
-  "Land Rover": "scale-[0.90]",
-  Lexus: "scale-[0.90]",
-  "Maruti Suzuki": "scale-[0.86]",
-  Toyota: "scale-[0.88]",
-  Honda: "scale-[0.90]",
-  Hyundai: "scale-[0.92]",
-  Kia: "scale-[0.90]",
-  Tata: "scale-[0.90]",
-  Mahindra: "scale-[0.90]",
-  Jeep: "scale-[0.88]",
-  "Range Rover": "scale-[0.88]",
-  BYD: "scale-[0.90]",
-  Skoda: "scale-[0.90]",
-  Volkswagen: "scale-[0.90]",
-  Nissan: "scale-[0.90]",
-  Renault: "scale-[0.90]",
-  MG: "scale-[0.90]",
-  Isuzu: "scale-[0.90]",
-};
-
 export default function BrandCard({ brand }: Props) {
-  const scaleClass = logoScale[brand.name] || "scale-[0.90]";
-
   return (
     <motion.div
       whileHover={{ y: -4 }}
@@ -89,7 +58,7 @@ export default function BrandCard({ brand }: Props) {
       {/* Main Content */}
       <div className="flex flex-col items-center">
 
-        {/* Logo */}
+        {/* Logo Area */}
         <div
           className="
             flex
@@ -99,25 +68,35 @@ export default function BrandCard({ brand }: Props) {
             justify-center
           "
         >
-          <Image
-            src={brand.logo}
-            alt={`${brand.name} logo`}
-            width={150}
-            height={70}
-            sizes="150px"
-            priority={false}
-            className={`
-              h-auto
-              max-h-[60px]
-              w-auto
-              max-w-[135px]
-              object-contain
-              transition-transform
-              duration-300
-              ${scaleClass}
-              group-hover:scale-[0.95]
-            `}
-          />
+          <div
+            className="
+              flex
+              h-[64px]
+              w-[140px]
+              items-center
+              justify-center
+            "
+          >
+            <Image
+              src={brand.logo}
+              alt={`${brand.name} logo`}
+              width={140}
+              height={64}
+              sizes="140px"
+              priority={false}
+              className="
+                block
+                h-auto
+                max-h-[52px]
+                w-auto
+                max-w-[125px]
+                object-contain
+                transition-transform
+                duration-300
+                group-hover:scale-105
+              "
+            />
+          </div>
         </div>
 
         {/* Brand Name */}

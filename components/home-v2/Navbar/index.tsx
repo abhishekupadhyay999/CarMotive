@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -15,18 +16,20 @@ import {
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Brands", href: "#brands" },
-  { label: "Featured Cars", href: "#featured-cars" },
-  { label: "Exchange", href: "#exchange" },
-  { label: "Finance", href: "#finance" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Brands", href: "/brands" },
+  { label: "Featured Cars", href: "/cars" },
+  { label: "Exchange", href: "/exchange" },
+  { label: "Finance", href: "/finance" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   /* =========================================================
      SCROLL HANDLER
@@ -34,26 +37,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      setScrolled(scrollY > 40);
-
-      let current = "home";
-
-      navLinks.forEach((item) => {
-        const section = item.href.replace("#", "");
-        const element = document.getElementById(section);
-
-        if (!element) return;
-
-        const top = element.offsetTop - 140;
-
-        if (scrollY >= top) {
-          current = section;
-        }
-      });
-
-      setActiveSection(current);
+      setScrolled(window.scrollY > 40);
     };
 
     handleScroll();
@@ -76,6 +60,18 @@ export default function Navbar() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  /* =========================================================
+     ACTIVE NAVIGATION
+  ========================================================= */
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -110,6 +106,8 @@ export default function Navbar() {
 
           <div className="flex items-center gap-8">
 
+            {/* PHONE */}
+
             <a
               href="tel:+919888197553"
               className="
@@ -127,8 +125,10 @@ export default function Navbar() {
                 className="text-[#E50914]"
               />
 
-              +91 98881 93335
+              +91 98881 95553
             </a>
+
+            {/* HOURS */}
 
             <div
               className="
@@ -147,35 +147,17 @@ export default function Navbar() {
               10:00 AM – 8:00 PM
             </div>
 
-            <div
-              className="
-                flex
-                items-center
-                gap-2
-                text-gray-600
-                dark:text-gray-300
-              "
-            >
-              <MapPin
-                size={14}
-                className="text-[#E50914]"
-              />
+            {/* LOCATION */}
 
-              Virar (W), Maharashtra
-            </div>
 
           </div>
 
           {/* RIGHT */}
 
-          <p
-            className="
-              text-gray-500
-              dark:text-gray-400
-            "
-          >
+          <p className="text-gray-500 dark:text-gray-400">
             India's Trusted Multi-Brand Car Dealership
           </p>
+
         </div>
       </div>
 
@@ -192,14 +174,13 @@ export default function Navbar() {
           top-0
           z-50
           border-b
+          border-gray-200
+          bg-white
           transition-all
           duration-300
 
-          bg-white
-          border-gray-200
-
-          dark:bg-[#050505]
           dark:border-white/10
+          dark:bg-[#050505]
 
           ${
             scrolled
@@ -211,6 +192,7 @@ export default function Navbar() {
           }
         `}
       >
+
         <div className="mx-auto max-w-7xl px-6">
 
           <div className="flex h-24 items-center justify-between">
@@ -220,13 +202,12 @@ export default function Navbar() {
             ================================================= */}
 
             <Link
-              href="#home"
+              href="/"
+              onClick={() => setIsOpen(false)}
               className="flex shrink-0 items-center"
             >
 
-              {/* LIGHT MODE LOGO
-                  logo4.png
-              */}
+              {/* LIGHT MODE */}
 
               <Image
                 src="/logo/logo4.png"
@@ -242,9 +223,7 @@ export default function Navbar() {
                 "
               />
 
-              {/* DARK MODE LOGO
-                  logo3.png
-              */}
+              {/* DARK MODE */}
 
               <Image
                 src="/logo/logo3.png"
@@ -267,14 +246,11 @@ export default function Navbar() {
                 DESKTOP NAVIGATION
             ================================================= */}
 
-            <nav className="hidden items-center gap-9 lg:flex">
+            <nav className="hidden items-center gap-8 lg:flex">
 
               {navLinks.map((item) => {
-                const section =
-                  item.href.replace("#", "");
 
-                const isActive =
-                  activeSection === section;
+                const active = isActive(item.href);
 
                 return (
                   <Link
@@ -290,19 +266,21 @@ export default function Navbar() {
                       duration-300
 
                       ${
-                        isActive
+                        active
                           ? "text-[#E50914]"
                           : `
                             text-gray-800
                             hover:text-[#E50914]
-
                             dark:text-gray-200
                             dark:hover:text-[#E50914]
                           `
                       }
                     `}
                   >
+
                     {item.label}
+
+                    {/* ACTIVE / HOVER LINE */}
 
                     <span
                       className={`
@@ -317,14 +295,16 @@ export default function Navbar() {
                         duration-300
 
                         ${
-                          isActive
+                          active
                             ? "w-full"
                             : "w-0 group-hover:w-full"
                         }
                       `}
                     />
+
                   </Link>
                 );
+
               })}
 
             </nav>
@@ -335,11 +315,11 @@ export default function Navbar() {
 
             <div className="hidden items-center gap-3 lg:flex">
 
-              {/* THEME TOGGLE */}
+              {/* THEME */}
 
               <ThemeToggle />
 
-              {/* CALL NOW */}
+              {/* CALL */}
 
               <a
                 href="tel:+919888195553"
@@ -347,7 +327,6 @@ export default function Navbar() {
                   rounded-full
                   border
                   border-gray-300
-                  bg-transparent
                   px-6
                   py-3
                   text-sm
@@ -372,7 +351,7 @@ export default function Navbar() {
               {/* BOOK TEST DRIVE */}
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="
                   rounded-full
                   bg-[#E50914]
@@ -449,6 +428,7 @@ export default function Navbar() {
             </div>
 
           </div>
+
         </div>
 
         {/* =====================================================
@@ -456,8 +436,10 @@ export default function Navbar() {
         ===================================================== */}
 
         <AnimatePresence>
+
           {isOpen && (
             <>
+
               {/* BACKDROP */}
 
               <motion.div
@@ -520,7 +502,7 @@ export default function Navbar() {
                   "
                 >
 
-                  {/* LIGHT MODE LOGO */}
+                  {/* LIGHT LOGO */}
 
                   <Image
                     src="/logo/logo4.png"
@@ -535,7 +517,7 @@ export default function Navbar() {
                     "
                   />
 
-                  {/* DARK MODE LOGO */}
+                  {/* DARK LOGO */}
 
                   <Image
                     src="/logo/logo3.png"
@@ -578,11 +560,8 @@ export default function Navbar() {
                 <div className="flex flex-1 flex-col px-6 py-8">
 
                   {navLinks.map((item) => {
-                    const section =
-                      item.href.replace("#", "");
 
-                    const isActive =
-                      activeSection === section;
+                    const active = isActive(item.href);
 
                     return (
                       <Link
@@ -600,12 +579,11 @@ export default function Navbar() {
                           dark:border-white/10
 
                           ${
-                            isActive
+                            active
                               ? "text-[#E50914]"
                               : `
                                 text-gray-800
                                 hover:text-[#E50914]
-
                                 dark:text-gray-200
                               `
                           }
@@ -614,6 +592,7 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                     );
+
                   })}
 
                   {/* CALL */}
@@ -645,7 +624,7 @@ export default function Navbar() {
                   {/* TEST DRIVE */}
 
                   <Link
-                    href="#contact"
+                    href="/contact"
                     onClick={() => setIsOpen(false)}
                     className="
                       mt-4
@@ -680,6 +659,7 @@ export default function Navbar() {
                         size={16}
                         className="text-[#E50914]"
                       />
+
                       +91 98881 97553
                     </div>
 
@@ -688,23 +668,20 @@ export default function Navbar() {
                         size={16}
                         className="text-[#E50914]"
                       />
+
                       10:00 AM – 8:00 PM
                     </div>
 
-                    <div className="flex items-center gap-3">
-                      <MapPin
-                        size={16}
-                        className="text-[#E50914]"
-                      />
-                      Virar (W), Maharashtra
-                    </div>
-
+                    
                   </div>
 
                 </div>
+
               </motion.div>
+
             </>
           )}
+
         </AnimatePresence>
 
       </motion.header>
