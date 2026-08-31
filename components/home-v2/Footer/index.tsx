@@ -17,12 +17,12 @@ import {
 } from "react-icons/fa";
 
 const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Brands", href: "#brands" },
-  { name: "Featured Cars", href: "#featured-cars" },
-  { name: "Finance", href: "#finance" },
-  { name: "Reviews", href: "#reviews" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Brands", href: "/brands" },
+  { name: "Featured Cars", href: "/cars" },
+  { name: "Finance", href: "/finance" },
+  { name: "Reviews", href: "/#reviews" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const services = [
@@ -89,7 +89,6 @@ export default function Footer() {
       />
 
       {/* Red Glow */}
-
       <div
         className="
           absolute
@@ -136,15 +135,39 @@ export default function Footer() {
             }}
           >
             <Link
-              href="#home"
+              href="/"
               className="mb-6 inline-flex items-center"
             >
+              {/* Light Mode Logo */}
+
+              <Image
+                src="/logo/logo4.png"
+                alt="Carmotive India"
+                width={220}
+                height={70}
+                className="
+                  h-auto
+                  w-[200px]
+                  object-contain
+                  dark:hidden
+                "
+                priority
+              />
+
+              {/* Dark Mode Logo */}
+
               <Image
                 src="/logo/logo3.png"
                 alt="Carmotive India"
                 width={220}
                 height={70}
-                className="h-auto w-[200px] object-contain"
+                className="
+                  hidden
+                  h-auto
+                  w-[200px]
+                  object-contain
+                  dark:block
+                "
                 priority
               />
             </Link>
@@ -153,7 +176,6 @@ export default function Footer() {
               className="
                 leading-8
                 text-gray-600
-
                 dark:text-gray-400
               "
             >
@@ -216,7 +238,6 @@ export default function Footer() {
                 text-xl
                 font-semibold
                 text-gray-900
-
                 dark:text-white
               "
             >
@@ -269,7 +290,6 @@ export default function Footer() {
                 text-xl
                 font-semibold
                 text-gray-900
-
                 dark:text-white
               "
             >
@@ -328,7 +348,6 @@ export default function Footer() {
                 text-2xl
                 font-semibold
                 text-gray-900
-
                 dark:text-white
               "
             >
@@ -353,10 +372,9 @@ export default function Footer() {
                   <a
                     href="tel:+919888195553"
                     className="
+                      text-gray-800
                       transition
                       hover:text-[#E50914]
-
-                      text-gray-800
                       dark:text-gray-200
                     "
                   >
@@ -381,10 +399,9 @@ export default function Footer() {
                   <a
                     href="mailto:sales@carmotive.com"
                     className="
+                      text-gray-800
                       transition
                       hover:text-[#E50914]
-
-                      text-gray-800
                       dark:text-gray-200
                     "
                   >
@@ -547,7 +564,6 @@ export default function Footer() {
             border-t
             border-gray-200
             pt-8
-
             dark:border-white/10
           "
         >
@@ -560,7 +576,6 @@ export default function Footer() {
               gap-4
               text-center
               text-sm
-
               md:flex-row
             "
           >
