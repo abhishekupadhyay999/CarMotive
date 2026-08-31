@@ -18,7 +18,7 @@ export const cars: Car[] = [
     brand: "Toyota",
     name: "Innova Hycross",
     slug: "toyota-innova-hycross",
-    image: "/images/featured/hycross.avif",
+    image: "/images/featured/hycross.png",
     price: "₹19.94 Lakh",
     emi: "₹38,500/mo",
     fuel: "Hybrid",
