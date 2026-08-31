@@ -101,17 +101,56 @@ export default function Hero() {
           DARK MODE OVERLAY
       ===================================================== */}
 
-      <div className="absolute inset-0 hidden bg-black/35 dark:block" />
+      <div
+        className="
+          absolute
+          inset-0
+          hidden
+          bg-black/35
+          dark:block
+        "
+      />
 
-      <div className="absolute inset-0 hidden bg-gradient-to-r from-black via-black/45 to-transparent dark:block" />
+      <div
+        className="
+          absolute
+          inset-0
+          hidden
+          bg-gradient-to-r
+          from-black
+          via-black/45
+          to-transparent
+          dark:block
+        "
+      />
 
       {/* =====================================================
-          LIGHT MODE OVERLAY
+          LIGHT MODE
+          Keep original background image visible
       ===================================================== */}
 
-      <div className="absolute inset-0 block bg-white/55 dark:hidden" />
+      <div
+        className="
+          absolute
+          inset-0
+          block
+          bg-white/10
+          dark:hidden
+        "
+      />
 
-      <div className="absolute inset-0 block bg-gradient-to-r from-white/95 via-white/60 to-transparent dark:hidden" />
+      <div
+        className="
+          absolute
+          inset-0
+          block
+          bg-gradient-to-r
+          from-white/25
+          via-white/5
+          to-transparent
+          dark:hidden
+        "
+      />
 
       {/* =====================================================
           HERO CONTENT
@@ -300,8 +339,6 @@ export default function Hero() {
                 hover:shadow-[0_15px_35px_rgba(229,9,20,0.3)]
               "
             >
-              
-
               <ArrowRight
                 size={18}
                 className="
@@ -337,7 +374,6 @@ export default function Hero() {
                 dark:hover:bg-white/10
               "
             >
-              
             </Link>
           </div>
         </motion.div>
@@ -443,7 +479,7 @@ export default function Hero() {
           w-full
           bg-gradient-to-t
           from-white
-          via-white/60
+          via-white/20
           to-transparent
 
           dark:from-[#050505]

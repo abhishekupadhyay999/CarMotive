@@ -11,6 +11,10 @@ import {
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+/* =========================================================
+   CAR TYPE
+========================================================= */
+
 export interface Car {
   id: number;
   brand: string;
@@ -19,9 +23,40 @@ export interface Car {
   image: string;
   engine: string;
   fuel: string[];
-  transmission: string[];
   price: string | null;
 }
+
+/* =========================================================
+   FILTER TYPE
+========================================================= */
+
+interface Filters {
+  brand: string;
+  budget: string;
+  fuel: string;
+}
+
+/* =========================================================
+   CONTEXT TYPE
+========================================================= */
+
+interface CarContextType {
+  cars: Car[];
+  filteredCars: Car[];
+  filters: Filters;
+  hasSearched: boolean;
+
+  setFilters: React.Dispatch<
+    React.SetStateAction<Filters>
+  >;
+
+  searchCars: () => void;
+  resetFilters: () => void;
+}
+
+/* =========================================================
+   SANITY CAR TYPE
+========================================================= */
 
 interface SanityCar {
   _id: string;
@@ -34,7 +69,6 @@ interface SanityCar {
   kilometers?: number;
 
   fuel?: string;
-  transmission?: string;
 
   bodyType?: string;
   color?: string;
@@ -54,38 +88,26 @@ interface SanityCar {
   sortOrder?: number;
 }
 
-interface Filters {
-  brand: string;
-  budget: string;
-  fuel: string;
-  transmission: string;
-}
-
-interface CarContextType {
-  cars: Car[];
-  filteredCars: Car[];
-  filters: Filters;
-
-  hasSearched: boolean;
-
-  setFilters: React.Dispatch<
-    React.SetStateAction<Filters>
-  >;
-
-  searchCars: () => void;
-
-  resetFilters: () => void;
-}
+/* =========================================================
+   CONTEXT
+========================================================= */
 
 const CarContext =
   createContext<CarContextType | null>(null);
+
+/* =========================================================
+   INITIAL FILTERS
+========================================================= */
 
 const initialFilters: Filters = {
   brand: "all",
   budget: "all",
   fuel: "all",
-  transmission: "all",
 };
+
+/* =========================================================
+   PRICE PARSER
+========================================================= */
 
 function getPriceValue(
   price: string | null | undefined
@@ -122,6 +144,10 @@ function getPriceValue(
 
   return isNaN(value) ? -1 : value;
 }
+
+/* =========================================================
+   BUDGET MATCH
+========================================================= */
 
 function matchBudget(
   price: number,
@@ -163,9 +189,9 @@ function matchBudget(
   }
 }
 
-/* =========================================
-   CONVERT SANITY CAR → EXISTING CAR FORMAT
-========================================= */
+/* =========================================================
+   CONVERT SANITY CAR → WEBSITE CAR
+========================================================= */
 
 function convertSanityCar(
   car: SanityCar,
@@ -180,54 +206,47 @@ function convertSanityCar(
           .url()
       : "/images/cars/no-image.webp";
 
+  const slug =
+    car.name
+      ?.toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "") ||
+    car._id;
+
+  const engineInfo = [
+    car.year
+      ? String(car.year)
+      : "",
+    car.bodyType
+      ? car.bodyType
+      : "",
+  ]
+    .filter(Boolean)
+    .join(" • ");
+
   return {
     id: index + 1,
-
     brand: car.brand,
-
     model: car.name,
-
-    slug:
-      car.name
-        ?.toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "") ||
-      car._id,
-
+    slug,
     image: firstImage,
-
-    engine:
-      car.bodyType ||
-      car.year
-        ? `${car.year || ""}${
-            car.bodyType
-              ? ` • ${car.bodyType}`
-              : ""
-          }`
-        : "",
-
-    fuel: car.fuel
-      ? [car.fuel]
-      : [],
-
-    transmission: car.transmission
-      ? [car.transmission]
-      : [],
-
+    engine: engineInfo,
+    fuel: car.fuel ? [car.fuel] : [],
     price: car.price || null,
   };
 }
 
-/* =========================================
+/* =========================================================
    PROVIDER
-========================================= */
+========================================================= */
 
 export function CarProvider({
   children,
 }: {
   children: ReactNode;
 }) {
-  const [cars, setCars] = useState<Car[]>([]);
+  const [cars, setCars] =
+    useState<Car[]>([]);
 
   const [filters, setFilters] =
     useState<Filters>(initialFilters);
@@ -238,9 +257,9 @@ export function CarProvider({
   const [hasSearched, setHasSearched] =
     useState(false);
 
-  /* =========================================
+  /* =======================================================
      FETCH CARS FROM SANITY
-  ========================================= */
+  ======================================================= */
 
   useEffect(() => {
     async function fetchCars() {
@@ -259,7 +278,6 @@ export function CarProvider({
             year,
             kilometers,
             fuel,
-            transmission,
             bodyType,
             color,
             location,
@@ -295,9 +313,9 @@ export function CarProvider({
     fetchCars();
   }, []);
 
-  /* =========================================
+  /* =======================================================
      SEARCH
-  ========================================= */
+  ======================================================= */
 
   const searchCars = () => {
     const results = cars.filter((car) => {
@@ -311,11 +329,6 @@ export function CarProvider({
         (filters.fuel === "all" ||
           car.fuel.includes(filters.fuel)) &&
 
-        (filters.transmission === "all" ||
-          car.transmission.includes(
-            filters.transmission
-          )) &&
-
         (filters.budget === "all" ||
           matchBudget(
             price,
@@ -325,7 +338,6 @@ export function CarProvider({
     });
 
     setFilteredCars(results);
-
     setHasSearched(true);
 
     setTimeout(() => {
@@ -338,15 +350,13 @@ export function CarProvider({
     }, 100);
   };
 
-  /* =========================================
-     RESET
-  ========================================= */
+  /* =======================================================
+     RESET FILTERS
+  ======================================================= */
 
   const resetFilters = () => {
     setFilters(initialFilters);
-
     setFilteredCars([]);
-
     setHasSearched(false);
 
     document
@@ -355,6 +365,10 @@ export function CarProvider({
         behavior: "smooth",
       });
   };
+
+  /* =======================================================
+     PROVIDER
+  ======================================================= */
 
   return (
     <CarContext.Provider
@@ -373,9 +387,9 @@ export function CarProvider({
   );
 }
 
-/* =========================================
+/* =========================================================
    HOOK
-========================================= */
+========================================================= */
 
 export function useCars() {
   const context =

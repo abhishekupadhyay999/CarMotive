@@ -76,14 +76,13 @@ export default async function BlogPage() {
           border-gray-200
           bg-white
           px-6
-          pb-20
-          pt-32
-
+          pb-6
+          pt-6
           dark:border-white/10
           dark:bg-[#050505]
-
           lg:px-8
-          lg:pt-36
+          lg:pb-8
+          lg:pt-8
         "
       >
         {/* Background Glow */}
@@ -94,32 +93,13 @@ export default async function BlogPage() {
             absolute
             left-1/2
             top-0
-            h-96
-            w-96
+            h-56
+            w-56
             -translate-x-1/2
             rounded-full
             bg-[#E50914]/5
-            blur-[120px]
-
+            blur-[80px]
             dark:bg-[#E50914]/10
-          "
-        />
-
-        {/* Secondary Glow */}
-
-        <div
-          className="
-            pointer-events-none
-            absolute
-            right-0
-            top-20
-            h-64
-            w-64
-            rounded-full
-            bg-gray-100
-            blur-[100px]
-
-            dark:bg-white/[0.02]
           "
         />
 
@@ -127,7 +107,7 @@ export default async function BlogPage() {
           className="
             relative
             mx-auto
-            max-w-5xl
+            max-w-4xl
             text-center
           "
         >
@@ -140,12 +120,12 @@ export default async function BlogPage() {
               border
               border-[#E50914]/20
               bg-[#E50914]/5
-              px-5
-              py-2
-              text-xs
+              px-4
+              py-1.5
+              text-[11px]
               font-semibold
               uppercase
-              tracking-[0.3em]
+              tracking-[0.28em]
               text-[#E50914]
             "
           >
@@ -156,16 +136,14 @@ export default async function BlogPage() {
 
           <h1
             className="
-              mt-6
-              text-4xl
+              mt-2
+              text-3xl
               font-bold
               leading-tight
               tracking-tight
               text-gray-900
-
+              sm:text-4xl
               md:text-5xl
-              lg:text-6xl
-
               dark:text-white
             "
           >
@@ -180,14 +158,13 @@ export default async function BlogPage() {
           <p
             className="
               mx-auto
-              mt-6
+              mt-2
               max-w-2xl
-              text-base
-              leading-8
+              text-sm
+              leading-6
               text-gray-600
-
-              md:text-lg
-
+              sm:text-base
+              sm:leading-7
               dark:text-gray-400
             "
           >
@@ -199,33 +176,30 @@ export default async function BlogPage() {
       </section>
 
       {/* =====================================================
-          ARTICLES SECTION
+          ARTICLES
       ===================================================== */}
 
       <section
         className="
           bg-gray-50
           px-6
-          py-20
-
+          py-6
           dark:bg-[#050505]
-
           lg:px-8
-          lg:py-24
+          lg:py-10
         "
       >
         <div className="mx-auto max-w-7xl">
 
           {/* Section Heading */}
 
-          <div className="mb-12">
-
+          <div className="mb-5">
             <p
               className="
-                text-sm
+                text-xs
                 font-semibold
                 uppercase
-                tracking-[0.25em]
+                tracking-[0.24em]
                 text-[#E50914]
               "
             >
@@ -234,13 +208,11 @@ export default async function BlogPage() {
 
             <h2
               className="
-                mt-3
-                text-3xl
+                mt-1
+                text-2xl
                 font-bold
                 text-gray-900
-
-                md:text-4xl
-
+                sm:text-3xl
                 dark:text-white
               "
             >
@@ -249,18 +221,17 @@ export default async function BlogPage() {
 
             <p
               className="
-                mt-3
+                mt-1
                 max-w-2xl
-                text-base
-                leading-7
+                text-sm
+                leading-6
                 text-gray-600
                 dark:text-gray-400
               "
             >
-              Discover helpful information about new cars,
+              Discover useful information about new cars,
               features, pricing, launches and car buying.
             </p>
-
           </div>
 
           {/* =================================================
@@ -270,15 +241,14 @@ export default async function BlogPage() {
           {posts.length === 0 ? (
             <div
               className="
-                rounded-3xl
+                rounded-2xl
                 border
                 border-gray-200
                 bg-white
                 px-6
-                py-24
+                py-12
                 text-center
                 shadow-sm
-
                 dark:border-white/10
                 dark:bg-[#111111]
                 dark:shadow-none
@@ -298,8 +268,9 @@ export default async function BlogPage() {
               <p
                 className="
                   mx-auto
-                  mt-3
+                  mt-2
                   max-w-md
+                  text-sm
                   text-gray-600
                   dark:text-gray-400
                 "
@@ -309,7 +280,6 @@ export default async function BlogPage() {
               </p>
             </div>
           ) : (
-
             /* =================================================
                ARTICLE GRID
             ================================================= */
@@ -317,13 +287,12 @@ export default async function BlogPage() {
             <div
               className="
                 grid
-                gap-8
+                gap-5
                 sm:grid-cols-2
                 lg:grid-cols-3
               "
             >
               {posts.map((post) => {
-
                 const imageUrl = post.coverImage?.asset
                   ? urlFor(post.coverImage)
                       .width(900)
@@ -338,7 +307,7 @@ export default async function BlogPage() {
                     className="
                       group
                       overflow-hidden
-                      rounded-3xl
+                      rounded-2xl
                       border
                       border-gray-200
                       bg-white
@@ -346,9 +315,9 @@ export default async function BlogPage() {
                       transition-all
                       duration-300
 
-                      hover:-translate-y-2
+                      hover:-translate-y-1
                       hover:border-[#E50914]/30
-                      hover:shadow-xl
+                      hover:shadow-lg
 
                       dark:border-white/10
                       dark:bg-[#111111]
@@ -433,18 +402,18 @@ export default async function BlogPage() {
                         CARD CONTENT
                     ================================================= */}
 
-                    <div className="p-6">
+                    <div className="p-4">
 
                       {/* Brand / Model */}
 
                       <div
                         className="
-                          mb-3
+                          mb-1.5
                           flex
                           flex-wrap
                           items-center
                           gap-2
-                          text-sm
+                          text-xs
                         "
                       >
                         <span
@@ -478,14 +447,13 @@ export default async function BlogPage() {
                         <h2
                           className="
                             line-clamp-2
-                            text-xl
+                            text-lg
                             font-bold
-                            leading-7
+                            leading-6
                             text-gray-900
                             transition-colors
                             duration-300
                             group-hover:text-[#E50914]
-
                             dark:text-white
                           "
                         >
@@ -497,12 +465,11 @@ export default async function BlogPage() {
 
                       <p
                         className="
-                          mt-3
+                          mt-1.5
                           line-clamp-3
                           text-sm
-                          leading-6
+                          leading-5
                           text-gray-600
-
                           dark:text-gray-400
                         "
                       >
@@ -513,25 +480,21 @@ export default async function BlogPage() {
 
                       <div
                         className="
-                          mt-6
+                          mt-3
                           flex
                           items-center
                           justify-between
                           border-t
                           border-gray-100
-                          pt-5
-
+                          pt-2.5
                           dark:border-white/10
                         "
                       >
 
-                        {/* Date */}
-
                         <span
                           className="
-                            text-xs
+                            text-[11px]
                             text-gray-500
-                            dark:text-gray-500
                           "
                         >
                           {new Date(
@@ -546,12 +509,10 @@ export default async function BlogPage() {
                           )}
                         </span>
 
-                        {/* Read More */}
-
                         <Link
                           href={`/blog/${post.slug.current}`}
                           className="
-                            text-sm
+                            text-xs
                             font-semibold
                             text-[#E50914]
                             transition-opacity
@@ -568,7 +529,7 @@ export default async function BlogPage() {
 
                     <div
                       className="
-                        h-[3px]
+                        h-[2px]
                         w-0
                         bg-[#E50914]
                         transition-all
@@ -582,7 +543,6 @@ export default async function BlogPage() {
               })}
             </div>
           )}
-
         </div>
       </section>
 

@@ -7,7 +7,6 @@ import {
   CarFront,
   Wallet,
   Fuel,
-  Settings2,
 } from "lucide-react";
 
 import {
@@ -52,21 +51,6 @@ export default function FindYourCar() {
         .filter(Boolean)
     )
   ).sort((a, b) => a.localeCompare(b));
-
-  const transmissions = Array.from(
-    new Set(
-      cars
-        .flatMap(
-          (car) => car.transmission || []
-        )
-        .map((transmission) =>
-          transmission?.trim()
-        )
-        .filter(Boolean)
-    )
-  ).sort((a, b) =>
-    a.localeCompare(b)
-  );
 
   /* =====================================================
      BUDGET OPTIONS
@@ -202,9 +186,8 @@ export default function FindYourCar() {
               dark:text-gray-400
             "
           >
-            Browse India's latest cars by brand,
-            budget, fuel type and transmission.
-            Find your perfect match in seconds.
+            Browse India's latest cars by brand, budget and
+            fuel type. Find your perfect match in seconds.
           </p>
         </motion.div>
 
@@ -255,7 +238,7 @@ export default function FindYourCar() {
                 grid
                 gap-6
                 md:grid-cols-2
-                xl:grid-cols-4
+                xl:grid-cols-3
               "
             >
               {/* =================================================
@@ -531,103 +514,6 @@ export default function FindYourCar() {
                   </SelectContent>
                 </Select>
               </div>
-
-              {/* =================================================
-                  TRANSMISSION
-              ================================================= */}
-
-              <div>
-                <label
-                  className="
-                    mb-2
-                    flex
-                    items-center
-                    gap-2
-                    text-sm
-                    font-medium
-                    text-gray-700
-                    dark:text-gray-300
-                  "
-                >
-                  <Settings2
-                    className="
-                      h-4
-                      w-4
-                      text-[#E50914]
-                    "
-                  />
-
-                  Transmission
-                </label>
-
-                <Select
-                  value={filters.transmission}
-                  onValueChange={(value) =>
-                    setFilters((prev) => ({
-                      ...prev,
-                      transmission: value,
-                    }))
-                  }
-                >
-                  <SelectTrigger
-                    className="
-                      h-12
-                      rounded-xl
-                      border-gray-200
-                      bg-gray-50
-                      text-gray-900
-                      transition-all
-                      duration-300
-                      hover:border-[#E50914]/50
-                      focus:ring-[#E50914]/20
-
-                      dark:border-white/10
-                      dark:bg-[#080808]
-                      dark:text-white
-                    "
-                  >
-                    <SelectValue placeholder="All Transmissions" />
-                  </SelectTrigger>
-
-                  <SelectContent
-                    className="
-                      border-gray-200
-                      bg-white
-                      text-gray-900
-
-                      dark:border-white/10
-                      dark:bg-[#151515]
-                      dark:text-white
-                    "
-                  >
-                    <SelectItem value="all">
-                      All Transmissions
-                    </SelectItem>
-
-                    {transmissions.length > 0 ? (
-                      transmissions.map(
-                        (transmission) => (
-                          <SelectItem
-                            key={transmission}
-                            value={transmission}
-                          >
-                            {transmission}
-                          </SelectItem>
-                        )
-                      )
-                    ) : (
-                      <SelectItem
-                        value="no-transmission"
-                        disabled
-                      >
-                        {isLoading
-                          ? "Loading transmissions..."
-                          : "No transmissions available"}
-                      </SelectItem>
-                    )}
-                  </SelectContent>
-                </Select>
-              </div>
             </div>
 
             {/* =================================================
@@ -660,8 +546,10 @@ export default function FindYourCar() {
                   shadow-red-500/20
                   transition-all
                   duration-300
+
                   hover:scale-[1.02]
                   hover:bg-red-700
+
                   disabled:cursor-not-allowed
                   disabled:opacity-50
                 "
@@ -687,6 +575,7 @@ export default function FindYourCar() {
                   text-gray-700
                   transition-all
                   duration-300
+
                   hover:border-[#E50914]
                   hover:bg-[#E50914]/5
                   hover:text-[#E50914]

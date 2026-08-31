@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Fuel, Settings2 } from "lucide-react";
+import { ArrowRight, Fuel } from "lucide-react";
 
 import { useCars } from "@/components/context/CarContext";
 
@@ -15,18 +15,23 @@ export default function SearchResult() {
   return (
     <section
       className="
-        relative overflow-hidden
+        relative
+        overflow-hidden
         bg-gray-50
         py-24
-        transition-colors duration-500
+        transition-colors
+        duration-500
         dark:bg-[#050505]
       "
     >
-      {/* ================= BACKGROUND ================= */}
+      {/* =====================================================
+          BACKGROUND
+      ===================================================== */}
 
       <div
         className="
-          absolute inset-0
+          absolute
+          inset-0
           bg-[radial-gradient(circle_at_top,rgba(229,9,20,0.05),transparent_55%)]
           dark:bg-[radial-gradient(circle_at_top,#1b1b1b_0%,#050505_70%)]
         "
@@ -34,13 +39,25 @@ export default function SearchResult() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* ================= HEADING ================= */}
+        {/* =================================================
+            HEADING
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
           className="mb-16 text-center"
         >
           {/* Badge */}
@@ -49,10 +66,14 @@ export default function SearchResult() {
             className="
               inline-flex
               rounded-full
-              border border-[#E50914]/20
+              border
+              border-[#E50914]/20
               bg-[#E50914]/5
-              px-5 py-2
-              text-xs font-semibold uppercase
+              px-5
+              py-2
+              text-xs
+              font-semibold
+              uppercase
               tracking-[0.3em]
               text-[#E50914]
             "
@@ -60,12 +81,16 @@ export default function SearchResult() {
             Search Results
           </span>
 
+          {/* Heading */}
+
           <h2
             className="
               mt-6
-              text-4xl font-bold
+              text-4xl
+              font-bold
               text-gray-900
-              transition-colors duration-500
+              transition-colors
+              duration-500
               md:text-5xl
               dark:text-white
             "
@@ -73,33 +98,49 @@ export default function SearchResult() {
             Cars Matching Your Search
           </h2>
 
+          {/* Count */}
+
           <p
             className="
               mt-4
               text-gray-600
-              transition-colors duration-500
+              transition-colors
+              duration-500
               dark:text-gray-400
             "
           >
             {filteredCars.length}{" "}
-            {filteredCars.length === 1 ? "car" : "cars"} found
+            {filteredCars.length === 1
+              ? "car"
+              : "cars"}{" "}
+            found
           </p>
         </motion.div>
 
-        {/* ================= NO RESULTS ================= */}
+        {/* =================================================
+            NO RESULTS
+        ================================================= */}
 
         {filteredCars.length === 0 ? (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             className="
               rounded-3xl
-              border border-gray-200
+              border
+              border-gray-200
               bg-white
               p-16
               text-center
               shadow-lg
-              transition-all duration-500
+              transition-all
+              duration-500
 
               dark:border-white/10
               dark:bg-[#111111]
@@ -108,7 +149,8 @@ export default function SearchResult() {
           >
             <h3
               className="
-                text-3xl font-bold
+                text-3xl
+                font-bold
                 text-gray-900
                 dark:text-white
               "
@@ -128,12 +170,19 @@ export default function SearchResult() {
           </motion.div>
         ) : (
 
-          /* ================= RESULTS GRID ================= */
+          /* =================================================
+             RESULTS GRID
+          ================================================= */
 
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
+          <div
+            className="
+              grid
+              gap-8
+              md:grid-cols-2
+              xl:grid-cols-3
+            "
+          >
             {filteredCars.map((car, index) => (
-
               <motion.div
                 key={car.id}
                 initial={{
@@ -144,7 +193,9 @@ export default function SearchResult() {
                   opacity: 1,
                   y: 0,
                 }}
-                viewport={{ once: true }}
+                viewport={{
+                  once: true,
+                }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.05,
@@ -153,11 +204,12 @@ export default function SearchResult() {
                   group
                   overflow-hidden
                   rounded-3xl
-                  border border-gray-200
+                  border
+                  border-gray-200
                   bg-white
                   shadow-lg
-
-                  transition-all duration-300
+                  transition-all
+                  duration-300
 
                   hover:-translate-y-2
                   hover:border-[#E50914]/50
@@ -169,7 +221,9 @@ export default function SearchResult() {
                 "
               >
 
-                {/* ================= IMAGE ================= */}
+                {/* =================================================
+                    IMAGE
+                ================================================= */}
 
                 <div
                   className="
@@ -194,7 +248,8 @@ export default function SearchResult() {
                     "
                     className="
                       object-cover
-                      transition duration-500
+                      transition
+                      duration-500
                       group-hover:scale-105
                     "
                     onError={(e) => {
@@ -207,7 +262,8 @@ export default function SearchResult() {
 
                   <div
                     className="
-                      absolute inset-0
+                      absolute
+                      inset-0
                       bg-gradient-to-t
                       from-black/30
                       via-transparent
@@ -217,7 +273,9 @@ export default function SearchResult() {
                   />
                 </div>
 
-                {/* ================= CONTENT ================= */}
+                {/* =================================================
+                    CONTENT
+                ================================================= */}
 
                 <div className="p-6">
 
@@ -239,7 +297,8 @@ export default function SearchResult() {
                   <h3
                     className="
                       mt-2
-                      text-2xl font-bold
+                      text-2xl
+                      font-bold
                       text-gray-900
                       dark:text-white
                     "
@@ -260,17 +319,23 @@ export default function SearchResult() {
                     {car.engine}
                   </p>
 
-                  {/* ================= SPECS ================= */}
+                  {/* =================================================
+                      FUEL
+                  ================================================= */}
 
                   <div className="mt-5 flex flex-wrap gap-3">
 
                     <span
                       className="
-                        flex items-center gap-2
+                        flex
+                        items-center
+                        gap-2
                         rounded-full
-                        border border-gray-200
+                        border
+                        border-gray-200
                         bg-gray-50
-                        px-3 py-2
+                        px-3
+                        py-2
                         text-sm
                         text-gray-700
 
@@ -281,35 +346,26 @@ export default function SearchResult() {
                     >
                       <Fuel size={15} />
 
-                      {car.fuel.join(", ")}
-                    </span>
-
-                    <span
-                      className="
-                        flex items-center gap-2
-                        rounded-full
-                        border border-gray-200
-                        bg-gray-50
-                        px-3 py-2
-                        text-sm
-                        text-gray-700
-
-                        dark:border-white/10
-                        dark:bg-white/5
-                        dark:text-gray-300
-                      "
-                    >
-                      <Settings2 size={15} />
-
-                      {car.transmission.join(", ")}
+                      {car.fuel.length > 0
+                        ? car.fuel.join(", ")
+                        : "Fuel not specified"}
                     </span>
 
                   </div>
 
-                  {/* ================= PRICE ================= */}
+                  {/* =================================================
+                      PRICE
+                  ================================================= */}
 
-                  <div className="mt-6 flex items-center justify-between gap-4">
-
+                  <div
+                    className="
+                      mt-6
+                      flex
+                      items-center
+                      justify-between
+                      gap-4
+                    "
+                  >
                     <div>
 
                       <p
@@ -324,7 +380,8 @@ export default function SearchResult() {
 
                       <h4
                         className="
-                          text-2xl font-bold
+                          text-2xl
+                          font-bold
                           text-gray-900
                           dark:text-white
                         "
@@ -345,10 +402,12 @@ export default function SearchResult() {
                         gap-2
                         rounded-xl
                         bg-[#E50914]
-                        px-5 py-3
+                        px-5
+                        py-3
                         font-medium
                         text-white
-                        transition-all duration-300
+                        transition-all
+                        duration-300
                         hover:bg-red-700
                         hover:shadow-lg
                         hover:shadow-red-500/20
@@ -365,12 +424,12 @@ export default function SearchResult() {
                         "
                       />
                     </Link>
-
                   </div>
-
                 </div>
 
-                {/* ================= BOTTOM ACCENT ================= */}
+                {/* =================================================
+                    BOTTOM ACCENT
+                ================================================= */}
 
                 <div
                   className="
@@ -382,11 +441,8 @@ export default function SearchResult() {
                     group-hover:w-full
                   "
                 />
-
               </motion.div>
-
             ))}
-
           </div>
         )}
       </div>

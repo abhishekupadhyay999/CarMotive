@@ -19,11 +19,13 @@ export default function ExchangePage() {
           border-gray-200
           bg-white
           px-6
-          pb-20
-          pt-40
+          pb-6
+          pt-6
           dark:border-white/10
           dark:bg-[#050505]
           lg:px-8
+          lg:pb-8
+          lg:pt-8
         "
       >
         {/* Background Glow */}
@@ -32,19 +34,19 @@ export default function ExchangePage() {
           className="
             pointer-events-none
             absolute
-            right-1/2
+            left-1/2
             top-0
-            h-96
-            w-96
-            translate-x-1/2
+            h-56
+            w-56
+            -translate-x-1/2
             rounded-full
             bg-[#E50914]/5
-            blur-[120px]
+            blur-[80px]
             dark:bg-[#E50914]/10
           "
         />
 
-        <div className="relative mx-auto max-w-5xl text-center">
+        <div className="relative mx-auto max-w-4xl text-center">
 
           {/* Badge */}
 
@@ -55,12 +57,12 @@ export default function ExchangePage() {
               border
               border-[#E50914]/20
               bg-[#E50914]/5
-              px-5
-              py-2
-              text-xs
+              px-4
+              py-1.5
+              text-[11px]
               font-semibold
               uppercase
-              tracking-[0.3em]
+              tracking-[0.28em]
               text-[#E50914]
             "
           >
@@ -71,13 +73,14 @@ export default function ExchangePage() {
 
           <h1
             className="
-              mt-6
-              text-4xl
+              mt-2
+              text-3xl
               font-bold
               leading-tight
+              tracking-tight
               text-gray-900
+              sm:text-4xl
               md:text-5xl
-              lg:text-6xl
               dark:text-white
             "
           >
@@ -92,24 +95,24 @@ export default function ExchangePage() {
           <p
             className="
               mx-auto
-              mt-6
+              mt-2
               max-w-2xl
-              text-base
-              leading-8
+              text-sm
+              leading-6
               text-gray-600
+              sm:text-base
+              sm:leading-7
               dark:text-gray-400
-              md:text-lg
             "
           >
-            Get a fair value for your current vehicle and make your next
-            upgrade simple with Carmotive India's inspection, valuation,
-            documentation and finance assistance.
+            Get a fair value for your current vehicle and make
+            your next upgrade simple with Carmotive India.
           </p>
         </div>
       </section>
 
       {/* =====================================================
-          EXCHANGE SECTION
+          EXCHANGE CONTENT
       ===================================================== */}
 
       <section
