@@ -1,26 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   CarFront,
   Truck,
   Headphones,
   Award,
 } from "lucide-react";
-
-/* =========================================================
-   HERO FEATURES
-========================================================= */
-
-const features = [
-  "20+ Brands",
-  "Best Prices",
-  "Easy Finance",
-  "PAN India Delivery",
-];
 
 /* =========================================================
    HERO STATS
@@ -125,8 +112,7 @@ export default function Hero() {
       />
 
       {/* =====================================================
-          LIGHT MODE
-          Keep original background image visible
+          LIGHT MODE OVERLAY
       ===================================================== */}
 
       <div
@@ -276,106 +262,6 @@ export default function Hero() {
             Discover premium cars, competitive deals, easy finance and
             complete car buying assistance — all under one roof.
           </p>
-
-          {/* =================================================
-              PREMIUM CHIPS
-          ================================================= */}
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            {features.map((feature) => (
-              <div
-                key={feature}
-                className="
-                  rounded-full
-                  border
-                  border-gray-300
-                  bg-white
-                  px-5
-                  py-2
-                  text-sm
-                  font-medium
-                  text-gray-800
-                  shadow-sm
-                  transition-all
-                  duration-300
-
-                  hover:border-[#E50914]
-                  hover:bg-[#E50914]/10
-
-                  dark:border-white/10
-                  dark:bg-[#111111]
-                  dark:text-white
-                  dark:shadow-none
-                  dark:hover:bg-[#E50914]/20
-                "
-              >
-                {feature}
-              </div>
-            ))}
-          </div>
-
-          {/* =================================================
-              CTA BUTTONS
-          ================================================= */}
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="#featured-cars"
-              className="
-                group
-                inline-flex
-                items-center
-                gap-3
-                rounded-xl
-                bg-[#E50914]
-                px-8
-                py-4
-                font-semibold
-                text-white
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:bg-red-700
-                hover:shadow-[0_15px_35px_rgba(229,9,20,0.3)]
-              "
-            >
-              <ArrowRight
-                size={18}
-                className="
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                "
-              />
-            </Link>
-
-            <Link
-              href="#contact"
-              className="
-                rounded-xl
-                border
-                border-gray-300
-                bg-white
-                px-8
-                py-4
-                font-semibold
-                text-gray-900
-                shadow-sm
-                transition-all
-                duration-300
-
-                hover:border-[#E50914]
-                hover:bg-gray-50
-
-                dark:border-white/20
-                dark:bg-[#111111]
-                dark:text-white
-                dark:shadow-none
-                dark:hover:bg-white/10
-              "
-            >
-            </Link>
-          </div>
         </motion.div>
       </div>
 
@@ -481,7 +367,6 @@ export default function Hero() {
           from-white
           via-white/20
           to-transparent
-
           dark:from-[#050505]
           dark:via-[#050505]/70
           dark:to-transparent

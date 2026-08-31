@@ -9,11 +9,14 @@ interface BlogPost {
     current: string;
   };
 
-  publishedAt: string;
+  publishedAt?: string;
 }
 
 const postsQuery = `
-  *[_type == "post" && defined(slug.current)] {
+  *[
+    _type == "post" &&
+    defined(slug.current)
+  ] {
     slug,
     publishedAt
   }
@@ -22,52 +25,54 @@ const postsQuery = `
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await client.fetch<BlogPost[]>(postsQuery);
 
+  const lastModified = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
 
     {
       url: `${siteUrl}/brands`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
 
     {
       url: `${siteUrl}/cars`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "daily",
       priority: 0.9,
     },
 
     {
       url: `${siteUrl}/exchange`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
 
     {
       url: `${siteUrl}/finance`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
 
     {
       url: `${siteUrl}/blog`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "daily",
       priority: 0.9,
     },
 
     {
       url: `${siteUrl}/contact`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -75,10 +80,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${siteUrl}/blog/${post.slug.current}`,
+
     lastModified: post.publishedAt
       ? new Date(post.publishedAt)
-      : new Date(),
+      : lastModified,
+
     changeFrequency: "monthly",
+
     priority: 0.8,
   }));
 

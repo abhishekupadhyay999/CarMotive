@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/studio"],
     },
 
-    sitemap: "https://car-motive.vercel.app/sitemap.xml",
+    sitemap: "https://carmotiveindia.com/sitemap.xml",
   };
 }

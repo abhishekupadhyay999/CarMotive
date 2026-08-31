@@ -20,20 +20,27 @@ const geistMono = Geist_Mono({
    SITE CONFIG
 ========================================================= */
 
-const siteUrl = "https://car-motive.vercel.app";
+const siteUrl = "https://carmotiveindia.com";
+
+/* =========================================================
+   SEO METADATA
+========================================================= */
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Carmotive India | Multi-Brand Car Dealer in Virar",
-    template: "%s | Carmotive India",
+    default:
+      "Carmotive India | Multi-Brand Car Dealer in Virar",
+    template:
+      "%s | Carmotive India",
   },
 
   description:
-    "Carmotive India is a multi-brand car dealership in Virar, Maharashtra. Explore new cars, car finance, vehicle exchange, latest car offers and more.",
+    "Carmotive India is a multi-brand car dealership in Virar, Maharashtra. Explore cars from leading brands, car finance, vehicle exchange, latest car updates and more.",
 
-  applicationName: "Carmotive India",
+  applicationName:
+    "Carmotive India",
 
   authors: [
     {
@@ -42,12 +49,23 @@ export const metadata: Metadata = {
     },
   ],
 
-  creator: "Carmotive India",
-  publisher: "Carmotive India",
+  creator:
+    "Carmotive India",
+
+  publisher:
+    "Carmotive India",
+
+  /* =======================================================
+     CANONICAL
+  ======================================================= */
 
   alternates: {
     canonical: "/",
   },
+
+  /* =======================================================
+     ROBOTS
+  ======================================================= */
 
   robots: {
     index: true,
@@ -62,27 +80,39 @@ export const metadata: Metadata = {
     },
   },
 
+  /* =======================================================
+     KEYWORDS
+  ======================================================= */
+
   keywords: [
+    "Carmotive India",
     "car dealer in Virar",
     "car dealership in Virar",
     "multi brand car dealer Virar",
     "car showroom Virar",
     "cars in Virar",
     "new cars in Virar",
-    "car dealer Vasai",
-    "car dealer Nalasopara",
+    "car dealer in Vasai",
+    "car dealer in Nalasopara",
     "Vasai Virar car dealer",
-    "car exchange Virar",
-    "car finance Virar",
-    "Carmotive India",
+    "car exchange in Virar",
+    "car finance in Virar",
+    "multibrand car dealer in Virar",
   ],
+
+  /* =======================================================
+     OPEN GRAPH
+  ======================================================= */
 
   openGraph: {
     type: "website",
+
     locale: "en_IN",
+
     url: siteUrl,
 
-    siteName: "Carmotive India",
+    siteName:
+      "Carmotive India",
 
     title:
       "Carmotive India | Multi-Brand Car Dealer in Virar",
@@ -90,15 +120,12 @@ export const metadata: Metadata = {
     description:
       "Explore cars from leading brands, flexible car finance, vehicle exchange and the latest car updates from Carmotive India.",
 
-    images: [
-      {
-        url: "/images/og/carmotive-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Carmotive India - Multi-Brand Car Dealer",
-      },
-    ],
+    /* Add an OG image here later once the final asset exists. */
   },
+
+  /* =======================================================
+     TWITTER / SOCIAL
+  ======================================================= */
 
   twitter: {
     card: "summary_large_image",
@@ -108,17 +135,23 @@ export const metadata: Metadata = {
 
     description:
       "Explore cars, finance, vehicle exchange and the latest car updates from Carmotive India.",
-
-    images: ["/images/og/carmotive-og.jpg"],
   },
+
+  /* =======================================================
+     ICON
+  ======================================================= */
 
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 
-  category: "automotive",
+  category:
+    "automotive",
 };
+
+/* =========================================================
+   ROOT LAYOUT
+========================================================= */
 
 export default function RootLayout({
   children,
