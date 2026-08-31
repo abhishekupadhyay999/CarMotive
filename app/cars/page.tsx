@@ -1,12 +1,66 @@
+import type { Metadata } from "next";
+
 import Navbar from "@/components/home-v2/Navbar";
 import FindYourCar from "@/components/FindYourCar";
 import SearchResult from "@/components/SearchResult";
 import FeaturedCars from "@/components/home-v2/FeaturedCars";
 import Footer from "@/components/home-v2/Footer";
 
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
+export const metadata: Metadata = {
+  title: "Cars for Sale in Virar | Carmotive India",
+
+  description:
+    "Browse cars for sale in Virar, Maharashtra at Carmotive India. Search available cars by brand, budget and fuel type and find the right car for your needs.",
+
+  alternates: {
+    canonical: "/cars",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://carmotiveindia.com/cars",
+    siteName: "Carmotive India",
+
+    title:
+      "Cars for Sale in Virar | Carmotive India",
+
+    description:
+      "Browse available cars in Virar, Maharashtra. Search by brand, budget and fuel type at Carmotive India.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Cars for Sale in Virar | Carmotive India",
+
+    description:
+      "Browse available cars in Virar, Maharashtra and find the right car by brand, budget and fuel type.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+/* =========================================================
+   CARS PAGE
+========================================================= */
+
 export default function CarsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-[#050505]">
+
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
       <Navbar />
 
       {/* =====================================================
@@ -48,8 +102,14 @@ export default function CarsPage() {
           "
         />
 
-        <div className="relative mx-auto max-w-4xl text-center">
-
+        <div
+          className="
+            relative
+            mx-auto
+            max-w-4xl
+            text-center
+          "
+        >
           {/* Badge */}
 
           <span
@@ -86,9 +146,9 @@ export default function CarsPage() {
               dark:text-white
             "
           >
-            Find Your
+            Cars for Sale in{" "}
             <span className="text-[#E50914]">
-              {" "}Perfect Car
+              Virar
             </span>
           </h1>
 
@@ -107,8 +167,9 @@ export default function CarsPage() {
               dark:text-gray-400
             "
           >
-            Search our current inventory by brand, budget and
-            fuel type and find the right car for you.
+            Explore our current car inventory in Virar,
+            Maharashtra. Search by brand, budget and fuel type
+            to find a car that suits your needs.
           </p>
         </div>
       </section>
@@ -148,6 +209,7 @@ export default function CarsPage() {
       ===================================================== */}
 
       <Footer />
+
     </main>
   );
 }

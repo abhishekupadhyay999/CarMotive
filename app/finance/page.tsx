@@ -1,6 +1,55 @@
+import type { Metadata } from "next";
+
 import Navbar from "@/components/home-v2/Navbar";
 import FinanceSection from "@/components/home-v2/FinanceSection";
 import Footer from "@/components/home-v2/Footer";
+
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
+export const metadata: Metadata = {
+  title: "Car Finance in Virar | Carmotive India",
+
+  description:
+    "Explore car finance options in Virar, Maharashtra with Carmotive India. Get assistance with financing your next car, simple documentation and guidance throughout the buying process.",
+
+  alternates: {
+    canonical: "/finance",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://carmotiveindia.com/finance",
+    siteName: "Carmotive India",
+
+    title:
+      "Car Finance in Virar | Carmotive India",
+
+    description:
+      "Explore car finance options and financing assistance in Virar, Maharashtra with Carmotive India.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Car Finance in Virar | Carmotive India",
+
+    description:
+      "Explore car finance options and financing assistance in Virar, Maharashtra with Carmotive India.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+/* =========================================================
+   FINANCE PAGE
+========================================================= */
 
 export default function FinancePage() {
   return (
@@ -84,9 +133,9 @@ export default function FinancePage() {
               dark:text-white
             "
           >
-            Finance Your
+            Car Finance in{" "}
             <span className="text-[#E50914]">
-              {" "}Dream Car
+              Virar
             </span>
           </h1>
 
@@ -105,8 +154,8 @@ export default function FinancePage() {
               dark:text-gray-400
             "
           >
-            Explore flexible car finance options with simple
-            documentation and expert assistance.
+            Explore flexible car finance options and get expert
+            assistance with financing your next vehicle.
           </p>
         </div>
       </section>
@@ -115,12 +164,7 @@ export default function FinancePage() {
           FINANCE CONTENT
       ===================================================== */}
 
-      <section
-        className="
-          bg-white
-          dark:bg-[#050505]
-        "
-      >
+      <section className="bg-white dark:bg-[#050505]">
         <FinanceSection />
       </section>
 

@@ -1,6 +1,55 @@
+import type { Metadata } from "next";
+
 import Navbar from "@/components/home-v2/Navbar";
 import ExchangeSection from "@/components/home-v2/ExchangeSection";
 import Footer from "@/components/home-v2/Footer";
+
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
+export const metadata: Metadata = {
+  title: "Car Exchange in Virar | Carmotive India",
+
+  description:
+    "Exchange or sell your car in Virar, Maharashtra with Carmotive India. Get a vehicle valuation, explore exchange options and upgrade to your next car with expert assistance.",
+
+  alternates: {
+    canonical: "/exchange",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://carmotiveindia.com/exchange",
+    siteName: "Carmotive India",
+
+    title:
+      "Car Exchange in Virar | Carmotive India",
+
+    description:
+      "Get your car valued and explore vehicle exchange options in Virar, Maharashtra with Carmotive India.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Car Exchange in Virar | Carmotive India",
+
+    description:
+      "Get your car valued and explore vehicle exchange options in Virar, Maharashtra with Carmotive India.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+/* =========================================================
+   EXCHANGE PAGE
+========================================================= */
 
 export default function ExchangePage() {
   return (
@@ -84,9 +133,9 @@ export default function ExchangePage() {
               dark:text-white
             "
           >
-            Exchange Your Car
+            Car Exchange in{" "}
             <span className="text-[#E50914]">
-              {" "}With Confidence
+              Virar
             </span>
           </h1>
 
@@ -105,8 +154,8 @@ export default function ExchangePage() {
               dark:text-gray-400
             "
           >
-            Get a fair value for your current vehicle and make
-            your next upgrade simple with Carmotive India.
+            Get your current vehicle valued and make your next
+            upgrade easier with Carmotive India.
           </p>
         </div>
       </section>
@@ -115,12 +164,7 @@ export default function ExchangePage() {
           EXCHANGE CONTENT
       ===================================================== */}
 
-      <section
-        className="
-          bg-white
-          dark:bg-[#050505]
-        "
-      >
+      <section className="bg-white dark:bg-[#050505]">
         <ExchangeSection />
       </section>
 

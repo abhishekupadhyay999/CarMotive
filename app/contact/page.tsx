@@ -1,10 +1,64 @@
+import type { Metadata } from "next";
+
 import Navbar from "@/components/home-v2/Navbar";
 import Contact from "@/components/contacts/Contacts";
 import Footer from "@/components/home-v2/Footer";
 
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
+export const metadata: Metadata = {
+  title: "Contact Carmotive India | Car Dealer in Virar",
+
+  description:
+    "Contact Carmotive India in Virar, Maharashtra for cars, test drives, car exchange, finance assistance and other car-buying enquiries.",
+
+  alternates: {
+    canonical: "/contact",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://carmotiveindia.com/contact",
+    siteName: "Carmotive India",
+
+    title:
+      "Contact Carmotive India | Car Dealer in Virar",
+
+    description:
+      "Get in touch with Carmotive India in Virar, Maharashtra for cars, test drives, exchange and finance assistance.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Contact Carmotive India | Car Dealer in Virar",
+
+    description:
+      "Get in touch with Carmotive India in Virar, Maharashtra for cars, test drives, exchange and finance assistance.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-[#050505]">
+
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
       <Navbar />
 
       {/* =====================================================
@@ -84,9 +138,9 @@ export default function ContactPage() {
               dark:text-white
             "
           >
-            Get In
+            Contact Carmotive India
             <span className="text-[#E50914]">
-              {" "}Touch
+              {" "}in Virar
             </span>
           </h1>
 
@@ -106,7 +160,8 @@ export default function ContactPage() {
             "
           >
             Have a question about a car, exchange, finance or a
-            test drive? Our team is here to help.
+            test drive? Get in touch with our team and we will be
+            happy to help.
           </p>
         </div>
       </section>
@@ -115,12 +170,7 @@ export default function ContactPage() {
           CONTACT CONTENT
       ===================================================== */}
 
-      <section
-        className="
-          bg-white
-          dark:bg-[#050505]
-        "
-      >
+      <section className="bg-white dark:bg-[#050505]">
         <Contact />
       </section>
 
@@ -129,6 +179,7 @@ export default function ContactPage() {
       ===================================================== */}
 
       <Footer />
+
     </main>
   );
 }

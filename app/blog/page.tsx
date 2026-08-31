@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +7,43 @@ import Footer from "@/components/home-v2/Footer";
 
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
+export const metadata: Metadata = {
+  title: "Car News & Insights in India | Carmotive India",
+
+  description:
+    "Read the latest car news, new car launches, prices, features, specifications and useful car buying guides from Carmotive India.",
+
+  alternates: {
+    canonical: "/blog",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://carmotiveindia.com/blog",
+    siteName: "Carmotive India",
+    title: "Car News & Insights | Carmotive India",
+    description:
+      "Stay updated with the latest car launches, prices, features, specifications and useful car buying information.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Car News & Insights | Carmotive India",
+    description:
+      "Stay updated with the latest car launches, prices, features, specifications and useful car buying information.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 interface Post {
   _id: string;
@@ -103,14 +141,8 @@ export default async function BlogPage() {
           "
         />
 
-        <div
-          className="
-            relative
-            mx-auto
-            max-w-4xl
-            text-center
-          "
-        >
+        <div className="relative mx-auto max-w-4xl text-center">
+
           {/* Badge */}
 
           <span
@@ -324,7 +356,6 @@ export default async function BlogPage() {
                       dark:shadow-none
                     "
                   >
-
                     {/* =================================================
                         COVER IMAGE
                     ================================================= */}
@@ -377,8 +408,6 @@ export default async function BlogPage() {
                             No image available
                           </div>
                         )}
-
-                        {/* Image Overlay */}
 
                         <div
                           className="
@@ -490,7 +519,6 @@ export default async function BlogPage() {
                           dark:border-white/10
                         "
                       >
-
                         <span
                           className="
                             text-[11px]
@@ -521,7 +549,6 @@ export default async function BlogPage() {
                         >
                           Read More →
                         </Link>
-
                       </div>
                     </div>
 
@@ -537,7 +564,6 @@ export default async function BlogPage() {
                         group-hover:w-full
                       "
                     />
-
                   </article>
                 );
               })}
