@@ -9,6 +9,13 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
 /* =========================================================
+   DYNAMIC RENDERING
+========================================================= */
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+/* =========================================================
    SEO METADATA
 ========================================================= */
 
@@ -45,6 +52,10 @@ export const metadata: Metadata = {
   },
 };
 
+/* =========================================================
+   POST TYPE
+========================================================= */
+
 interface Post {
   _id: string;
 
@@ -71,6 +82,10 @@ interface Post {
   publishedAt: string;
 }
 
+/* =========================================================
+   SANITY QUERY
+========================================================= */
+
 const postsQuery = `
   *[_type == "post"]
     | order(publishedAt desc)
@@ -86,16 +101,42 @@ const postsQuery = `
     }
 `;
 
+/* =========================================================
+   GET POSTS
+========================================================= */
+
 async function getPosts(): Promise<Post[]> {
-  return client.fetch(postsQuery);
+  try {
+    const posts = await client.fetch<Post[]>(
+      postsQuery
+    );
+
+    return posts || [];
+  } catch (error) {
+    console.error(
+      "Failed to fetch blog posts from Sanity:",
+      error
+    );
+
+    return [];
+  }
 }
+
+/* =========================================================
+   BLOG PAGE
+========================================================= */
 
 export default async function BlogPage() {
   const posts = await getPosts();
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#050505]">
-
+    <main
+      className="
+        min-h-screen
+        bg-white
+        dark:bg-[#050505]
+      "
+    >
       {/* =====================================================
           NAVBAR
       ===================================================== */}
@@ -141,8 +182,14 @@ export default async function BlogPage() {
           "
         />
 
-        <div className="relative mx-auto max-w-4xl text-center">
-
+        <div
+          className="
+            relative
+            mx-auto
+            max-w-4xl
+            text-center
+          "
+        >
           {/* Badge */}
 
           <span
@@ -200,9 +247,9 @@ export default async function BlogPage() {
               dark:text-gray-400
             "
           >
-            Stay updated with the latest car launches, prices,
-            features, specifications, offers and useful car
-            buying information from Carmotive India.
+            Stay updated with the latest car launches,
+            prices, features, specifications, offers and
+            useful car buying information from Carmotive India.
           </p>
         </div>
       </section>
@@ -307,8 +354,8 @@ export default async function BlogPage() {
                   dark:text-gray-400
                 "
               >
-                New car articles will appear here once they are
-                published from the Carmotive Studio.
+                New car articles will appear here once they
+                are published from the Carmotive Studio.
               </p>
             </div>
           ) : (
@@ -325,13 +372,14 @@ export default async function BlogPage() {
               "
             >
               {posts.map((post) => {
-                const imageUrl = post.coverImage?.asset
-                  ? urlFor(post.coverImage)
-                      .width(900)
-                      .height(560)
-                      .fit("crop")
-                      .url()
-                  : null;
+                const imageUrl =
+                  post.coverImage?.asset
+                    ? urlFor(post.coverImage)
+                        .width(900)
+                        .height(560)
+                        .fit("crop")
+                        .url()
+                    : null;
 
                 return (
                   <article
@@ -346,11 +394,9 @@ export default async function BlogPage() {
                       shadow-sm
                       transition-all
                       duration-300
-
                       hover:-translate-y-1
                       hover:border-[#E50914]/30
                       hover:shadow-lg
-
                       dark:border-white/10
                       dark:bg-[#111111]
                       dark:shadow-none
@@ -370,7 +416,6 @@ export default async function BlogPage() {
                           aspect-[16/10]
                           overflow-hidden
                           bg-gray-100
-
                           dark:bg-white
                         "
                       >
@@ -525,16 +570,18 @@ export default async function BlogPage() {
                             text-gray-500
                           "
                         >
-                          {new Date(
-                            post.publishedAt
-                          ).toLocaleDateString(
-                            "en-IN",
-                            {
-                              day: "numeric",
-                              month: "short",
-                              year: "numeric",
-                            }
-                          )}
+                          {post.publishedAt
+                            ? new Date(
+                                post.publishedAt
+                              ).toLocaleDateString(
+                                "en-IN",
+                                {
+                                  day: "numeric",
+                                  month: "short",
+                                  year: "numeric",
+                                }
+                              )
+                            : ""}
                         </span>
 
                         <Link
@@ -577,7 +624,6 @@ export default async function BlogPage() {
       ===================================================== */}
 
       <Footer />
-
     </main>
   );
 }

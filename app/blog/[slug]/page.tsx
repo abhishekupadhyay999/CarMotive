@@ -6,27 +6,52 @@ import { PortableText } from "@portabletext/react";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+/* =========================================================
+   TYPES
+========================================================= */
+
 interface Post {
   _id: string;
+
   title: string;
+
   slug: {
     current: string;
   };
+
   brand: string;
+
   model: string;
+
   excerpt: string;
-  coverImage: {
+
+  coverImage?: {
     asset: {
       _ref: string;
     };
     alt?: string;
   };
+
   publishedAt: string;
+
   body: any[];
 }
 
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+/* =========================================================
+   SANITY QUERY
+========================================================= */
+
 const postQuery = `
-  *[_type == "post" && slug.current == $slug][0] {
+  *[
+    _type == "post" &&
+    slug.current == $slug
+  ][0] {
     _id,
     title,
     slug,
@@ -39,64 +64,184 @@ const postQuery = `
   }
 `;
 
-async function getPost(slug: string): Promise<Post | null> {
-  return client.fetch(postQuery, { slug });
+/* =========================================================
+   DYNAMIC RENDERING
+========================================================= */
+
+export const dynamic = "force-dynamic";
+
+export const revalidate = 0;
+
+/* =========================================================
+   GET BLOG POST
+========================================================= */
+
+async function getPost(
+  slug: string
+): Promise<Post | null> {
+  try {
+    const post = await client.fetch<Post | null>(
+      postQuery,
+      { slug }
+    );
+
+    return post;
+  } catch (error) {
+    console.error(
+      "Failed to fetch blog post from Sanity:",
+      error
+    );
+
+    return null;
+  }
 }
 
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
+/* =========================================================
+   SEO METADATA
+========================================================= */
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({
+  params,
+}: PageProps) {
   const { slug } = await params;
+
   const post = await getPost(slug);
 
   if (!post) {
     return {
       title: "Article Not Found | Carmotive India",
+
+      description:
+        "The requested article could not be found on Carmotive India.",
     };
   }
 
+  const imageUrl = post.coverImage
+    ? urlFor(post.coverImage)
+        .width(1200)
+        .height(675)
+        .fit("crop")
+        .url()
+    : undefined;
+
   return {
     title: `${post.title} | Carmotive India`,
-    description: post.excerpt,
+
+    description:
+      post.excerpt ||
+      `Read the latest car news, insights and buying information from Carmotive India.`,
+
+    openGraph: {
+      title: `${post.title} | Carmotive India`,
+
+      description:
+        post.excerpt ||
+        `Read the latest car news and insights from Carmotive India.`,
+
+      type: "article",
+
+      publishedTime: post.publishedAt,
+
+      ...(imageUrl && {
+        images: [
+          {
+            url: imageUrl,
+
+            width: 1200,
+
+            height: 675,
+
+            alt:
+              post.coverImage?.alt ||
+              post.title,
+          },
+        ],
+      }),
+    },
   };
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
+/* =========================================================
+   BLOG POST PAGE
+========================================================= */
+
+export default async function BlogPostPage({
+  params,
+}: PageProps) {
   const { slug } = await params;
+
   const post = await getPost(slug);
+
+  /* =======================================================
+     POST NOT FOUND
+  ======================================================= */
 
   if (!post) {
     notFound();
   }
 
-  const formattedDate = new Date(post.publishedAt).toLocaleDateString(
-    "en-IN",
-    {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    }
-  );
+  /* =======================================================
+     DATE
+  ======================================================= */
 
-  const imageUrl = urlFor(post.coverImage)
-    .width(1200)
-    .height(675)
-    .fit("crop")
-    .url();
+  const formattedDate = post.publishedAt
+    ? new Date(
+        post.publishedAt
+      ).toLocaleDateString("en-IN", {
+        day: "numeric",
+
+        month: "long",
+
+        year: "numeric",
+      })
+    : "";
+
+  /* =======================================================
+     COVER IMAGE
+  ======================================================= */
+
+  const imageUrl = post.coverImage
+    ? urlFor(post.coverImage)
+        .width(1200)
+        .height(675)
+        .fit("crop")
+        .url()
+    : null;
+
+  /* =======================================================
+     PAGE
+  ======================================================= */
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black">
-      <article className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+    <main
+      className="
+        min-h-screen
+        bg-white
+        text-gray-900
+        dark:bg-[#050505]
+        dark:text-white
+      "
+    >
+      <article
+        className="
+          mx-auto
+          max-w-5xl
+          px-6
+          pb-16
+          pt-10
+          md:pb-20
+          md:pt-12
+        "
+      >
 
-        {/* Back to Articles */}
+        {/* =================================================
+            BACK TO ARTICLES
+        ================================================= */}
+
         <Link
           href="/blog"
           className="
-            mb-10
+            mb-8
             inline-flex
             items-center
             gap-2
@@ -104,6 +249,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             font-semibold
             text-gray-600
             transition-colors
+            duration-300
             hover:text-[#E50914]
             dark:text-gray-400
           "
@@ -111,35 +257,87 @@ export default async function BlogPostPage({ params }: PageProps) {
           ← Back to Articles
         </Link>
 
-        {/* Article Header */}
-        <header className="mb-10">
+        {/* =================================================
+            ARTICLE HEADER
+        ================================================= */}
+
+        <header className="mb-8">
 
           {/* Brand / Model / Date */}
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-sm">
-            <span className="font-semibold text-[#E50914]">
-              {post.brand}
-            </span>
 
-            <span className="text-gray-400">•</span>
+          <div
+            className="
+              mb-4
+              flex
+              flex-wrap
+              items-center
+              gap-2
+              text-sm
+            "
+          >
 
-            <span className="text-gray-500 dark:text-gray-400">
-              {post.model}
-            </span>
+            {post.brand && (
+              <>
+                <span
+                  className="
+                    font-semibold
+                    text-[#E50914]
+                  "
+                >
+                  {post.brand}
+                </span>
 
-            <span className="text-gray-400">•</span>
+                {post.model && (
+                  <span className="text-gray-400">
+                    •
+                  </span>
+                )}
+              </>
+            )}
 
-            <span className="text-gray-500 dark:text-gray-400">
-              {formattedDate}
-            </span>
+            {post.model && (
+              <>
+                <span
+                  className="
+                    text-gray-500
+                    dark:text-gray-400
+                  "
+                >
+                  {post.model}
+                </span>
+
+                {formattedDate && (
+                  <span className="text-gray-400">
+                    •
+                  </span>
+                )}
+              </>
+            )}
+
+            {formattedDate && (
+              <span
+                className="
+                  text-gray-500
+                  dark:text-gray-400
+                "
+              >
+                {formattedDate}
+              </span>
+            )}
+
           </div>
 
-          {/* Title */}
+          {/* =================================================
+              TITLE
+          ================================================= */}
+
           <h1
             className="
               max-w-4xl
               text-4xl
               font-bold
               leading-tight
+              tracking-tight
               text-gray-900
               md:text-5xl
               lg:text-6xl
@@ -149,45 +347,69 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
 
-          {/* Description */}
-          <p
-            className="
-              mt-6
-              max-w-3xl
-              text-lg
-              leading-8
-              text-gray-600
-              dark:text-gray-400
-            "
-          >
-            {post.excerpt}
-          </p>
+          {/* =================================================
+              EXCERPT
+          ================================================= */}
+
+          {post.excerpt && (
+            <p
+              className="
+                mt-5
+                max-w-3xl
+                text-lg
+                leading-8
+                text-gray-600
+                dark:text-gray-400
+              "
+            >
+              {post.excerpt}
+            </p>
+          )}
+
         </header>
 
-        {/* Cover Image */}
-        <div
-          className="
-            relative
-            mb-12
-            aspect-[16/9]
-            overflow-hidden
-            rounded-2xl
-            bg-white
-          "
-        >
-          <Image
-            src={imageUrl}
-            alt={post.coverImage?.alt || post.title}
-            fill
-            priority
-            unoptimized
-            sizes="(max-width: 768px) 100vw, 1200px"
-            className="object-cover"
-          />
-        </div>
+        {/* =================================================
+            COVER IMAGE
+        ================================================= */}
 
-        {/* Article Content */}
+        {imageUrl && (
+          <div
+            className="
+              relative
+              mb-10
+              aspect-[16/9]
+              overflow-hidden
+              rounded-2xl
+              bg-gray-100
+              dark:bg-[#111111]
+            "
+          >
+            <Image
+              src={imageUrl}
+              alt={
+                post.coverImage?.alt ||
+                post.title
+              }
+              fill
+              priority
+              unoptimized
+              sizes="
+                (max-width: 768px) 100vw,
+                1200px
+              "
+              className="
+                object-cover
+              "
+            />
+          </div>
+        )}
+
+        {/* =================================================
+            ARTICLE CONTENT
+        ================================================= */}
+
         <div className="mx-auto max-w-3xl">
+
           <div
             className="
               text-base
@@ -231,19 +453,25 @@ export default async function BlogPostPage({ params }: PageProps) {
               [&_a]:underline
             "
           >
-            <PortableText value={post.body} />
+            <PortableText
+              value={post.body || []}
+            />
           </div>
+
         </div>
 
-        {/* Bottom Navigation */}
+        {/* =================================================
+            BOTTOM NAVIGATION
+        ================================================= */}
+
         <div
           className="
             mx-auto
-            mt-16
+            mt-12
             max-w-3xl
             border-t
             border-gray-200
-            pt-8
+            pt-6
             dark:border-white/10
           "
         >
@@ -262,6 +490,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               font-semibold
               text-gray-800
               transition-all
+              duration-300
               hover:border-[#E50914]
               hover:text-[#E50914]
               dark:border-white/10

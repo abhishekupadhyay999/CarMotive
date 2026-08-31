@@ -72,7 +72,7 @@ const stats = [
   },
   {
     number: "300+",
-    label: "Premium Cars",
+    label: "Successful Exchanges",
   },
   {
     number: "4.9★",
