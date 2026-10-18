@@ -113,6 +113,42 @@ const vehicles = [
   ["Skoda", "Kushaq"],
   ["Skoda", "Slavia"],
   ["Skoda", "Kodiaq"],
+
+    // TATA MOTORS
+  ["Tata", "Tiago"],
+  ["Tata", "Tiago EV"],
+  ["Tata", "Tigor"],
+  ["Tata", "Tigor EV"],
+  ["Tata", "Altroz"],
+  ["Tata", "Punch"],
+  ["Tata", "Punch EV"],
+  ["Tata", "Nexon"],
+  ["Tata", "Nexon EV"],
+  ["Tata", "Curvv"],
+  ["Tata", "Curvv EV"],
+  ["Tata", "Harrier"],
+  ["Tata", "Harrier EV"],
+  ["Tata", "Safari"],
+
+  // RENAULT
+  ["Renault", "Kwid"],
+  ["Renault", "Kiger"],
+  ["Renault", "Triber"],
+  ["Renault", "Duster"],
+
+  // VOLKSWAGEN
+  ["Volkswagen", "Taigun"],
+  ["Volkswagen", "Tayron"],
+  ["Volkswagen", "Tiguan R-Line"],
+  ["Volkswagen", "Virtus"],
+  ["Volkswagen", "Golf GTI"],
+
+  // CITROEN
+  ["Citroen", "C3X"],
+  ["Citroen", "e-C3X"],
+  ["Citroen", "AircrossX"],
+  ["Citroen", "BasaltX"],
+  ["Citroen", "C5 Aircross"],
 ] as const;
 
 function createDocumentId(brand: string, model: string) {
