@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 import Navbar from "@/components/home-v2/Navbar";
@@ -9,10 +10,10 @@ import Footer from "@/components/home-v2/Footer";
 ========================================================= */
 
 export const metadata: Metadata = {
-  title: "Car Finance in Virar | Carmotive India",
+  title: "Car Finance & Loan Assistance Across India | Carmotive India",
 
   description:
-    "Explore car finance options in Virar, Maharashtra with Carmotive India. Get assistance with financing your next car, simple documentation and guidance throughout the buying process.",
+    "Explore car finance options with Carmotive India. Get assistance with car loans, financing options and documentation when buying your next vehicle across India, including Maharashtra.",
 
   alternates: {
     canonical: "/finance",
@@ -24,21 +25,19 @@ export const metadata: Metadata = {
     url: "https://carmotiveindia.com/finance",
     siteName: "Carmotive India",
 
-    title:
-      "Car Finance in Virar | Carmotive India",
+    title: "Car Finance & Loan Assistance | Carmotive India",
 
     description:
-      "Explore car finance options and financing assistance in Virar, Maharashtra with Carmotive India.",
+      "Explore car loan options and get guidance with financing and documentation for your next vehicle with Carmotive India.",
   },
 
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Car Finance in Virar | Carmotive India",
+    title: "Car Finance Options Across India | Carmotive India",
 
     description:
-      "Explore car finance options and financing assistance in Virar, Maharashtra with Carmotive India.",
+      "Explore car finance options and get assistance with financing your next vehicle through Carmotive India.",
   },
 
   robots: {
@@ -56,37 +55,26 @@ export default function FinancePage() {
     <main className="min-h-screen bg-white dark:bg-[#050505]">
       <Navbar />
 
-      {/* =====================================================
-          PAGE HEADER
-      ===================================================== */}
+      {/* PAGE HEADER */}
 
       <section
         className="
-          relative
-          overflow-hidden
-          border-b
-          border-gray-200
-          bg-white
-          px-6
-          pb-6
-          pt-6
+          relative overflow-hidden
+          border-b border-gray-200
+          bg-white px-6
+          pb-6 pt-6
           dark:border-white/10
           dark:bg-[#050505]
-          lg:px-8
-          lg:pb-8
-          lg:pt-8
+          lg:px-8 lg:pb-8 lg:pt-8
         "
       >
         {/* Background Glow */}
 
         <div
           className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-0
-            h-56
-            w-56
+            pointer-events-none absolute
+            left-1/2 top-0
+            h-56 w-56
             -translate-x-1/2
             rounded-full
             bg-[#E50914]/5
@@ -96,22 +84,16 @@ export default function FinancePage() {
         />
 
         <div className="relative mx-auto max-w-4xl text-center">
-
           {/* Badge */}
 
           <span
             className="
-              inline-flex
-              rounded-full
-              border
-              border-[#E50914]/20
+              inline-flex rounded-full
+              border border-[#E50914]/20
               bg-[#E50914]/5
-              px-4
-              py-1.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.28em]
+              px-4 py-1.5
+              text-[11px] font-semibold
+              uppercase tracking-[0.28em]
               text-[#E50914]
             "
           >
@@ -122,20 +104,16 @@ export default function FinancePage() {
 
           <h1
             className="
-              mt-2
-              text-3xl
-              font-bold
-              leading-tight
-              tracking-tight
+              mt-2 text-3xl font-bold
+              leading-tight tracking-tight
               text-gray-900
-              sm:text-4xl
-              md:text-5xl
+              sm:text-4xl md:text-5xl
               dark:text-white
             "
           >
-            Car Finance in{" "}
+            Car Finance Made{" "}
             <span className="text-[#E50914]">
-              Virar
+              Simple
             </span>
           </h1>
 
@@ -143,34 +121,27 @@ export default function FinancePage() {
 
           <p
             className="
-              mx-auto
-              mt-2
-              max-w-2xl
-              text-sm
-              leading-6
+              mx-auto mt-2 max-w-2xl
+              text-sm leading-6
               text-gray-600
-              sm:text-base
-              sm:leading-7
+              sm:text-base sm:leading-7
               dark:text-gray-400
             "
           >
-            Explore flexible car finance options and get expert
-            assistance with financing your next vehicle.
+            Explore flexible car finance options and get
+            expert assistance with financing your next
+            vehicle with Carmotive India.
           </p>
         </div>
       </section>
 
-      {/* =====================================================
-          FINANCE CONTENT
-      ===================================================== */}
+      {/* FINANCE CONTENT */}
 
       <section className="bg-white dark:bg-[#050505]">
         <FinanceSection />
       </section>
 
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
+      {/* FOOTER */}
 
       <Footer />
     </main>

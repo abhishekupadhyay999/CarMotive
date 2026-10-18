@@ -1,11 +1,14 @@
-import {carType} from './cartypes'
-import { postType } from './postType'
+
+import { carType } from "./cartypes";
+import { postType } from "./postType";
+import { vehicleModelType } from "./vehicleModels";
 
 export const schemaTypes = [
   carType,
-  postType
-]
+  postType,
+  vehicleModelType,
+];
 
 export const schema = {
   types: schemaTypes,
-}
+};

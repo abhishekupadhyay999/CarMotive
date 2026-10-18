@@ -9,10 +9,10 @@ import Footer from "@/components/home-v2/Footer";
 ========================================================= */
 
 export const metadata: Metadata = {
-  title: "Car Exchange in Virar | Carmotive India",
+  title: "Car Exchange & Sell Your Car | Carmotive India",
 
   description:
-    "Exchange or sell your car in Virar, Maharashtra with Carmotive India. Get a vehicle valuation, explore exchange options and upgrade to your next car with expert assistance.",
+    "Exchange or sell your car with Carmotive India. Get a vehicle valuation, explore car exchange options and upgrade to your next car with expert assistance across India.",
 
   alternates: {
     canonical: "/exchange",
@@ -24,21 +24,19 @@ export const metadata: Metadata = {
     url: "https://carmotiveindia.com/exchange",
     siteName: "Carmotive India",
 
-    title:
-      "Car Exchange in Virar | Carmotive India",
+    title: "Car Exchange Services Across India | Carmotive India",
 
     description:
-      "Get your car valued and explore vehicle exchange options in Virar, Maharashtra with Carmotive India.",
+      "Get your car valued, explore exchange options and upgrade to your next vehicle with Carmotive India. Serving customers across India, including Maharashtra.",
   },
 
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Car Exchange in Virar | Carmotive India",
+    title: "Car Exchange Services | Carmotive India",
 
     description:
-      "Get your car valued and explore vehicle exchange options in Virar, Maharashtra with Carmotive India.",
+      "Sell or exchange your car with Carmotive India. Explore vehicle valuation and car upgrade options across India.",
   },
 
   robots: {
@@ -56,37 +54,26 @@ export default function ExchangePage() {
     <main className="min-h-screen bg-white dark:bg-[#050505]">
       <Navbar />
 
-      {/* =====================================================
-          PAGE HEADER
-      ===================================================== */}
+      {/* PAGE HEADER */}
 
       <section
         className="
-          relative
-          overflow-hidden
-          border-b
-          border-gray-200
-          bg-white
-          px-6
-          pb-6
-          pt-6
+          relative overflow-hidden
+          border-b border-gray-200
+          bg-white px-6
+          pb-6 pt-6
           dark:border-white/10
           dark:bg-[#050505]
-          lg:px-8
-          lg:pb-8
-          lg:pt-8
+          lg:px-8 lg:pb-8 lg:pt-8
         "
       >
         {/* Background Glow */}
 
         <div
           className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-0
-            h-56
-            w-56
+            pointer-events-none absolute
+            left-1/2 top-0
+            h-56 w-56
             -translate-x-1/2
             rounded-full
             bg-[#E50914]/5
@@ -96,22 +83,16 @@ export default function ExchangePage() {
         />
 
         <div className="relative mx-auto max-w-4xl text-center">
-
           {/* Badge */}
 
           <span
             className="
-              inline-flex
-              rounded-full
-              border
-              border-[#E50914]/20
+              inline-flex rounded-full
+              border border-[#E50914]/20
               bg-[#E50914]/5
-              px-4
-              py-1.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.28em]
+              px-4 py-1.5
+              text-[11px] font-semibold
+              uppercase tracking-[0.28em]
               text-[#E50914]
             "
           >
@@ -122,20 +103,16 @@ export default function ExchangePage() {
 
           <h1
             className="
-              mt-2
-              text-3xl
-              font-bold
-              leading-tight
-              tracking-tight
+              mt-2 text-3xl font-bold
+              leading-tight tracking-tight
               text-gray-900
-              sm:text-4xl
-              md:text-5xl
+              sm:text-4xl md:text-5xl
               dark:text-white
             "
           >
-            Car Exchange in{" "}
+            Car Exchange Made{" "}
             <span className="text-[#E50914]">
-              Virar
+              Easy
             </span>
           </h1>
 
@@ -143,34 +120,27 @@ export default function ExchangePage() {
 
           <p
             className="
-              mx-auto
-              mt-2
-              max-w-2xl
-              text-sm
-              leading-6
+              mx-auto mt-2 max-w-2xl
+              text-sm leading-6
               text-gray-600
-              sm:text-base
-              sm:leading-7
+              sm:text-base sm:leading-7
               dark:text-gray-400
             "
           >
-            Get your current vehicle valued and make your next
-            upgrade easier with Carmotive India.
+            Get your current car valued, explore exchange
+            options and make your next upgrade easier
+            with Carmotive India.
           </p>
         </div>
       </section>
 
-      {/* =====================================================
-          EXCHANGE CONTENT
-      ===================================================== */}
+      {/* EXCHANGE CONTENT */}
 
       <section className="bg-white dark:bg-[#050505]">
         <ExchangeSection />
       </section>
 
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
+      {/* FOOTER */}
 
       <Footer />
     </main>
